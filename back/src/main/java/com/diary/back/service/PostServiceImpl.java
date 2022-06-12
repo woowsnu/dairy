@@ -16,7 +16,7 @@ public class PostServiceImpl implements PostService{
 
     @Override
     public List<Post> update(Post post){
-        final Optional<Post> foundPost = repository.findByID(post.getUser_id());
+        final Optional<Post> foundPost = repository.findById(post.getPost_id());
 
         foundPost.ifPresent(newPost ->{
             newPost.setPost_id(post.getPost_id());
