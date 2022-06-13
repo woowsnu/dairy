@@ -14,8 +14,11 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository repository;
 
+    // 유저 등록
+    @Override
+    public User regist(User user){ return repository.save(user); }
 
-
+    // 유저 수정
     @Override
     public List<User> update(User user){
 
