@@ -37,6 +37,7 @@ public class EmotionController {
 //        return emotionService.post(emotion_cat_id, emotion);
 //    }
 
+    //emotion_cat_id에 맞는 값을 보냄, 슬라이더값받아서 <Component>에 비동기처리하는건 여기선 불가능한듯...
     @GetMapping(value = "모달창까지url/{emotion_cat_id}", produces = {MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<Emotion> getEmotion(@PathVariable("emotion_cat_id") Long emotion_cat_id){
         Optional<Emotion> emotion = emotionService.findbycatid(emotion_cat_id);
