@@ -20,6 +20,7 @@ public class Post {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "POST_ID")
     private Long post_id;
 
     @ManyToOne
@@ -28,7 +29,8 @@ public class Post {
     private LocalDate post_date;
     private String post_text;
 
-    
+    @OneToMany(mappedBy = "Post")
+    private List<PostEmotion> postemotions = new ArrayList<>();
 
 //    @OneToMany
 //    @JoinTable(name = "PostPostEmotion", joinColumns = @JoinColumn(name = "post_id"),
