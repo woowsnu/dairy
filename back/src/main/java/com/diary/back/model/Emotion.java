@@ -21,7 +21,7 @@ public class Emotion {
     private int emotion_cat_frequency;
     private int emotion_cat_average;
     private int emotion_cat_sd;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY, targetEntity = EmotionCategory.class)
     @JoinColumn(name="emotion_cat_id")
     private Long emotion_cat_id;
 
