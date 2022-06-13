@@ -23,7 +23,7 @@ public class Post {
     @Column(name = "POST_ID")
     private Long post_id;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY, targetEntity = User.class)
     @JoinColumn(name="user_id")
     private Long user_id;
     private LocalDate post_date;
