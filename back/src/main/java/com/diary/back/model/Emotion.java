@@ -3,10 +3,7 @@ package com.diary.back.model;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Builder
 @RequiredArgsConstructor
@@ -24,6 +21,8 @@ public class Emotion {
     private int emotion_cat_frequency;
     private int emotion_cat_average;
     private int emotion_cat_sd;
+    @ManyToOne
+    @JoinColumn(name="emotion_cat_id")
     private Long emotion_cat_id;
 
 
