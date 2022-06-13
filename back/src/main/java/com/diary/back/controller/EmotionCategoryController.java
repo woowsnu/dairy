@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin
 public class EmotionCategoryController {
 
-    @Autowired
-    private EmotionCategoryService emotionCategoryService;
+//    @Autowired
+//    private EmotionCategoryService emotionCategoryService;
 
 }

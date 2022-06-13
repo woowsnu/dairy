@@ -29,7 +29,9 @@ public class Post {
     private LocalDate post_date;
     private String post_text;
 
-    @OneToMany(mappedBy = "Post")
+    @OneToMany
+    @JoinTable(name = "PostPostEmotion", joinColumns = @JoinColumn(name = "post_id"),
+    inverseJoinColumns = @JoinColumn(name="PostEmotion_id"))
     private List<PostEmotion> postemotions = new ArrayList<>();
 
 //    @OneToMany
