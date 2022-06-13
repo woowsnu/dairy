@@ -26,4 +26,6 @@ public class PostEmotion {
     @ManyToOne
     @JoinColumn(name="emotion_cat_id")
     private Long emotion_cat_id;
+
+
 }
