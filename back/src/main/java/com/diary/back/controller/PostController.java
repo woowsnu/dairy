@@ -20,12 +20,13 @@ public class PostController {
 
 
 
-//    밑줄은 데이터가 아직없어서 못쓰는거 
+//    밑줄은 데이터가 아직없어서 못쓰는거
 //    @GetMapping
 //    public List<Post> update(){
 //
 //        return PostService.update();
 //    }
 
+//    public List<Post> update;
 
 }
