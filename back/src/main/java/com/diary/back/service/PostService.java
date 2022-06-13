@@ -10,4 +10,5 @@ public interface PostService {
 
     List<Post> update(Post post);
 
+//    List<Post> find(Post post);
 }

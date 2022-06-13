@@ -1,7 +1,6 @@
 package com.diary.back.service;
 
 import com.diary.back.model.Post;
-import com.diary.back.model.PostEmotion;
 import com.diary.back.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -31,5 +30,10 @@ public class PostServiceImpl implements PostService{
         return repository.findAll();
     }
 
+//    List<Post>
+//
+//    public List<Post> find(Post post){
+//        final Optional<Post> foundPost =
+//    }
 
 }

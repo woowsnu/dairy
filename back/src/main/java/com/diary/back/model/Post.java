@@ -32,7 +32,7 @@ public class Post {
     @OneToMany
     @JoinTable(name = "PostPostEmotion", joinColumns = @JoinColumn(name = "post_id"),
     inverseJoinColumns = @JoinColumn(name="PostEmotion_id"))
-    private List<PostEmotion> postemotions = new ArrayList<>();
+    private List<Post> postPostEmotions = new ArrayList<>();
 
 //    @OneToMany
 //    @JoinTable(name = "PostPostEmotion", joinColumns = @JoinColumn(name = "post_id"),
