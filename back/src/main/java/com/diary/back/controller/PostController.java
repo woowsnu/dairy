@@ -24,11 +24,13 @@ public class PostController {
 
     @GetMapping
     public List<Post> findAll(){
+
         return postService.findAll();
     }
 
     @PostMapping
     public Post save(@RequestBody Post post){
+
         return postService.save(post);
     }
 

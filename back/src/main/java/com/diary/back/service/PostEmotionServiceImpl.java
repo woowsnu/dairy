@@ -4,13 +4,17 @@ import com.diary.back.model.PostEmotion;
 import com.diary.back.repository.PostEmotionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class PostEmotionServiceImpl implements PostEmotionService{
 
     @Autowired
     private PostEmotionRepository repository;
+
+
 
     public List<PostEmotion> findAll(){
         return repository.findAll();

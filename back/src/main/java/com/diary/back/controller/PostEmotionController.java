@@ -2,6 +2,7 @@ package com.diary.back.controller;
 
 import com.diary.back.model.PostEmotion;
 import com.diary.back.repository.EmotionRepository;
+import com.diary.back.repository.JoinRepository;
 import com.diary.back.repository.PostEmotionRepository;
 import com.diary.back.service.PostEmotionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,8 +27,8 @@ public class PostEmotionController {
     @Autowired
     private PostEmotionService postEmotionService;
 
-    @Autowired
-    private PostEmotionRepository repository;
+//    @Autowired
+//    private JoinRepository joinRepository;
 
 //   @PutMapping
 //   public List<PostEmotion> searchDateAndUserid(@Param("post_date") String post_date, @Param("user_id") Long user_id, @Param("category_id") Long category_id){
@@ -36,5 +37,7 @@ public class PostEmotionController {
 //
 //       return repository.searchDateAndUserid(post_date, user_id, category_id);
 //   };
+
+
 
 }

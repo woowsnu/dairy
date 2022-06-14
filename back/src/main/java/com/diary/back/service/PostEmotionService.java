@@ -2,9 +2,11 @@ package com.diary.back.service;
 
 import com.diary.back.model.PostEmotion;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public interface PostEmotionService {
 
     List<PostEmotion> findAll();
@@ -15,6 +17,7 @@ public interface PostEmotionService {
 
     //위치가이상함
 //    List<PostEmotion> searchDateAndUserid(@Param("post_date") String post_date, @Param("user_id") Long user_id, @Param("category_id") Long category_id);
+
 
 
 

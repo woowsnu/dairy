@@ -9,6 +9,7 @@ import java.util.Optional;
 
 
 
+
 public interface EmotionService {
 
     List<Emotion> findAll();
