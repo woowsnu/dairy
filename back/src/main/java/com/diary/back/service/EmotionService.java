@@ -12,6 +12,8 @@ public interface EmotionService {
     Optional<Emotion> findbycatid(Long emotion_cat_id);
 
 
+//    Optional<Emotion> findByUseridAndDate(Long emotion_cat_id);
+
 //    List<Emotion> searchBycatid(Emotion emotion);
 
 //    Emotion post(Long emotion_cat_id, Emotion emotion);

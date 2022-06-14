@@ -6,6 +6,9 @@ import java.util.List;
 
 public interface UserService {
 
+
+    List<User> findbyid(User user);
+
     // 유저 등록
     User regist(User user);
 

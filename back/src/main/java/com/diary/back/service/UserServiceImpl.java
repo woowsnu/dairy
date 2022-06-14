@@ -14,6 +14,24 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository repository;
 
+
+    @Override
+    public List<User> findbyid(User user){
+
+        final Optional<User> foundbyidUser = repository.findById(user.getUser_id());
+
+        foundbyidUser.ifPresent(newUser -> {
+            newUser.setUser_id(user.getUser_id());
+            newUser.setUser_name(user.getUser_name());
+            newUser.setUser_nickname(user.getUser_nickname());
+            newUser.setUser_profile(user.getUser_profile());
+
+            repository.save(newUser);
+        });
+
+        return repository.findAll();
+    }
+
     // 유저 등록
     @Override
     public User regist(User user){ return repository.save(user); }
