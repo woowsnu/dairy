@@ -34,6 +34,13 @@ public class EmotionServiceImpl implements EmotionService {
         return emotionn;
     }
 
+//    @Override
+//    public Optional<Emotion> findByUseridAndDate(Long emotion_cat_id) {
+//
+//        Optional<Emotion> emotionn = repository.findById(emotion_cat_id);
+//        return emotionn;
+//    }
+
 //    public Optional<Emotion> find
 
 //    public Optional<Emotion> search()

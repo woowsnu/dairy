@@ -14,6 +14,11 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @PostMapping
+    public List<User> findbyid(@RequestBody User user){
+        return userService.findbyid(user);
+    }
+
     // 유저 등록
     @PostMapping
     public User regist(@RequestBody User user){
