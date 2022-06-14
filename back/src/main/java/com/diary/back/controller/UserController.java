@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("user")
+@RequestMapping("regist")
+@CrossOrigin("*")
 public class UserController {
 
     @Autowired
@@ -16,6 +17,7 @@ public class UserController {
 
     @PostMapping
     public List<User> findbyid(@RequestBody User user){
+
         return userService.findbyid(user);
     }
 
@@ -25,12 +27,12 @@ public class UserController {
         System.out.println("regist user");
         return userService.regist(user);
     }
-
-    // 유저 수정
-    @PatchMapping
-    public List<User> update(@RequestBody User user){
-        System.out.println("update user");
-        return userService.update(user);
-    }
+//
+//    // 유저 수정
+//    @PatchMapping
+//    public List<User> update(@RequestBody User user){
+//        System.out.println("update user");
+//        return userService.update(user);
+//    }
 
 }

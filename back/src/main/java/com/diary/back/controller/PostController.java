@@ -13,13 +13,26 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("post")
-@CrossOrigin
+@CrossOrigin("*")
 public class PostController {
+
+//    @Autowired
+//    private PostServiceImpl;
 
     @Autowired
     private PostService postService;
 
+    @GetMapping
+    public List<Post> findAll(){
 
+        return postService.findAll();
+    }
+
+    @PostMapping
+    public Post save(@RequestBody Post post){
+
+        return postService.save(post);
+    }
 
     @PutMapping
     public List<Post> update(@RequestBody Post post){
