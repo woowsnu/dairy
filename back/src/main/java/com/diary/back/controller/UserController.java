@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("user")
-@CrossOrigin
+@RequestMapping("regist")
+@CrossOrigin("*")
 public class UserController {
 
     @Autowired
@@ -20,13 +20,13 @@ public class UserController {
 
         return userService.findbyid(user);
     }
-//
-//    // 유저 등록
-//    @PostMapping
-//    public User regist(@RequestBody User user){
-//        System.out.println("regist user");
-//        return userService.regist(user);
-//    }
+
+    // 유저 등록
+    @PostMapping
+    public User regist(@RequestBody User user){
+        System.out.println("regist user");
+        return userService.regist(user);
+    }
 //
 //    // 유저 수정
 //    @PatchMapping
