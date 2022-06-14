@@ -1,17 +1,9 @@
-import React, { Fragment } from "react";
-import Card from "../../components/Card/Card";
+import React from "react";
+import Emotions from "../../components/Emotions/Emotions";
 
-const Emotions = () => {
-  return <Card />
-}
-
-export default Emotions
+const MainEmotions = () => {
+  return <Emotions/>;
+};
 
 
-{/* <Fragment>
-<div>Emotions</div>
-<ul>
-  <li><Link href="">기쁨</Link></li>
-  <li><Link href="">슬픔</Link></li>
-</ul>
-</Fragment> */}
+export default MainEmotions;

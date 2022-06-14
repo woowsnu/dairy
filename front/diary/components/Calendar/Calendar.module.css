@@ -1,0 +1,8 @@
+.calendar {
+    border: 1px solid #d9d9db;
+}
+
+.calendar button {
+    border: 1px solid #d9d9db;
+    padding: 10px;
+}
