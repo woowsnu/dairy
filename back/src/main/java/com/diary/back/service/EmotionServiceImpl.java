@@ -23,10 +23,12 @@ public class EmotionServiceImpl implements EmotionService {
 
     @Override
     public List<Emotion> findAll(){
-        List<Emotion> emotion = new ArrayList<>();
-        repository.findAll().forEach(e -> emotion.add(e));
-        return emotion;
+//        List<Emotion> emotion = new ArrayList<>();
+//        repository.findAll().forEach(e -> emotion.add(e));
+//        return emotion;
+        return repository.findAll();
     }
+
 
     @Override
     public Optional<Emotion> findbycatid(Long emotion_cat_id) {
