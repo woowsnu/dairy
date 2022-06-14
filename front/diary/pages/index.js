@@ -1,9 +1,11 @@
 // import Head from "next/head";
 // import Image from "next/image";
 import { Reset } from "styled-reset";
+import Link from "next/link";
 import Main from "../components/Layout/Layout";
 import Header from "../components/Layout/Header";
-import Calendar from "../components/Calendar/Calendar";
+import UserCalendar from "../components/Calendar/Calendar";
+import Button from "../components/UI/Button";
 
 // 사용자 일기 데이터 불러와서 달력에 표시해줘야 함
 const USER_POST = [
@@ -25,7 +27,9 @@ export default function Home() {
   return (
     <>
       <Reset />
-      <Calendar userPost={USER_POST}/>
+      <UserCalendar userPost={USER_POST}/>
+      {/* 각 날짜 클릭시 이동해야하지만 우선 버튼으로 대체 */}
+      <Link href="/emotions"><Button>일기쓰기(임시)</Button></Link>
     </>
   );
 }

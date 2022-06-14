@@ -1,70 +1,65 @@
+import Document from "next/document";
 import React, { useEffect, useRef, useState } from "react";
-import ReactDOM from "react-dom";
+import ReactDOM, { createPortal } from "react-dom";
 import styled from "styled-components";
+import MyDocument from "../../pages/_document";
 
-const Modal = ({ show, onClose, children, title}) => {
-  const [isBrowser, setIsBrowser] = useState(false);
 
-  useEffect(() => {
-    setIsBrowser(true);
-  }, []);
 
-  const handleCloseClick = (e) => {
-    e.preventDefault();
-    onClose();
-  };
+// const Backdrop = (props) => {
+//   return <div></div>;
+// };
 
-  const modalContent = show ? (
-    <StyledModalOverlay>
-      <StyledModal>
-        <StyledModalHeader>
-          <a href="#" onClick={handleCloseClick}>
-            x
-          </a>
-        </StyledModalHeader>
-        {title && <StyledModalTitle>{title}</StyledModalTitle>}
-        <StyledModalBody>{children}</StyledModalBody>
-      </StyledModal>
-    </StyledModalOverlay>
-  ) : null;
+// const ModalOverlay = (props) => {
+//   return (
+//     <div>
+//       <div>content{props.children}</div>
+//     </div>
+//   );
+// };
 
-  if (isBrowser) {
-    return ReactDOM.createPortal(
-      <div>Hello from modal</div>,
-      document.getElementById("modal-root")
-    );
-  } else {
-    return null;
-  }
+
+const Modal = ({selector}) => {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(()=>{
+    setMounted(true)
+    return () => setMounted(false)
+  }, [selector])
+
+  return mounted ? createPortal(document.querySelector(selector)) : null
+      {/* {ReactDOM.createPortal(<Backdrop/>, portalElement)} */}
+      
+
 };
 
 export default Modal;
 
-const StyledModalBody = styled.div`
-  padding-top: 10px;
-`;
+// const StyledModalBody = styled.div`
+//   padding-top: 10px;
+// `;
 
-const StyledModalHeader = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  font-size: 25px;
-`;
+// const StyledModalHeader = styled.div`
+//   display: flex;
+//   justify-content: flex-end;
+//   font-size: 25px;
+// `;
 
-const StyledModal = styled.div`
-  background: white;
-  width: 500px;
-  height: 600px;
-  border-radius: 15px;
-  padding: 15px;
-`;
-const StyledModalOverlay = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
-`;
+// const StyledModal = styled.div`
+//   background: white;
+//   width: 500px;
+//   height: 600px;
+//   border-radius: 15px;
+//   padding: 15px;
+// `;
+// const StyledModalOverlay = styled.div`
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   background-color: rgba(0, 0, 0, 0.5);
+// `;
