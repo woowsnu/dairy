@@ -1,9 +1,14 @@
 import React from 'react'
+import ChartTotal from '../../components/Charts/ChartTotal'
+import Mypage from '../../components/Mypage/Mypage'
 
-const index = () => {
+const total = () => {
   return (
-    <Mypage>종합</Mypage>
+    <div className="total">
+      <Mypage></Mypage>
+      <ChartTotal/>
+    </div>
   )
 }
 
-export default index
+export default total
