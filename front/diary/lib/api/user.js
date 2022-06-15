@@ -1,7 +1,7 @@
 import baseURL from "."
 
 // Regist user API
-export const postUserAPI = (user) => fetch(`${baseURL}/regist`,{
+export const registUserAPI = (user) => fetch(`${baseURL}/user`,{
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'

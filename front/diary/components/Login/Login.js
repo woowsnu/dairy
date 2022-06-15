@@ -1,25 +1,39 @@
 import Link from 'next/link'
-import React from 'react'
+import React, {useState} from 'react'
 
 const login = () => {
+    const [id, setId] = useState('');
+    const [password, setPassword] = useState('');
+
+    const logIn = () =>{
+        const inputUser = {
+            input_user_name: id,
+            input_user_password: password,
+        }
+        const user = {
+
+        }
+    }
+
+
   return (
     <>
         <div>로그인</div>
         <div>
-            <input class="login-form" id="user-email" type="string" placeholder="아이디" required />
+            <input class="login-form" id="user-name" type="text" value ={id} placeholder="아이디" required />
         </div>
         <div>
-            <input class="login-form" id="password" type="password" placeholder="비밀번호" required />
+            <input class="login-form" id="password" type="password" value={password} placeholder="비밀번호" required />
         </div>
         <div>
             <input class="login-keeping" id="check-keeping" name="check-keeping"type="checkbox" />
             <label class="login-keeping-label" for="check-keeping">로그인 유지</label>
         </div>
         <div>
-            {/* <button><Link href="">로그인</Link></button> */}
+            <button type="button" onClick={logIn}>로그인</button>
         </div>
         <div>
-            아직 회원이 아니신가요? <Link href="/regist">회원가입</Link>
+            아직 회원이 아니신가요? <Link href="/user">회원가입</Link>
         </div>
         <div>
             비밀번호를 잊으셨나요? <Link href="/findpw">비밀번호 찾기</Link>
