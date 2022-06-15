@@ -14,4 +14,6 @@ public interface UserService {
 
     // 유저 수정
     List<User> update(User user);
+
+    void login(User user);
 }

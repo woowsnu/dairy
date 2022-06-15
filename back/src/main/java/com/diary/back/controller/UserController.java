@@ -41,20 +41,10 @@ public class UserController {
 //    }
 
     @PostMapping("/login")
-    protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException{
-        System.out.println("doPost 실행");
-        res.setContentType("text/html;charset=UTF-8");
-
-
-        PrintWriter out = res.getWriter();
-        out.print("user login post방식");
-        System.out.println("doPost get");
-
-        String id = req.getParameter("user_name");
-        String pw = req.getParameter("password");
-
-        out.print("id " + id);
-        out.print("pw " + pw);
-        out.close();
+    public void login(@RequestBody User user){
+        System.out.println("login");
+        System.out.println(user.getUser_name());
+        System.out.println(user.getUser_password());
+        userService.login(user);
     }
 }
