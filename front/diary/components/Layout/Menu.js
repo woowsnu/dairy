@@ -11,7 +11,6 @@ const Menu = (props) => {
 
   return (
     <Rnb>
-      <div>
         <Link href="/">
           <CancelIcon />
         </Link>
@@ -23,14 +22,13 @@ const Menu = (props) => {
         <div>
           <ul>
             <li>
-              <Link href="/mypage">마이페이지</Link>
+              <Link href="/mypage/weekly">마이페이지</Link>
             </li>
             <li>
               <Link href="/mypage">회원정보수정</Link>
             </li>
           </ul>
         </div>
-      </div>
     </Rnb>
   );
 };
@@ -38,12 +36,13 @@ const Menu = (props) => {
 export default Menu;
 
 const Rnb = styled.div`
+  width: 70%;
+  float: right;
   display: flex;
   justify-content: flex-end;
   position: fixed;
   top: 0;
   background-color: #fff;
-  width: 70%;
   z-index: 100;
   animation: slide-down 300ms ease-out forwards;
 `;

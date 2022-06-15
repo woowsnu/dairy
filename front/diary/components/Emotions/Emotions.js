@@ -62,11 +62,11 @@ const Emotions = () => {
   // }
 
   const [selected, setSelected] = useState([]);
-  const [isClicked, setIsClicked] = useState(false);
+  // const [isClicked, setIsClicked] = useState(false);
 
-  const clickHandler = () => {
-    setIsClicked(!isClicked);
-  };
+  // const clickHandler = () => {
+  //   setIsClicked(!isClicked);
+  // };
 
   const selectHandler = (event) => {
     setSelected(event.target.value);
@@ -80,77 +80,59 @@ const Emotions = () => {
   // );
 
   return (
-    <div>
-      <Title>오늘의 기분은 어떠셨나요?</Title>
-      <Section>
+    <Container>
+      <div className="title">오늘의 기분은 어떠셨나요?</div>
+      <div className="seleted-word-area">
         {selected.length > 0 ? (
           selected
         ) : (
           <div>선택하신 단어가 표시됩니다.</div>
         )}
-      </Section>
-      <Wrap>
-          <EmotionTab cats={EC} clickHandler={clickHandler}/>
-          {/* <Link href={"/emotions/" + EC[1].id}>
-            <div className="btn" onClick={clickHandler} key={EC[1].id}>
-              <div className="btn-main-emotion" style={{backgroundColor : EC[1].color}}></div>
-              <p className="txt-main-emotion">{EC[1].name}</p>
-            </div>
-          </Link> */}
-      </Wrap>
+      </div>
+        <EmotionTab cats={EC} selectHandler={selectHandler} />
       {selected.length > 0 ? (
         <Link href="/write">
           <Button>일기쓰기</Button>
         </Link>
       ) : (
-        <Button style={{backgroundColor: "grey"}}>단어를 선택해주세요</Button>
+        <button className="btn-disable">단어를 선택해주세요</button>
       )}
-    </div>
+    </Container>
   );
 };
 
 export default Emotions;
 
-const Title = styled.div`
-  ${fonts.H1};
-  color: ${colors.gray1};
-  text-align: center;
-  padding: 20px 0;
-`;
-const Section = styled.div`
-  border: 1px dashed ${colors.gray4};
-  padding: 110px 45px;
-  text-align: center;
-  ${fonts.Body1};
-  color: ${colors.gray4};
-`;
+const Container = styled.div`
+  width: 94%;
+  margin: 0 auto;
 
-const Wrap = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 335px;
-  padding: 0 20px;
-  margin-top: 22px;
-
-  .btn-main-emotion {
-    position: absolute;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    z-index: 1;
+  .title {
+    ${fonts.H2};
+    color: ${colors.gray1};
+    text-align: left;
+    padding: 30px 0;
   }
 
-  .btn-main-emotion2 {
-    position: relative;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    z-index: 5;
-  }
-
-  .txt-main-emotion {
+  .seleted-word-area {
+    border: 1px dashed ${colors.gray4};
+    padding: 110px 45px;
     text-align: center;
-    padding-top: 10px;
-    ${fonts.Body1}
+    ${fonts.Body1};
+    color: ${colors.gray4};
+  }
+
+  .btn-disable {
+    width: 100%;
+    padding: 20px;
+    margin: 30px auto;
+    ${fonts.Body1};
+    font-weight: 600;
+    background-color: ${colors.gray4};
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
   }
 `;

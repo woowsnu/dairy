@@ -1,17 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
+import { useRouter } from "next/router";
+import { postTodoAPI } from "../../lib/api/post";
 import colors from "../../styles/colors";
 import fonts from "../../styles/fonts";
 import styled from "styled-components";
 import Button from "../UI/Button";
 
 const Post = () => {
+  //todo 입력 폼에 들어갈 항목들을 state로 관리
+  const [description, setDescription] = useState("");
+  const [emotion, setEmotion] = useState("와우")
+  
+  // useRouter
+  const router = useRouter();
+
+  const descChangeHandler = (e) => {
+    setDescription(e.target.value);
+  };
+  // addTodo 함수 작성
+  const addTodo = () => {
+    const post = {
+      emotion: emotion,
+      post_text: description,
+    };
+    console.log(post);
+    //POST API 요청 전송, data와 함께
+    postTodoAPI(post);
+    // 폼에 입력된 상태값 초기화
+    // setTitle('');
+    // setDescription('');
+    // setDueDate('');
+    router.replace("/");
+  };
+
   return (
     <Container>
       <form>
-      <h3 className="write-title">2022.06.14</h3>
-      <input type="text" value={"선택된 단어들이 들어와야하는데"}/>
-      <textarea className="write-area">오늘의 감정을 글로 남겨보세요.</textarea>
-      <Button type="submit">저장</Button>
+        <h3 className="write-title">2022.06.14</h3>
+        <input type="text" value={emotion} />
+        <textarea className="write-area" value={description} onChange={descChangeHandler}>
+        </textarea>
+        <Button onClick={addTodo}>저장</Button>
       </form>
     </Container>
   );
@@ -39,6 +68,6 @@ const Container = styled.div`
     padding: 12px;
     margin-top: 20px;
     ${fonts.Body2};
-    color: ${colors.gray3}
+    color: ${colors.gray3};
   }
-`
+`;
