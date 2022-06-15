@@ -26,4 +26,7 @@ public class EmotionCategory {
 
     @OneToMany(mappedBy = "emotionCategory")
     private List<Emotion> emotionList = new ArrayList<>();
+
+
 }
+

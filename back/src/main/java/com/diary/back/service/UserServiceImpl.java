@@ -5,6 +5,7 @@ import com.diary.back.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Optional;
 
@@ -68,4 +69,20 @@ public class UserServiceImpl implements UserService {
         }else { System.out.println(false); }
     }
 
+
+    //임시저장
+    @Override
+    public Boolean isThereUseridAndPassword(User user){
+
+        User loginuser = repository.findByUser_name(user.getUser_name());
+
+        if(loginuser == null){
+            return false;
+        }
+        if(!loginuser.getUser_password().equals(user.getUser_password())){
+            return false;
+        }
+
+        return true;
+    }
 }

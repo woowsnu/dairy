@@ -12,6 +12,8 @@ import java.util.List;
 @Repository
 public interface PostEmotionRepository extends JpaRepository<PostEmotion, Long> {
 
+//    @Query("SELECT * FROM post p LEFT OUTER JOIN post_emotion pe ON p.post_id=pe.post_id  AND p.post_id=:post_id AND p.post_date=:post_date UNION SELECT * FROM post p RIGHT OUTER JOIN post_emotion pe ON p.post_id=pe.post_id")
+//    List<Object> searchDateAndUserid(@Param("post_date") LocalDate post_date, @Param("user_id") Long user_id);
 //    @Query("SELECT post_date FROM post")
 //    List<Object> searchjoin();
 

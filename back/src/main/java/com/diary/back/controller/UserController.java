@@ -40,11 +40,21 @@ public class UserController {
 //        return userService.update(user);
 //    }
 
-    @PostMapping("/login")
-    public void login(@RequestBody User user){
-        System.out.println("login");
-        System.out.println(user.getUser_name());
-        System.out.println(user.getUser_password());
-        userService.login(user);
+
+
+//    @PostMapping("/login")
+//    public void login(@RequestBody User user){
+//        System.out.println("login");
+//        System.out.println(user.getUser_name());
+//        System.out.println(user.getUser_password());
+//        userService.login(user);
+//    }
+
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public String isThere(@ModelAttribute User user) {
+        if (userService.isThereUseridAndPassword(user)) {
+            return "redirect:/";
+        }
+        return "로그인페이지";
     }
 }
