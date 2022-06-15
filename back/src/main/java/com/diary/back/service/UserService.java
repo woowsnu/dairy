@@ -1,7 +1,9 @@
 package com.diary.back.service;
 
 import com.diary.back.model.User;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 public interface UserService {
@@ -16,4 +18,6 @@ public interface UserService {
     List<User> update(User user);
 
     void login(User user);
+
+    Boolean isThereUseridAndPassword(User user);
 }
