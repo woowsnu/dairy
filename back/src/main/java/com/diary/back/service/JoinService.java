@@ -1,4 +1,4 @@
-package com.diary.back.service;
-
-public interface JoinService {
-}
+//package com.diary.back.service;
+//
+//public interface JoinService {
+//}

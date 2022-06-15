@@ -24,7 +24,7 @@ public class UserServiceImpl implements UserService {
             newUser.setUser_id(user.getUser_id());
             newUser.setUser_name(user.getUser_name());
             newUser.setUser_nickname(user.getUser_nickname());
-            newUser.setUser_profile(user.getUser_profile());
+//            newUser.setUser_profile(user.getUser_profile());
 
             repository.save(newUser);
         });
@@ -47,7 +47,7 @@ public class UserServiceImpl implements UserService {
             newUser.setUser_email(user.getUser_email());
             newUser.setUser_nickname(user.getUser_nickname());
             newUser.setUser_password(user.getUser_password());
-            newUser.setUser_profile(user.getUser_profile());
+//            newUser.setUser_profile(user.getUser_profile());
 
             repository.save(newUser);
 

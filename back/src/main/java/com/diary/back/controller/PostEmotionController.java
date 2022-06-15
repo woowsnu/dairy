@@ -2,7 +2,7 @@ package com.diary.back.controller;
 
 import com.diary.back.model.PostEmotion;
 import com.diary.back.repository.EmotionRepository;
-import com.diary.back.repository.JoinRepository;
+//import com.diary.back.repository.JoinRepository;
 import com.diary.back.repository.PostEmotionRepository;
 import com.diary.back.service.PostEmotionService;
 import org.springframework.beans.factory.annotation.Autowired;

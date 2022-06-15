@@ -25,6 +25,6 @@ public class User {
     private String user_password;
     private String user_email;
     private String user_nickname;
-    private String user_profile;
+//    private String user_profile; 미구현
 
 }
