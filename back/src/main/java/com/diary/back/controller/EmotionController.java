@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("emotion")    // 뭐라고 주소를 적어야하지? 주소를 꼭 적어야하나?
+@RequestMapping("emotions")    // 뭐라고 주소를 적어야하지? 주소를 꼭 적어야하나?
 public class EmotionController {
 
     @Autowired
@@ -51,9 +51,9 @@ public class EmotionController {
 //        return new ResponseEntity<Emotion>(emotion.get(), HttpStatus.OK);
 //    }
 
-    @GetMapping(path = "")
+    @GetMapping
     public List<Emotion> findAll(){
-
+        System.out.println("Get요청 전송됨");
         return emotionService.findAll();
     }
 
