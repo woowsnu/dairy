@@ -57,4 +57,15 @@ public class UserServiceImpl implements UserService {
 
     }
 
+    // 유저가 로그인하면 DB 안의 user 들과 하나씩 비교해서 true false 반환하기
+    // 실패
+    @Override
+    public void login(User user){
+        System.out.println("login serviceImpl");
+
+        if(repository.equals(user.getUser_name())){
+            System.out.println(true);
+        }else { System.out.println(false); }
+    }
+
 }
