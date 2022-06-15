@@ -15,18 +15,18 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping
-    public List<User> findbyid(@RequestBody User user){
-
-        return userService.findbyid(user);
-    }
-
-//    // 유저 등록
 //    @PostMapping
-//    public User regist(@RequestBody User user){
-//        System.out.println("regist user");
-//        return userService.regist(user);
+//    public List<User> findbyid(@RequestBody User user){
+//
+//        return userService.findbyid(user);
 //    }
+
+    // 유저 등록
+    @PostMapping
+    public User regist(@RequestBody User user){
+        System.out.println("regist user");
+        return userService.regist(user);
+    }
 //
 //    // 유저 수정
 //    @PatchMapping
