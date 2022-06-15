@@ -28,6 +28,7 @@ public class Post {
     private Long user_id;
     private LocalDate post_date;
     private String post_text;
+    private String post_text_summary;
 
 //    @OneToMany
 //    @JoinTable(name = "PostPostEmotion", joinColumns = @JoinColumn(name = "post_id"),

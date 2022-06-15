@@ -15,7 +15,7 @@ public class PostEmotion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "POST_EMOTION_ID")
+    @Column
     private Long post_emotion_id;
     @ManyToOne(fetch = FetchType.LAZY, targetEntity = Post.class)
     @JoinColumn(name="post_id")

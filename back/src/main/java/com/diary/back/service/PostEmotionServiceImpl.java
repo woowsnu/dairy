@@ -17,6 +17,7 @@ public class PostEmotionServiceImpl implements PostEmotionService{
 
 
     public List<PostEmotion> findAll(){
+
         return repository.findAll();
     }
 

@@ -1,7 +1,6 @@
 package com.diary.back.service;
 
 import com.diary.back.model.Post;
-import com.diary.back.model.PostEmotion;
 import com.diary.back.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
