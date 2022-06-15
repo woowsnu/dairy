@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
-import { postUserAPI } from '../../../lib/api/user';
+import { registUserAPI } from '../../../lib/api/user';
 
 const SignUp = () => {
 
@@ -37,9 +37,10 @@ const SignUp = () => {
       user_nickname: nickname,
       user_profile: profile,
     }
-    console.log(user);
+    // 확인용
+    // console.log(user);
 
-    postUserAPI(user);
+    registUserAPI(user);
 
     setId('');
     setPassword('');
@@ -47,7 +48,7 @@ const SignUp = () => {
     setNickname('');
     setProfile('');
 
-    router.replace('/regist/regist_com')
+    router.replace('/user/regist_com')
 
   }
 
