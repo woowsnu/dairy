@@ -1,24 +1,38 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router';
 import React, {useState} from 'react'
+import { loginUserAPI } from '../../lib/api/user';
 
 const login = () => {
     const [id, setId] = useState('');
     const [password, setPassword] = useState('');
 
+    const router = useRouter();
+
     const logIn = () =>{
         const inputUser = {
-            input_user_name: id,
-            input_user_password: password,
+            user_name: id,
+            user_password: password,
         }
-        const user = {
-
-        }
+        
+        loginUserAPI(inputUser);
+        
+        router.replace('/');
     }
 
 
   return (
     <>
         <div>로그인</div>
+
+        <form action={logIn} method="POST">
+            <input type="text" name="user_name"/><br/>
+            <input type="password" name="password"/><br/>
+            <input type="submit" value="로그인"/>
+        </form>
+
+
+
         <div>
             <input class="login-form" id="user-name" type="text" value ={id} placeholder="아이디" required />
         </div>
