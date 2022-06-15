@@ -4,6 +4,7 @@ import com.diary.back.model.User;
 import com.diary.back.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -23,7 +24,7 @@ public class UserServiceImpl implements UserService {
 
         foundbyidUser.ifPresent(newUser -> {
             newUser.setUser_id(user.getUser_id());
-            newUser.setUser_name(user.getUser_name());
+            newUser.setUsername(user.getUsername());
             newUser.setUser_nickname(user.getUser_nickname());
 //            newUser.setUser_profile(user.getUser_profile());
 
@@ -34,8 +35,8 @@ public class UserServiceImpl implements UserService {
     }
 
     // 유저 등록
-    @Override
-    public User regist(User user){ return repository.save(user); }
+//    @Override
+//    public User regist(User user){ return repository.save(user); }
 
     // 유저 수정
     @Override
@@ -44,7 +45,7 @@ public class UserServiceImpl implements UserService {
         final Optional<User> foundUser = repository.findById(user.getUser_id());
 
         foundUser.ifPresent(newUser -> {
-            newUser.setUser_name(user.getUser_name());
+            newUser.setUsername(user.getUsername());
             newUser.setUser_email(user.getUser_email());
             newUser.setUser_nickname(user.getUser_nickname());
             newUser.setUser_password(user.getUser_password());
@@ -60,26 +61,29 @@ public class UserServiceImpl implements UserService {
 
     // 유저가 로그인하면 DB 안의 user 들과 하나씩 비교해서 true false 반환하기
     // 실패
-    @Override
-    public void login(User user){
-        System.out.println("login serviceImpl");
-
-        if(repository.equals(user.getUser_name())){
-            System.out.println(true);
-        }else { System.out.println(false); }
-    }
+//    @Override
+//    public void login(User user){
+//        System.out.println("login serviceImpl");
+//
+//        if(repository.equals(user.getUser_name())){
+//            System.out.println(true);
+//        }else { System.out.println(false); }
+//    }
 
 
     //임시저장
     @Override
-    public Boolean isThereUseridAndPassword(User user){
+    public Boolean isThereUseridAndPassword(Model model){
 
-        User loginuser = repository.findByUser_name(user.getUser_name());
+//        Model loginUser = repository.findByUser_name(model.getAttribute("user_name"));
+        String loginuser = (String) model.asMap().get("user_name");
+        Model userCheck = repository.findByUsername(loginuser);
 
-        if(loginuser == null){
+        if(userCheck == null){
             return false;
         }
-        if(!loginuser.getUser_password().equals(user.getUser_password())){
+//        if(!loginuser.getUser_password().equals(user.getUser_password())){
+        if(!userCheck.getAttribute("user_password").equals(model.getAttribute("user_password"))){
             return false;
         }
 
