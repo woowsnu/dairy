@@ -1,9 +1,14 @@
 import React from 'react'
+import ChartMonthly from '../../components/Charts/ChartMonthly'
+import Mypage from '../../components/Mypage/Mypage'
 
-const index = () => {
+const monthly = () => {
   return (
-    <Mypage>월간</Mypage>
+    <div className="monthly">
+      <Mypage></Mypage>
+      <ChartMonthly/>
+    </div>
   )
 }
 
-export default index
+export default monthly

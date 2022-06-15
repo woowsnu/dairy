@@ -1,10 +1,14 @@
 import React from 'react'
+import ChartWeekly from '../../components/Charts/ChartWeekly'
 import Mypage from '../../components/Mypage/Mypage'
 
-const index = () => {
+const weekly = () => {
   return (
-    <Mypage>주간</Mypage>
+    <div className="weekly">
+      <Mypage></Mypage>
+      <ChartWeekly/>
+    </div>
   )
 }
 
-export default index
+export default weekly
