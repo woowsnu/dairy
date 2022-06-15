@@ -1,8 +1,9 @@
 import React from 'react'
-import Post from '../../components/Post/Post'
 
 const index = () => {
-  return <Post/>
+  return (
+    <Mypage>월간</Mypage>
+  )
 }
 
 export default index

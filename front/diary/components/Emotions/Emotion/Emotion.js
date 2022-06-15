@@ -18,7 +18,7 @@ const Emotion = (props) => {
   };
 
   console.log(isChecked);
-  
+
   const sliderValueHandelr = (e) => {
     console.log(e.target.value);
   }
@@ -89,6 +89,6 @@ const Wrapper = styled.div`
 
   .slider {
     width: 100%;
-    background-color: ${colors.primary};
+    background: ${colors.primary};
   }
 `

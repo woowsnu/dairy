@@ -4,7 +4,7 @@ import fonts from "../../styles/fonts";
 
 const Button = (props) => {
   return (
-    <Btn type={props.type || "button"} onClick={props.onClick}>
+    <Btn type={ props.type || "button" } onClick={props.onClick}>
       {props.children}
     </Btn>
   );
