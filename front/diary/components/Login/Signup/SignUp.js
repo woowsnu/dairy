@@ -9,7 +9,7 @@ const SignUp = () => {
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
   const [nickname, setNickname] = useState('');
-  const [profile, setProfile] = useState('');
+  // const [profile, setProfile] = useState('');
 
   const router = useRouter();
 
@@ -25,9 +25,9 @@ const SignUp = () => {
   const nicknameChangeHandler = (event) => {
     setNickname(event.target.value);
   };
-  const profileChangeHandler = (event) => {
-    setProfile(event.target.value);
-  };
+  // const profileChangeHandler = (event) => {
+  //   setProfile(event.target.value);
+  // };
 
   const signUp = () => {
     const user = {
@@ -35,7 +35,7 @@ const SignUp = () => {
       user_password: password,
       user_email: email,
       user_nickname: nickname,
-      user_profile: profile,
+      // user_profile: profile,
     }
     // 확인용
     // console.log(user);
@@ -46,7 +46,7 @@ const SignUp = () => {
     setPassword('');
     setEmail('');
     setNickname('');
-    setProfile('');
+    // setProfile('');
 
     router.replace('/user/regist_com')
 
@@ -75,10 +75,10 @@ const SignUp = () => {
         닉네임<br/>
         <input id="regist-nickname" type="text" value={nickname} onChange={nicknameChangeHandler} placeholder="닉네임을 입력해주세요" required />
       </div>
-      <div>
+      {/* <div>
         프로필이미지<br/>
         <input id="regist-profile" type="text" value={profile} onChange={profileChangeHandler} placeholder="임시프로필을 입력해주세요" required />
-      </div>
+      </div> */}
       <div>
         <button type="button" onClick={signUp}>회원가입</button>
       </div>
