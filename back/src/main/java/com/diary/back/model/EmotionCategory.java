@@ -24,6 +24,6 @@ public class EmotionCategory {
     private String emotion_cat_name;
     private String emotion_cat_color;
 
-    @OneToMany(mappedBy = "emotionCategory")
-    private List<Emotion> emotionList = new ArrayList<>();
+//    @OneToMany(mappedBy = "emotionCategory")
+//    private List<Emotion> emotionList = new ArrayList<>();
 }
