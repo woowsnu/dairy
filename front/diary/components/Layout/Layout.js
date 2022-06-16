@@ -4,6 +4,7 @@ import colors from "../../styles/colors";
 import Header from "./Header";
 
 const Layout = (props) => {
+
   return (
     <Container>
       <Header />

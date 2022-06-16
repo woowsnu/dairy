@@ -7,40 +7,65 @@ import styled from "styled-components";
 import Button from "../UI/Button";
 
 const Post = () => {
-  //todo 입력 폼에 들어갈 항목들을 state로 관리
+  //post 입력 항목 state
   const [description, setDescription] = useState("");
-  const [emotion, setEmotion] = useState("와우")
-  
-  // useRouter
-  const router = useRouter();
 
+  // 쿼리스트링으로 받은 감정 단어
+  const router = useRouter();
+  const emotion = router.query.selected;
+
+  // new Date의 날짜 포맷 지정
+  const today = new Date();
+  
+  function getToday(){
+    var year = today.getFullYear();
+    var month = ("0" + (1 + today.getMonth())).slice(-2);
+    var day = ("0" + today.getDate()).slice(-2);
+    return year + "-" + month + "-" + day;
+  }
+
+  const date = getToday(today);
+//  function leftPad(value) {
+//     if (value >= 10) {
+//         return value;
+//     }
+
+//     return `0${value}`;
+//     }
+
+//   function toStringByFormatting(source, delimiter = '-') {
+//     const year = source.getFullYear();
+//     const month = leftPad(source.getMonth() + 1);
+//     const day = leftPad(source.getDate());
+    
+//     return [year, month, day].join(delimiter);
+// }
   const descChangeHandler = (e) => {
     setDescription(e.target.value);
   };
+
   // addTodo 함수 작성
-  const addTodo = () => {
+  const addPost = () => {
     const post = {
-      emotion: emotion,
+      emotion_list: emotion,
       post_text: description,
+      post_date : date
     };
-    console.log(post);
-    //POST API 요청 전송, data와 함께
+
     postTodoAPI(post);
-    // 폼에 입력된 상태값 초기화
-    // setTitle('');
-    // setDescription('');
-    // setDueDate('');
+
     router.replace("/");
   };
 
   return (
     <Container>
       <form>
-        <h3 className="write-title">2022.06.14</h3>
-        <input type="text" value={emotion} />
+        <h3 className="write-title">{date}</h3>
+        <div value={emotion}>{emotion}</div>
+        {/* <input type="text" placeholder={router.query.selected} value={router.query.selected}>{router.query.emotion}</input> */}
         <textarea className="write-area" value={description} onChange={descChangeHandler}>
         </textarea>
-        <Button onClick={addTodo}>저장</Button>
+        <Button onClick={addPost}>저장</Button>
       </form>
     </Container>
   );

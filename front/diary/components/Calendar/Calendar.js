@@ -9,10 +9,10 @@ const UserCalendar = () => {
   const onChange = () => {
     setDate(date);
   };
+
   return (
     <Container>
       <Calendar onChange={onChange} value={date} />
-      {console.log(date)}
     </Container>
   );
 };
@@ -24,7 +24,3 @@ const Container = styled.div`
   justify-content: center;
   padding-top: 30px;
 `
-
-{
-  /* <div>{moment(value).format("YYYY년 MM월 DD일")}</div> */
-}
