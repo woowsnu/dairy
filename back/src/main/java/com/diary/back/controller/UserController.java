@@ -1,10 +1,11 @@
 package com.diary.back.controller;
 
+import com.diary.back.model.Model;
 import com.diary.back.model.User;
 import com.diary.back.service.UserService;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.Model;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -71,11 +72,14 @@ public class UserController {
     @PostMapping(value = "/login")
 //    public String isThere(@ModelAttribute("login") Model model) {
     public String isThere(@RequestBody Model model){
+        //여기서부터 다 살리기
+
         if (userService.isThereUseridAndPassword(model)) {
-//            return "redirect:/";
+////            return "redirect:/";
             return "naver.com";
         }
-//        return "로그인페이지";
+////        return "로그인페이지";
         return "google.com";
+//        return userService.isThereUseridAndPassword(model);
     }
 }

@@ -1,10 +1,12 @@
 package com.diary.back.service;
 
+import ch.qos.logback.core.CoreConstants;
+import com.diary.back.model.Model;
 import com.diary.back.model.User;
 import com.diary.back.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.stereotype.Service;
-import org.springframework.ui.Model;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -70,27 +72,51 @@ public class UserServiceImpl implements UserService {
 //        }else { System.out.println(false); }
 //    }
 
-
+//    String jsonStr = jsonArray.toJSONString();
     //임시저장
     @Override
     public Boolean isThereUseridAndPassword(Model model){
 
-//        Model loginUser = repository.findByUser_name(model.getAttribute("user_name"));
-        String loginUser = (String) model.asMap().get("user_name");
-        String userCheck = repository.findByUsername(loginUser);
 
-        String loginUserPass = (String) model.asMap().get("user_password");
-        String userCheckPass = repository.findByUserpassword(loginUserPass);
+//        Model loginUser = repository.findByUser_name(model.getAttribute("user_name"));//ver1
+//        String loginUser = (String) model.getUsername();//ver2
+        String loginUser = model.getUsername(); //ver3
+//        String loginUser = (String) model.asMap().get("user_name"); //ver1
+        User userSelect = repository.findByUsername(loginUser);
+        System.out.println(userSelect);
+//        String userCheckk = userCheck.getUsername(model);
+        String userCheck = userSelect.getUsername(); //살려야함
+//        System.out.println(userCheck); // DB안에 있는 lucky
+                                        //DB밖 lucky
+////        String userCheck = repository.findByUsername(model.getUsername());//ver2
+//
+//        String loginUserPass = (String) model.getUserpassword();
+////        String loginUserPass = (String) model.asMap().get("user_password"); //ver1
+//        String userCheckPass = repository.findByUserpassword(loginUserPass);
 
-        if(userCheck == null){
+
+
+        //여기서부터 다 살리기
+        //lastPass
+        String loginUserPass = model.getUserpassword();
+        User userSelectPass = repository.findByUserpassword(loginUserPass);
+        String userCheckPass = userSelectPass.getUserpassword();
+
+//        //ver2
+        if(userSelect == null){
             return false;
         }
 //        if(!loginuser.getUser_password().equals(user.getUser_password())){
 //        if(!userCheckPass.getAttribute("user_password").equals(model.getAttribute("user_password"))){
-        if(userCheckPass == null){
+        if(!userSelectPass.getUserpassword().equals(loginUserPass)){
+//        if(userCheckPass == null){
             return false;
         }
 
         return true;
+//        return userCheck;
+//        return "";
+//        return "";
     }
 }
+

@@ -1,7 +1,7 @@
 package com.diary.back.service;
 
+import com.diary.back.model.Model;
 import com.diary.back.model.User;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
