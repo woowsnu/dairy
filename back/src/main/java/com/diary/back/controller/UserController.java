@@ -2,6 +2,7 @@ package com.diary.back.controller;
 
 import com.diary.back.model.User;
 import com.diary.back.service.UserService;
+import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -44,8 +45,32 @@ public class UserController {
 //        userService.login(user);
 //    }
 
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String isThere(@ModelAttribute Model model) {
+//    @ModelAttribute("login")
+//    public Model getlogin(){
+//        return getlogin(1);
+//    }
+
+
+//
+//    @ModelAttribute("login")
+//    public Model model(String username, String userpassword){
+//        this.username = username;
+//        this.userpassword = userpassword;
+//    }
+//
+//    public static model of(final)
+
+//    @ModelAttribute("login")
+//    public void login(String username, String userpassword){
+//        this.username = username;
+//        this.userpassword = userpassword;
+//    }
+
+
+
+    @PostMapping(value = "/login")
+//    public String isThere(@ModelAttribute("login") Model model) {
+    public String isThere(@RequestBody Model model){
         if (userService.isThereUseridAndPassword(model)) {
 //            return "redirect:/";
             return "naver.com";

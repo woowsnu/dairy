@@ -48,7 +48,7 @@ public class UserServiceImpl implements UserService {
             newUser.setUsername(user.getUsername());
             newUser.setUser_email(user.getUser_email());
             newUser.setUser_nickname(user.getUser_nickname());
-            newUser.setUser_password(user.getUser_password());
+            newUser.setUserpassword(user.getUserpassword());
 //            newUser.setUser_profile(user.getUser_profile());
 
             repository.save(newUser);
@@ -76,14 +76,18 @@ public class UserServiceImpl implements UserService {
     public Boolean isThereUseridAndPassword(Model model){
 
 //        Model loginUser = repository.findByUser_name(model.getAttribute("user_name"));
-        String loginuser = (String) model.asMap().get("user_name");
-        Model userCheck = repository.findByUsername(loginuser);
+        String loginUser = (String) model.asMap().get("user_name");
+        String userCheck = repository.findByUsername(loginUser);
+
+        String loginUserPass = (String) model.asMap().get("user_password");
+        String userCheckPass = repository.findByUserpassword(loginUserPass);
 
         if(userCheck == null){
             return false;
         }
 //        if(!loginuser.getUser_password().equals(user.getUser_password())){
-        if(!userCheck.getAttribute("user_password").equals(model.getAttribute("user_password"))){
+//        if(!userCheckPass.getAttribute("user_password").equals(model.getAttribute("user_password"))){
+        if(userCheckPass == null){
             return false;
         }
 

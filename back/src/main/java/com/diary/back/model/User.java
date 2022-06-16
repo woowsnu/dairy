@@ -22,7 +22,7 @@ public class User {
     private Long user_id;
 
     private String username;
-    private String user_password;
+    private String userpassword;
     private String user_email;
     private String user_nickname;
 //    private String user_profile; 미구현
