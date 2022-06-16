@@ -26,9 +26,11 @@ public class Post {
     @ManyToOne(fetch = FetchType.LAZY, targetEntity = User.class)
     @JoinColumn(name = "user_id", referencedColumnName = "user_id", foreignKey = @ForeignKey(name = "user_id", foreignKeyDefinition = "FOREIGN KEY(user_id) REFERENCES USER(user_id) ON UPDATE CASCADE ON DELETE CASCADE"))
     private Long user_id;
-    private LocalDate post_date;
+    private String post_date;
     private String post_text;
     private String post_text_summary;
+    private String emotion_cat_id;
+    private String emotion_list;
 
 //    @OneToMany
 //    @JoinTable(name = "PostPostEmotion", joinColumns = @JoinColumn(name = "post_id"),
