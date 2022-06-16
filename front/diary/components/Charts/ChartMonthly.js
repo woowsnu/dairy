@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+import React from 'react'
+
+const ChartMonthly = () => {
+  return (
+    <div>ChartMonthly</div>
+  )
+}
+
+export default ChartMonthly
+=======
 import React, { PureComponent } from 'react'
 import {
     LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
@@ -111,3 +122,4 @@ export default class ChartMonthly extends PureComponent{
         );
     }
 }
+>>>>>>> 4bf7118f0e5f08d509f08b85ef5965d98f46a5d0
