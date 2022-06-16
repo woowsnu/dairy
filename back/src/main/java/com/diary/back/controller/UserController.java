@@ -7,6 +7,9 @@ import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import javax.servlet.http.HttpSession;
 
 @RestController
 @RequestMapping("/user")
@@ -66,16 +69,24 @@ public class UserController {
 //        this.username = username;
 //        this.userpassword = userpassword;
 //    }
+//    @GetMapping(path = "/loginfail 로그인실패페이지")
+//    public String loginfail(){
+//        return "loginfail";
+//    }
 
 
 
     @PostMapping(value = "/login")
 //    public String isThere(@ModelAttribute("login") Model model) {
-    public String isThere(@RequestBody Model model){
+    public String isThere(@RequestBody Model model, HttpSession session, RedirectAttributes redirectAttr){
         //여기서부터 다 살리기
 
+
         try{userService.isThereUseridAndPassword(model);
-////
+//            String s =
+            session.setAttribute("username",model.getUsername());
+//            return "redirect:/login";
+            session.setMaxInactiveInterval(-1);
             return "redirect:/";
         } catch(Exception e){
 
@@ -84,5 +95,8 @@ public class UserController {
 //        return userService.isThereUseridAndPassword(model);
     }
     }
+
+
+
 }
 
