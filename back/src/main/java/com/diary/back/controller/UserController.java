@@ -74,12 +74,15 @@ public class UserController {
     public String isThere(@RequestBody Model model){
         //여기서부터 다 살리기
 
-        if (userService.isThereUseridAndPassword(model)) {
-////            return "redirect:/";
-            return "naver.com";
-        }
-////        return "로그인페이지";
-        return "google.com";
+        try{userService.isThereUseridAndPassword(model);
+////
+            return "redirect:/";
+        } catch(Exception e){
+
+        return "로그인실패 페이지";
+
 //        return userService.isThereUseridAndPassword(model);
     }
+    }
 }
+
