@@ -1,6 +1,7 @@
 package com.diary.back.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -21,9 +22,13 @@ public class Emotion {
     private int emotion_cat_frequency;
     private int emotion_cat_average;
     private int emotion_cat_sd;
-    @ManyToOne(fetch = FetchType.LAZY, targetEntity = EmotionCategory.class)
-    @JoinColumn(name="emotion_cat_id")
-    private Long emotion_cat_id;
 
+    @JsonIgnore
+    @ManyToOne
+    @JoinColumn(name="emotion_cat_id")
+//    private Long emotion_cat_id;
+    private EmotionCategory emotionCategory;
+
+//    (fetch = FetchType.LAZY, targetEntity = EmotionCategory.class)
 
 }

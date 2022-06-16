@@ -4,13 +4,13 @@ import Link from "next/link";
 const MypageTab = () => {
   return (
     <div>
-      <Link href="/weekly">
+      <Link href="/mypage/weekly">
         <a>주간</a>
       </Link>
-      <Link href="/monthly">
+      <Link href="/mypage/monthly">
         <a>월간</a>
       </Link>
-      <Link href="/total">
+      <Link href="/mypage/total">
         <a>종합</a>
       </Link>
     </div>

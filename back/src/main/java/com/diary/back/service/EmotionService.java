@@ -1,7 +1,6 @@
 package com.diary.back.service;
 
 import com.diary.back.model.Emotion;
-import com.diary.back.model.PostEmotion;
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;
