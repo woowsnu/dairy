@@ -37,7 +37,7 @@
 
 
 ---
-## 시연 📹
+## 일기 작성 📹
 
 
 ![talkv_wro07C0f8a_tdFSfjgFRNKaIhmTWHNhp0_talkv_high](https://user-images.githubusercontent.com/98632452/174240072-7facf076-85d5-43da-b62c-3c91d67ab6a7.gif)
