@@ -37,6 +37,7 @@
 
 
 ---
+
 ## DESCRIPTION & UI 🎨
 
 *main calendar*<br/>
@@ -75,6 +76,15 @@
 <br/>
 6. 마이페이지에서는 자신이 작성한 일기에 포함된 감정들의 빈도를 그래프를 통해 표시해줍니다. ( 주간 / 월간 / 총 )<br/>
 7. 그래프 아래 쪽에는 기간에 따라 가장 많이 작성된 감정을 카드형태로 표시하고, 그 감정이 들어있는 문장을 추출해 나타냅니다.
+
+
+---
+## 시연 📹
+
+
+![talkv_wro07C0f8a_tdFSfjgFRNKaIhmTWHNhp0_talkv_high](https://user-images.githubusercontent.com/98632452/174240072-7facf076-85d5-43da-b62c-3c91d67ab6a7.gif)
+
+
 
 
 
