@@ -110,7 +110,7 @@
 `Prerequisite`
 JDBC, lombok, jackson.core, react-chartjs-2, styled-components, next-images
 
-`Environment`
+`Tools`
 Intelli J , SPRINGBOOT, VS CODE
 
 ----
