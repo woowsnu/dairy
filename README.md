@@ -37,6 +37,14 @@
 
 
 ---
+## 시연 📹
+
+
+![talkv_wro07C0f8a_tdFSfjgFRNKaIhmTWHNhp0_talkv_high](https://user-images.githubusercontent.com/98632452/174240072-7facf076-85d5-43da-b62c-3c91d67ab6a7.gif)
+
+
+
+---
 
 ## DESCRIPTION & UI 🎨
 
@@ -78,12 +86,6 @@
 7. 그래프 아래 쪽에는 기간에 따라 가장 많이 작성된 감정을 카드형태로 표시하고, 그 감정이 들어있는 문장을 추출해 나타냅니다.
 
 
----
-## 시연 📹
-
-
-![talkv_wro07C0f8a_tdFSfjgFRNKaIhmTWHNhp0_talkv_high](https://user-images.githubusercontent.com/98632452/174240072-7facf076-85d5-43da-b62c-3c91d67ab6a7.gif)
-
 
 
 
@@ -92,7 +94,7 @@
 ## ❌ TROUBLESHOOTING 😢
 
 
-- 로그인 기능 실패❌<br/> 회원가입을 하고 로그인 화면에서 데이터베이스로 데이터를 넘기고 true, false 를 확인할 수 있었지만, 최종적으로는 구현하지 못했습니다
+- 로그인 기능 실패❌<br/> 회원가입을 하고 로그인 화면에서 데이터베이스로 데이터를 넘기고 true, false 를 확인할 수 있었지만, 로그인 뒤에 세션으로 유지하는 기능까지는 구현하지 못함
 - 일기 데이터를 가져온 뒤 차트에 적용시키기 실패❌<br/> 데이터베이스에 쌓인 감정 데이터를 계산하는 데 까지는 했으나, 차트에 표현은 구현하지 못함.
 
 
