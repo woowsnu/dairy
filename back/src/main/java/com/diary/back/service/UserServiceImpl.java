@@ -86,8 +86,8 @@ public class UserServiceImpl implements UserService {
         System.out.println(userSelect);
 //        String userCheckk = userCheck.getUsername(model);
         String userCheck = userSelect.getUsername(); //살려야함
-//        System.out.println(userCheck); // DB안에 있는 lucky
-                                        //DB밖 lucky
+//        System.out.println(userCheck); // DB안에 있는 id
+                                        //DB밖 id
 ////        String userCheck = repository.findByUsername(model.getUsername());//ver2
 //
 //        String loginUserPass = (String) model.getUserpassword();

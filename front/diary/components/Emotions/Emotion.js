@@ -1,12 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import colors from "../../styles/colors";
 import fonts from "../../styles/fonts";
 import Button from "../UI/Button";
 
 const Emotion = (props) => {
-
+  // 창닫기 state
+  const [close, setClose] = useState('hidden');
   // 선택된 단어 추가
+  const { onClose } = props;
+
   const onselectHandler = (e) => {
     const emotionWord = e.target.textContent
     props.selectHandler(emotionWord);
@@ -17,9 +20,14 @@ const Emotion = (props) => {
     console.log(e.target.value);
   };
 
+  // Emotion 닫기
+  const [ emotionClose, setEmotionClose ] = useState(false);
+  const closeEmotion = () => {
+    setEmotionClose(!emotionClose);
+  } 
+
   return (
-    <Container>
-      <div>닫기</div>
+    <Container hidden={emotionClose}>
       <div className="title">
         감정의 강도는
         <br />
@@ -27,11 +35,8 @@ const Emotion = (props) => {
       </div>
       <WordSection>
         {props.emotion.map((emo)=>{
-          return <button onClick={onselectHandler}>{emo.emotion_word}</button>
+          return <div className="tag" onClick={onselectHandler}>{emo.emotion_word}</div>
         })}
-        <button onClick={onselectHandler}>
-          {props.emotion[0].emotion_word}
-        </button>
       </WordSection>
       <Wrapper>
         <div className="slider-label">
@@ -42,7 +47,7 @@ const Emotion = (props) => {
           onChange={sliderValueHandelr}
         />
       </Wrapper>
-      <Button>선택완료</Button>
+      <Button onClick={closeEmotion}>선택완료</Button>
     </Container>
   );
 };
@@ -50,26 +55,41 @@ const Emotion = (props) => {
 export default Emotion;
 
 const Container = styled.div`
-  width: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  width: 94%;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 20px 0;
+  padding: 20px;
   z-index: 100;
+  background-color: white;
 
   .title {
     text-align: left;
     ${fonts.H1};
-    color: ${colors.gray1};
+    color: ${colors.gray2};
     padding-top: 20px;
   }
 `;
 
 const WordSection = styled.div`
-  margin-top: 30px;
-  padding: 60px 0;
+  margin-top: 10px;
+  padding: 30px 10px;
   border: 1px solid ${colors.gray4};
+  display: flex;
+  flex-wrap: wrap;
+
+  .tag {
+    padding: 8px 14px;
+    margin:4px;
+    font-size: 15px;
+    background-color: ${colors.gray5};
+    border-radius: 16px;
+  }
+
+  .tag:hover {
+    background-color: ${colors.primary};
+    color: ${colors.white};
+  }
 `;
 
 const Wrapper = styled.div`
@@ -79,10 +99,15 @@ const Wrapper = styled.div`
   .slider-label {
     display: flex;
     justify-content: space-between;
+    padding-top: 10px;
   }
 
   .slider {
+    -webkit-appearance: none;
+    accent-color: ${colors.primary};
+    background-color: ${colors.gray4};
+    border-radius: 3px;
     width: 100%;
-    background: ${colors.primary};
+    height: 6px;
   }
 `;

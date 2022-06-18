@@ -24,7 +24,15 @@ const Post = () => {
     return year + "-" + month + "-" + day;
   }
 
+  function getTodayView(){
+    var year = today.getFullYear();
+    var month = ("0" + (1 + today.getMonth())).slice(-2);
+    var day = ("0" + today.getDate()).slice(-2);
+    return year + "." + month + "." + day;
+  }
+
   const date = getToday(today);
+  const dateView = getTodayView(today);
 //  function leftPad(value) {
 //     if (value >= 10) {
 //         return value;
@@ -60,10 +68,10 @@ const Post = () => {
   return (
     <Container>
       <form>
-        <h3 className="write-title">{date}</h3>
-        <div value={emotion}>{emotion}</div>
+        <h3 className="write-title">{dateView}</h3>
+        <span className="tag" value={emotion}>{emotion}</span>
         {/* <input type="text" placeholder={router.query.selected} value={router.query.selected}>{router.query.emotion}</input> */}
-        <textarea className="write-area" value={description} onChange={descChangeHandler}>
+        <textarea className="write-area" value={description} onChange={descChangeHandler} cols="30" rows="10">
         </textarea>
         <Button onClick={addPost}>저장</Button>
       </form>
@@ -74,16 +82,26 @@ const Post = () => {
 export default Post;
 
 const Container = styled.div`
+  width: 90%;  
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 30px 20px;
+  margin: 0 auto;
 
   .write-title {
     ${fonts.H2};
-    color: ${colors.gray1};
+    color: ${colors.gray2};
     text-align: left;
-    padding: 20px 0;
+    padding: 30px 0 20px 0;
+  }
+
+  .tag {
+    font-size: 14px;
+    padding: 6px 14px;
+    margin: 10px 0;
+    border-radius: 16px;
+    color: ${colors.white};
+    background-color: ${colors.primary};
   }
 
   .write-area {
@@ -91,7 +109,7 @@ const Container = styled.div`
     border: 1px solid ${colors.gray4};
     border-radius: 5px;
     padding: 12px;
-    margin-top: 20px;
+    margin-top: 30px;
     ${fonts.Body2};
     color: ${colors.gray3};
   }

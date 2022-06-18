@@ -18,6 +18,7 @@ const Cats = [
 ];
 
 const Emotions = (props) => {
+  
   // 감정 버튼 클릭 상태
   const [click, setClick] = useState(false);
   const [click1, setClick1] = useState(false);
@@ -37,32 +38,70 @@ const Emotions = (props) => {
   const onClickHandler5 = () => setClick5(!click5);
   const onClickHandler6 = () => setClick6(!click6);
   const onClickHandler7 = () => setClick7(!click7);
-
+  
   // emotion에서 선택된 단어 상태
   const [selected, setSelected] = useState([]);
-
+  
   const selectHandler = (emotion) => {
     setSelected(emotion);
   };
+
 
   return (
     <Container>
       <div className="title">오늘의 기분은 어떠셨나요?</div>
       <div className="seleted-word-area">
-        {selected.length > 0 ? selected : <div>선택하신 단어가 표시됩니다.</div>}
+        {selected.length > 0 ? (
+          selected
+        ) : (
+          <div>선택하신 단어가 표시됩니다.</div>
+        )}
       </div>
       <Wrap>
-        {click ? <Emotion emotion={props.emotion} selectHandler={selectHandler} /> : <BtnEmotion onClick={onClickHandler}>{Cats[0].name}</BtnEmotion>}
-        {click1 ? <Emotion emotion={props.emotion} selectHandler={selectHandler} /> : <BtnEmotion onClick={onClickHandler1}>{Cats[1].name}</BtnEmotion>}
-        {click2 ? <Emotion emotion={props.emotion} selectHandler={selectHandler} /> : <BtnEmotion onClick={onClickHandler2}>{Cats[2].name}</BtnEmotion>}
-        {click3 ? <Emotion emotion={props.emotion} selectHandler={selectHandler} /> : <BtnEmotion onClick={onClickHandler3}>{Cats[3].name}</BtnEmotion>}
-        {click4 ? <Emotion emotion={props.emotion} selectHandler={selectHandler} /> : <BtnEmotion onClick={onClickHandler4}>{Cats[4].name}</BtnEmotion>}
-        {click5 ? <Emotion emotion={props.emotion} selectHandler={selectHandler} /> : <BtnEmotion onClick={onClickHandler5}>{Cats[5].name}</BtnEmotion>}
-        {click6 ? <Emotion emotion={props.emotion} selectHandler={selectHandler} /> : <BtnEmotion onClick={onClickHandler6}>{Cats[6].name}</BtnEmotion>}
-        {click7 ? <Emotion emotion={props.emotion} selectHandler={selectHandler} /> : <BtnEmotion onClick={onClickHandler7}>{Cats[7].name}</BtnEmotion>}
+        {click ? (<Emotion emotion={props.emotion} selectHandler={selectHandler}/>) : ( <BtnEmotion onClick={onClickHandler}>
+            <div className="btn">
+              <div className="btn-main-emotion" style={{ backgroundColor: Cats[0].color }}></div>
+              <p className="txt-main-emotion">{Cats[0].name}</p>
+            </div></BtnEmotion>)}
+        {click1 ? (<Emotion emotion={props.emotion} selectHandler={selectHandler} />) : ( <BtnEmotion onClick={onClickHandler1}>
+            <div className="btn">
+              <div className="btn-main-emotion" style={{ backgroundColor: Cats[1].color }}></div>
+              <p className="txt-main-emotion">{Cats[1].name}</p>
+            </div></BtnEmotion>)}
+        {click2 ? (<Emotion emotion={props.emotion} selectHandler={selectHandler} />) : ( <BtnEmotion onClick={onClickHandler2}>
+            <div className="btn">
+              <div className="btn-main-emotion" style={{ backgroundColor: Cats[2].color }}></div>
+              <p className="txt-main-emotion">{Cats[2].name}</p>
+            </div></BtnEmotion>)}
+        {click3 ? (<Emotion emotion={props.emotion} selectHandler={selectHandler} />) : ( <BtnEmotion onClick={onClickHandler3}>
+            <div className="btn">
+              <div className="btn-main-emotion" style={{ backgroundColor: Cats[3].color }}></div>
+              <p className="txt-main-emotion">{Cats[3].name}</p>
+            </div></BtnEmotion>)}
+            {click4 ? (<Emotion emotion={props.emotion} selectHandler={selectHandler} />) : ( <BtnEmotion onClick={onClickHandler4}>
+            <div className="btn">
+              <div className="btn-main-emotion" style={{ backgroundColor: Cats[4].color }}></div>
+              <p className="txt-main-emotion">{Cats[4].name}</p>
+            </div></BtnEmotion>)}
+        {click5 ? (<Emotion emotion={props.emotion} selectHandler={selectHandler} />) : ( <BtnEmotion onClick={onClickHandler5}>
+            <div className="btn">
+              <div className="btn-main-emotion" style={{ backgroundColor: Cats[5].color }}></div>
+              <p className="txt-main-emotion">{Cats[5].name}</p>
+            </div></BtnEmotion>)}
+        {click6 ? (<Emotion emotion={props.emotion} selectHandler={selectHandler} />) : ( <BtnEmotion onClick={onClickHandler6}>
+            <div className="btn">
+              <div className="btn-main-emotion" style={{ backgroundColor: Cats[6].color }}></div>
+              <p className="txt-main-emotion">{Cats[6].name}</p>
+            </div></BtnEmotion>)}
+        {click7 ? (<Emotion emotion={props.emotion} selectHandler={selectHandler} />) : ( <BtnEmotion onClick={onClickHandler7}>
+            <div className="btn">
+              <div className="btn-main-emotion" style={{ backgroundColor: Cats[7].color }}></div>
+              <p className="txt-main-emotion">{Cats[7].name}</p>
+            </div></BtnEmotion>)}
       </Wrap>
+
       {selected.length > 0 ? (
-        <Link href={{ pathname: `/emotions/write`, query: { selected },}}>
+        <Link href={{ pathname: `/emotions/write`, query: { selected } }}>
           <Button>일기쓰기</Button>
         </Link>
       ) : (
@@ -82,14 +121,14 @@ const Container = styled.div`
 
   .title {
     ${fonts.H2};
-    color: ${colors.gray1};
-    text-align: left;
+    color: ${colors.gray2};
+    text-align: center;
     padding: 30px 0;
   }
 
   .seleted-word-area {
     border: 1px dashed ${colors.gray4};
-    padding: 110px 45px;
+    padding: 40px 45px;
     text-align: center;
     ${fonts.Body1};
     color: ${colors.gray4};
@@ -111,7 +150,7 @@ const Container = styled.div`
 `;
 
 const Wrap = styled.div`
-  max-width: 90%;
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -119,12 +158,31 @@ const Wrap = styled.div`
   margin: 0 auto;
 `;
 
-const BtnEmotion = styled.button`
-  width: 25%;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-top: 10px;
-  ${fonts.Body1}
-}
+const BtnEmotion = styled.div`
+  width: 23%;
+
+  .btn {
+    border: 1px solid ${colors.gray4};
+    border-radius: 3px;
+    padding: 8px;
+    margin-top: 10px;
+  }
+
+  .btn:hover {
+    border: 1px solid ${colors.primary};
+    color: ${colors.primary}
+  }
+  
+  .btn-main-emotion {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+
+  .txt-main-emotion {
+    text-align: right;
+    margin-top: 10px;
+    ${fonts.Body1}
+    color: ${colors.gray3}
+  }
 `;

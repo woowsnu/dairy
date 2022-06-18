@@ -1,35 +1,14 @@
-import React, { useState } from 'react'
-import ChartWeekly from '../../components/Charts/ChartWeekly'
+import React from 'react'
+import ChartTotal from '../../components/Charts/ChartTotal'
 import Mypage from '../../components/Mypage/Mypage'
 
-const weekly = (props) => {
-  console.log(props.post);
-  const [post, setPost] = useState(props.post);
-
-  
-
+const total = () => {
   return (
-    <div className="weekly">
+    <div className="total">
       <Mypage></Mypage>
-      <ChartWeekly post={post}/>
-
+      <ChartTotal/>
     </div>
   )
-  
 }
 
-export const getStaticProps = async() => {
-  try {
-    const res = await fetch("http://localhost:8080/post");
-    const post = await res.json();
-
-    return {
-      props: {post},
-    };
-  } catch (error){
-    console.log(error);
-    return {props:{}};
-  }
-}
-
-export default weekly
+export default total
