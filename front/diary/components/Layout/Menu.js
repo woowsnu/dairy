@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import colors from "../../styles/colors";
+import fonts from "../../styles/fonts";
 import CancelIcon from "../../public/static/svg/cancel.svg";
 
 const Menu = (props) => {
@@ -11,24 +12,27 @@ const Menu = (props) => {
 
   return (
     <Rnb>
+      <div className="wrap">
+      <div className="close">
         <Link href="/">
           <CancelIcon />
         </Link>
-        <div>
-          <img />
-          <h3>{props.user[0].nickname}</h3>
-          <p>{props.user[0].name}</p>
-        </div>
-        <div>
-          <ul>
-            <li>
-              <Link href="/mypage/weekly">마이페이지</Link>
-            </li>
-            <li>
-              <Link href="/mypage">회원정보수정</Link>
-            </li>
-          </ul>
-        </div>
+      </div>
+      <div className="user">
+        <h3 className="user-nickname">닉네임 님</h3>
+        <p className="user-id">아이디</p>
+      </div>
+      <div className="sub-menu">
+        <ul>
+          <li>
+            <Link href="/mypage/weekly">마이페이지</Link>
+          </li>
+          <li>
+            <Link href="/mypage">회원정보수정</Link>
+          </li>
+        </ul>
+      </div>
+      </div>
     </Rnb>
   );
 };
@@ -37,12 +41,34 @@ export default Menu;
 
 const Rnb = styled.div`
   width: 70%;
-  float: right;
+  height: 100vh;
+  opacity: 90%;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: space-between;
   position: fixed;
   top: 0;
-  background-color: #fff;
+  background-color: ${colors.primary};
   z-index: 100;
-  animation: slide-down 300ms ease-out forwards;
+  margin-left: 72px;
+  padding: 20px;
+  text-decoration: none;
+
+  .wrap {
+    padding: 16px;
+  }
+
+  .close {
+    float: right;
+  }
+
+  .user-nickname {
+    ${fonts.Body1};
+    font-weight: 700;
+  }
+
+  .user-id {
+    ${fonts.Caption};
+    color: ${colors.gray4};
+  }
 `;

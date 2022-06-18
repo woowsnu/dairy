@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
 
@@ -10,7 +11,12 @@ const Header = () => {
   return (
     <Wrap>
       <div>
-        <Link href="/"><p>로고</p></Link>
+        <Link href="/">
+          <Image
+        src="/static/images/logo2.png"
+        width='55'
+        height='38'
+    	/></Link>
       </div>
       <div>
         <Link href="/search"><SearchIcon /></Link>

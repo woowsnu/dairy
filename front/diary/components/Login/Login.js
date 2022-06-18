@@ -2,6 +2,10 @@ import Link from 'next/link'
 import { useRouter } from 'next/router';
 import React, {useState} from 'react'
 import { loginUserAPI } from '../../lib/api/user';
+import styled from 'styled-components';
+import colors from "../../styles/colors";
+import fonts from "../../styles/fonts";
+import Button from "../UI/Button";
 
 const login = () => {
     const [id, setId] = useState('');
@@ -32,43 +36,54 @@ const login = () => {
         router.replace('/');
     }
 
-
   return (
-    <>
-        <div>로그인</div>
-
-        {/* <form action={logIn} method="POST">
-            <input type="text" name="user_name"/><br/>
-            <input type="password" name="password"/><br/>
-            <input type="submit" value="로그인"/>
-        </form> */}
-        <div><input id="user-name" type="text" value ={id} onChange={idChangeHandler} placeholder="아이디" required /></div>
-        <div><input id="user-password" type="password" value ={password} onChange={passwordChangeHandler} placeholder="비밀번호" required /></div>
-        <button type="button" onClick={logIn}>로그인</button>
-
-
-
-        {/* <div>
-            <input class="login-form" id="user-name" type="text" value ={id} placeholder="아이디" required />
-        </div>
-        <div>
-            <input class="login-form" id="password" type="password" value={password} placeholder="비밀번호" required />
-        </div>
-        <div>
-            <input class="login-keeping" id="check-keeping" name="check-keeping"type="checkbox" />
-            <label class="login-keeping-label" for="check-keeping">로그인 유지</label>
-        </div>
-        <div>
-            <button type="button" onClick={logIn}>로그인</button>
-        </div> */}
+    <Container>
+        <h1 className="title">로그인</h1>
+        <input className='input' id="user-name" type="text" value ={id} onChange={idChangeHandler} placeholder="아이디" required />
+        <input className='input' id="user-password" type="password" value ={password} onChange={passwordChangeHandler} placeholder="비밀번호" required />
+        <Button type="button" onClick={logIn}>로그인</Button>
+        <div className='user-link'>
         <div>
             아직 회원이 아니신가요? <Link href="/user">회원가입</Link>
         </div>
         <div>
             비밀번호를 잊으셨나요? <Link href="/findpw">비밀번호 찾기</Link>
         </div>
-    </>
+        </div>
+    </Container>
   )
 }
 
 export default login
+
+const Container = styled.div`
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+
+  .title {
+    ${fonts.H1};
+    color: ${colors.primary};
+    margin-top: 50px; 
+    margin-bottom: 40px;
+  }
+
+  .input {
+    width: 90%;
+    padding: 16px;
+    margin-top: 6px;
+    ${fonts.Caption}
+    color: ${colors.gray4};
+    outline: 1px soilid ${colors.gray5};
+  }
+
+  .input:focus {
+    outline: 1px soilid ${colors.primary};
+  }
+
+  .user-link {
+    text-decoration: none;
+    ${fonts.Body2};
+    color: ${colors.gray2};
+  }
+`;
