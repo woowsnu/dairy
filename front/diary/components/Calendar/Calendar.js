@@ -1,34 +1,81 @@
-import React, { useState } from "react";
-import Link from "next/link";
-import Calendar from "react-calendar";
-import "react-calendar/dist/Calendar.css";
-import styled from "styled-components";
-import Button from "../UI/Button";
+import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
+import { renderCalendar, renderCalendarChange } from '../../utils/render-calendar';
 
-const UserCalendar = () => {
-  const [date, setDate] = useState(new Date());
+const Calendar = () => {
+	const [dates, setDates] = useState([]);
+	const [viewYear, setViewYear] = useState('');
+	const [viewMonth, setViewMonth] = useState('');
 
-  const onChange = () => {
-    setDate(date);
-  };
+	useEffect(() => {
+        const date = new Date();
+        const year= date.getFullYear();
+        const month = date.getMonth();
+        setViewYear(year)
+        setViewYear(month)
+		const data = renderCalendar();
+		setDates(data);
+	}, []);
 
-  return (
-    <Container>
-      <Calendar onChange={onChange} value={date} />
-      <Link href="/emotions">
-        <Button>일기쓰기</Button>
-      </Link>
-    </Container>
-  );
+	const handlePrevDates = () => {
+		const data = renderCalendarChange(year, month);
+		setDates(data);
+	};
+
+	const handleNextDates = () => {};
+
+	const handleThisDates = () => {};
+
+	return (
+		<div>
+			<div>
+				<div>
+					{viewYear}년 {viewMonth + 1}월
+				</div>
+				<div>
+					<button onClick={handlePrevDates}>이전</button>
+					<button onClick={handleThisDates}>Today</button>
+					<button onClick={handleNextDates}>다음</button>
+				</div>
+			</div>
+			<div>
+				<Weeks>
+					<WeekItem>일</WeekItem>
+					<WeekItem>월</WeekItem>
+					<WeekItem>화</WeekItem>
+					<WeekItem>수</WeekItem>
+					<WeekItem>목</WeekItem>
+					<WeekItem>금</WeekItem>
+					<WeekItem>토</WeekItem>
+				</Weeks>
+				<Dates>
+					{dates.map((date, i) => {
+						return <DateItem key={i}>{date}</DateItem>;
+					})}
+				</Dates>
+			</div>
+		</div>
+	);
 };
 
-export default UserCalendar;
+export default Calendar;
 
-const Container = styled.div`
-  display: flex;
-  width: 90%;
-  padding-top: 30px;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 auto;
-`
+const Weeks = styled.div`
+	display: flex;
+	flex-flow: row wrap;
+`;
+
+const WeekItem = styled.div`
+	width: calc(100% / 7);
+	text-align: center;
+`;
+
+const Dates = styled.div`
+	display: flex;
+	flex-flow: row wrap;
+`;
+
+const DateItem = styled.div`
+	width: calc(100% / 7);
+	text-align: center;
+`;
