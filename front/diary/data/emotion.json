@@ -1,0 +1,3284 @@
+{
+  "emotion": [
+    {
+      "id": 1,
+      "cat_id": 1,
+      "word": "가련하다",
+      "word_freq": 88.8,
+      "word_m": 5.62,
+      "word_std": 2.36
+    },
+    {
+      "id": 2,
+      "cat_id": 1,
+      "word": "가슴아프다",
+      "word_freq": 93.8,
+      "word_m": 7.62,
+      "word_std": 2.14
+    },
+    {
+      "id": 3,
+      "cat_id": 1,
+      "word": "가슴앓이",
+      "word_freq": 90,
+      "word_m": 7.75,
+      "word_std": 1.98
+    },
+    {
+      "id": 4,
+      "cat_id": 1,
+      "word": "가엾다",
+      "word_freq": 87.5,
+      "word_m": 6.26,
+      "word_std": 2.59
+    },
+    {
+      "id": 5,
+      "cat_id": 1,
+      "word": "각박하다",
+      "word_freq": 42.5,
+      "word_m": 5.87,
+      "word_std": 2.47
+    },
+    {
+      "id": 6,
+      "cat_id": 1,
+      "word": "간절하다",
+      "word_freq": 57.5,
+      "word_m": 4.95,
+      "word_std": 2.72
+    },
+    {
+      "id": 7,
+      "cat_id": 1,
+      "word": "걱정하다",
+      "word_freq": 66.3,
+      "word_m": 4.55,
+      "word_std": 2.29
+    },
+    {
+      "id": 8,
+      "cat_id": 1,
+      "word": "고달프다",
+      "word_freq": 77.5,
+      "word_m": 5.66,
+      "word_std": 2.79
+    },
+    {
+      "id": 9,
+      "cat_id": 1,
+      "word": "고독하다",
+      "word_freq": 70,
+      "word_m": 6.29,
+      "word_std": 2.68
+    },
+    {
+      "id": 10,
+      "cat_id": 1,
+      "word": "곤욕스럽다",
+      "word_freq": 32.5,
+      "word_m": 4.62,
+      "word_std": 2.71
+    },
+    {
+      "id": 11,
+      "cat_id": 1,
+      "word": "공허하다",
+      "word_freq": 57.5,
+      "word_m": 5.74,
+      "word_std": 2.54
+    },
+    {
+      "id": 12,
+      "cat_id": 1,
+      "word": "괴롭다",
+      "word_freq": 70,
+      "word_m": 6.31,
+      "word_std": 2.58
+    },
+    {
+      "id": 13,
+      "cat_id": 1,
+      "word": "구슬프다",
+      "word_freq": 100,
+      "word_m": 7.72,
+      "word_std": 2.04
+    },
+    {
+      "id": 14,
+      "cat_id": 1,
+      "word": "그리워하다",
+      "word_freq": 86.3,
+      "word_m": 6.29,
+      "word_std": 2.74
+    },
+    {
+      "id": 15,
+      "cat_id": 1,
+      "word": "근심스럽다",
+      "word_freq": 63.7,
+      "word_m": 4.82,
+      "word_std": 2.49
+    },
+    {
+      "id": 16,
+      "cat_id": 1,
+      "word": "글썽글썽하다",
+      "word_freq": 100,
+      "word_m": 6.8,
+      "word_std": 2.5
+    },
+    {
+      "id": 17,
+      "cat_id": 1,
+      "word": "기구하다",
+      "word_freq": 47.5,
+      "word_m": 5.81,
+      "word_std": 2.86
+    },
+    {
+      "id": 18,
+      "cat_id": 1,
+      "word": "기운없다",
+      "word_freq": 60,
+      "word_m": 4.37,
+      "word_std": 3.06
+    },
+    {
+      "id": 19,
+      "cat_id": 1,
+      "word": "낙담하다",
+      "word_freq": 93.8,
+      "word_m": 6.21,
+      "word_std": 2.31
+    },
+    {
+      "id": 20,
+      "cat_id": 1,
+      "word": "낙망하다",
+      "word_freq": 73.8,
+      "word_m": 6.07,
+      "word_std": 2.67
+    },
+    {
+      "id": 21,
+      "cat_id": 1,
+      "word": "낙심하다",
+      "word_freq": 90,
+      "word_m": 6.42,
+      "word_std": 2.65
+    },
+    {
+      "id": 22,
+      "cat_id": 1,
+      "word": "난처하다",
+      "word_freq": 37.5,
+      "word_m": 3.73,
+      "word_std": 2.17
+    },
+    {
+      "id": 23,
+      "cat_id": 1,
+      "word": "남부럽다",
+      "word_freq": 32.5,
+      "word_m": 3.45,
+      "word_std": 2.09
+    },
+    {
+      "id": 24,
+      "cat_id": 1,
+      "word": "낭패스럽다",
+      "word_freq": 50,
+      "word_m": 5.07,
+      "word_std": 2.46
+    },
+    {
+      "id": 25,
+      "cat_id": 1,
+      "word": "눈물겹다",
+      "word_freq": 97.5,
+      "word_m": 7.04,
+      "word_std": 2.32
+    },
+    {
+      "id": 26,
+      "cat_id": 1,
+      "word": "망막하다",
+      "word_freq": 43.8,
+      "word_m": 4.65,
+      "word_std": 2.14
+    },
+    {
+      "id": 27,
+      "cat_id": 1,
+      "word": "망연",
+      "word_freq": 81.3,
+      "word_m": 6.08,
+      "word_std": 2.39
+    },
+    {
+      "id": 28,
+      "cat_id": 1,
+      "word": "망연자실하다",
+      "word_freq": 83.8,
+      "word_m": 6.74,
+      "word_std": 2.52
+    },
+    {
+      "id": 29,
+      "cat_id": 1,
+      "word": "먹먹하다",
+      "word_freq": 65,
+      "word_m": 6.15,
+      "word_std": 2.87
+    },
+    {
+      "id": 30,
+      "cat_id": 1,
+      "word": "뭉클하다",
+      "word_freq": 76.3,
+      "word_m": 6.58,
+      "word_std": 2.41
+    },
+    {
+      "id": 31,
+      "cat_id": 1,
+      "word": "미안하다",
+      "word_freq": 86.3,
+      "word_m": 5.04,
+      "word_std": 2.62
+    },
+    {
+      "id": 32,
+      "cat_id": 1,
+      "word": "복받치다",
+      "word_freq": 83.8,
+      "word_m": 7.55,
+      "word_std": 2.24
+    },
+    {
+      "id": 33,
+      "cat_id": 1,
+      "word": "부끄럽다",
+      "word_freq": 32.5,
+      "word_m": 3.99,
+      "word_std": 2.33
+    },
+    {
+      "id": 34,
+      "cat_id": 1,
+      "word": "불쌍하다",
+      "word_freq": 91.3,
+      "word_m": 5.9,
+      "word_std": 2.4
+    },
+    {
+      "id": 35,
+      "cat_id": 1,
+      "word": "불행하다",
+      "word_freq": 83.8,
+      "word_m": 6.81,
+      "word_std": 2.46
+    },
+    {
+      "id": 36,
+      "cat_id": 1,
+      "word": "비참하다",
+      "word_freq": 93.8,
+      "word_m": 6.77,
+      "word_std": 2.26
+    },
+    {
+      "id": 37,
+      "cat_id": 1,
+      "word": "비탄하다",
+      "word_freq": 80,
+      "word_m": 6.7,
+      "word_std": 2.58
+    },
+    {
+      "id": 38,
+      "cat_id": 1,
+      "word": "비통하다",
+      "word_freq": 91.3,
+      "word_m": 7.92,
+      "word_std": 1.98
+    },
+    {
+      "id": 39,
+      "cat_id": 1,
+      "word": "뼈저리다",
+      "word_freq": 57.5,
+      "word_m": 6.12,
+      "word_std": 2.43
+    },
+    {
+      "id": 40,
+      "cat_id": 1,
+      "word": "사무치다",
+      "word_freq": 83.8,
+      "word_m": 7.49,
+      "word_std": 2.24
+    },
+    {
+      "id": 41,
+      "cat_id": 1,
+      "word": "상실감",
+      "word_freq": 80,
+      "word_m": 7.13,
+      "word_std": 2.22
+    },
+    {
+      "id": 42,
+      "cat_id": 1,
+      "word": "서럽다",
+      "word_freq": 95,
+      "word_m": 7.38,
+      "word_std": 2.05
+    },
+    {
+      "id": 43,
+      "cat_id": 1,
+      "word": "서운하다",
+      "word_freq": 90,
+      "word_m": 5.89,
+      "word_std": 2.55
+    },
+    {
+      "id": 44,
+      "cat_id": 1,
+      "word": "섭섭하다",
+      "word_freq": 86.3,
+      "word_m": 5.24,
+      "word_std": 2.58
+    },
+    {
+      "id": 45,
+      "cat_id": 1,
+      "word": "속상하다",
+      "word_freq": 92.5,
+      "word_m": 6.46,
+      "word_std": 2.67
+    },
+    {
+      "id": 46,
+      "cat_id": 1,
+      "word": "속앓이",
+      "word_freq": 81.3,
+      "word_m": 6.49,
+      "word_std": 2.52
+    },
+    {
+      "id": 47,
+      "cat_id": 1,
+      "word": "송구하다",
+      "word_freq": 45,
+      "word_m": 4.86,
+      "word_std": 2.67
+    },
+    {
+      "id": 48,
+      "cat_id": 1,
+      "word": "숙연하다",
+      "word_freq": 78.8,
+      "word_m": 5.59,
+      "word_std": 2.44
+    },
+    {
+      "id": 49,
+      "cat_id": 1,
+      "word": "슬퍼하다",
+      "word_freq": 98.8,
+      "word_m": 8.46,
+      "word_std": 1.98
+    },
+    {
+      "id": 50,
+      "cat_id": 1,
+      "word": "실망하다",
+      "word_freq": 72.5,
+      "word_m": 5.1,
+      "word_std": 2.49
+    },
+    {
+      "id": 51,
+      "cat_id": 1,
+      "word": "심각하다",
+      "word_freq": 38.8,
+      "word_m": 4.4,
+      "word_std": 2.4
+    },
+    {
+      "id": 52,
+      "cat_id": 1,
+      "word": "심란하다",
+      "word_freq": 58.8,
+      "word_m": 4.56,
+      "word_std": 2.4
+    },
+    {
+      "id": 53,
+      "cat_id": 1,
+      "word": "심려하다",
+      "word_freq": 47.5,
+      "word_m": 5.03,
+      "word_std": 2.61
+    },
+    {
+      "id": 54,
+      "cat_id": 1,
+      "word": "쓴웃음",
+      "word_freq": 70,
+      "word_m": 4.27,
+      "word_std": 2.31
+    },
+    {
+      "id": 55,
+      "cat_id": 1,
+      "word": "쓸쓸하다",
+      "word_freq": 87.5,
+      "word_m": 5.91,
+      "word_std": 2.72
+    },
+    {
+      "id": 56,
+      "cat_id": 1,
+      "word": "씁쓸하다",
+      "word_freq": 83.8,
+      "word_m": 5.4,
+      "word_std": 2.52
+    },
+    {
+      "id": 57,
+      "cat_id": 1,
+      "word": "아깝다",
+      "word_freq": 52.5,
+      "word_m": 4.6,
+      "word_std": 2.58
+    },
+    {
+      "id": 58,
+      "cat_id": 1,
+      "word": "아련하다",
+      "word_freq": 80,
+      "word_m": 5.62,
+      "word_std": 2.45
+    },
+    {
+      "id": 59,
+      "cat_id": 1,
+      "word": "아쉽다",
+      "word_freq": 60,
+      "word_m": 4.55,
+      "word_std": 2.95
+    },
+    {
+      "id": 60,
+      "cat_id": 1,
+      "word": "아이고",
+      "word_freq": 70,
+      "word_m": 5.54,
+      "word_std": 2.81
+    },
+    {
+      "id": 61,
+      "cat_id": 1,
+      "word": "아휴",
+      "word_freq": 52.5,
+      "word_m": 4.49,
+      "word_std": 2.79
+    },
+    {
+      "id": 62,
+      "cat_id": 1,
+      "word": "안쓰럽다",
+      "word_freq": 86.3,
+      "word_m": 5.38,
+      "word_std": 2.77
+    },
+    {
+      "id": 63,
+      "cat_id": 1,
+      "word": "안타깝다",
+      "word_freq": 85,
+      "word_m": 4.79,
+      "word_std": 2.91
+    },
+    {
+      "id": 64,
+      "cat_id": 1,
+      "word": "암담하다",
+      "word_freq": 65,
+      "word_m": 5.82,
+      "word_std": 2.53
+    },
+    {
+      "id": 65,
+      "cat_id": 1,
+      "word": "암울하다",
+      "word_freq": 86.3,
+      "word_m": 7.52,
+      "word_std": 2.26
+    },
+    {
+      "id": 66,
+      "cat_id": 1,
+      "word": "애끓다",
+      "word_freq": 67.5,
+      "word_m": 5.98,
+      "word_std": 2.52
+    },
+    {
+      "id": 67,
+      "cat_id": 1,
+      "word": "애달프다",
+      "word_freq": 96.3,
+      "word_m": 7.17,
+      "word_std": 2.26
+    },
+    {
+      "id": 68,
+      "cat_id": 1,
+      "word": "애도하다",
+      "word_freq": 97.5,
+      "word_m": 8.13,
+      "word_std": 1.85
+    },
+    {
+      "id": 69,
+      "cat_id": 1,
+      "word": "애석하다",
+      "word_freq": 93.8,
+      "word_m": 6.53,
+      "word_std": 2.17
+    },
+    {
+      "id": 70,
+      "cat_id": 1,
+      "word": "애잔하다",
+      "word_freq": 95,
+      "word_m": 6.21,
+      "word_std": 2.28
+    },
+    {
+      "id": 71,
+      "cat_id": 1,
+      "word": "애처롭다",
+      "word_freq": 91.3,
+      "word_m": 6.46,
+      "word_std": 2.18
+    },
+    {
+      "id": 72,
+      "cat_id": 1,
+      "word": "애통하다",
+      "word_freq": 97.5,
+      "word_m": 8.21,
+      "word_std": 1.74
+    },
+    {
+      "id": 73,
+      "cat_id": 1,
+      "word": "애틋하다",
+      "word_freq": 51.2,
+      "word_m": 5.6,
+      "word_std": 2.39
+    },
+    {
+      "id": 74,
+      "cat_id": 1,
+      "word": "야속하다",
+      "word_freq": 67.5,
+      "word_m": 5.73,
+      "word_std": 2.41
+    },
+    {
+      "id": 75,
+      "cat_id": 1,
+      "word": "외롭다",
+      "word_freq": 85,
+      "word_m": 6.87,
+      "word_std": 2.64
+    },
+    {
+      "id": 76,
+      "cat_id": 1,
+      "word": "외톨이",
+      "word_freq": 76.3,
+      "word_m": 7.12,
+      "word_std": 2.54
+    },
+    {
+      "id": 77,
+      "cat_id": 1,
+      "word": "우울하다",
+      "word_freq": 97.5,
+      "word_m": 7.23,
+      "word_std": 2.65
+    },
+    {
+      "id": 78,
+      "cat_id": 1,
+      "word": "울다",
+      "word_freq": 96.3,
+      "word_m": 8.27,
+      "word_std": 2.2
+    },
+    {
+      "id": 79,
+      "cat_id": 1,
+      "word": "울먹이다",
+      "word_freq": 98.8,
+      "word_m": 6.35,
+      "word_std": 2.45
+    },
+    {
+      "id": 80,
+      "cat_id": 1,
+      "word": "울며불며",
+      "word_freq": 96.3,
+      "word_m": 7.73,
+      "word_std": 2.04
+    },
+    {
+      "id": 81,
+      "cat_id": 1,
+      "word": "울부짖다",
+      "word_freq": 91.3,
+      "word_m": 8.05,
+      "word_std": 2.31
+    },
+    {
+      "id": 82,
+      "cat_id": 1,
+      "word": "울분",
+      "word_freq": 87.5,
+      "word_m": 7.73,
+      "word_std": 1.93
+    },
+    {
+      "id": 83,
+      "cat_id": 1,
+      "word": "울상",
+      "word_freq": 96.3,
+      "word_m": 6.39,
+      "word_std": 2.63
+    },
+    {
+      "id": 84,
+      "cat_id": 1,
+      "word": "울적하다",
+      "word_freq": 96.3,
+      "word_m": 7.08,
+      "word_std": 2.3
+    },
+    {
+      "id": 85,
+      "cat_id": 1,
+      "word": "울컥하다",
+      "word_freq": 83.8,
+      "word_m": 6.47,
+      "word_std": 2.4
+    },
+    {
+      "id": 86,
+      "cat_id": 1,
+      "word": "원통하다",
+      "word_freq": 82.5,
+      "word_m": 7.82,
+      "word_std": 1.94
+    },
+    {
+      "id": 87,
+      "cat_id": 1,
+      "word": "유감스럽다",
+      "word_freq": 83.8,
+      "word_m": 5.89,
+      "word_std": 2.79
+    },
+    {
+      "id": 88,
+      "cat_id": 1,
+      "word": "으앙",
+      "word_freq": 88.8,
+      "word_m": 5.7,
+      "word_std": 2.81
+    },
+    {
+      "id": 89,
+      "cat_id": 1,
+      "word": "음울하다",
+      "word_freq": 87.5,
+      "word_m": 6.13,
+      "word_std": 2.35
+    },
+    {
+      "id": 90,
+      "cat_id": 1,
+      "word": "자책하다",
+      "word_freq": 77.5,
+      "word_m": 5.28,
+      "word_std": 2.59
+    },
+    {
+      "id": 91,
+      "cat_id": 1,
+      "word": "자포자기하다",
+      "word_freq": 61.3,
+      "word_m": 5.24,
+      "word_std": 2.79
+    },
+    {
+      "id": 92,
+      "cat_id": 1,
+      "word": "적적하다",
+      "word_freq": 63.7,
+      "word_m": 5.06,
+      "word_std": 2.69
+    },
+    {
+      "id": 93,
+      "cat_id": 1,
+      "word": "절규하다",
+      "word_freq": 86.3,
+      "word_m": 7.45,
+      "word_std": 2.56
+    },
+    {
+      "id": 94,
+      "cat_id": 1,
+      "word": "절망하다",
+      "word_freq": 82.5,
+      "word_m": 7.04,
+      "word_std": 2.27
+    },
+    {
+      "id": 95,
+      "cat_id": 1,
+      "word": "절박하다",
+      "word_freq": 72.5,
+      "word_m": 5.81,
+      "word_std": 2.37
+    },
+    {
+      "id": 96,
+      "cat_id": 1,
+      "word": "절실하다",
+      "word_freq": 60,
+      "word_m": 5.24,
+      "word_std": 2.87
+    },
+    {
+      "id": 97,
+      "cat_id": 1,
+      "word": "절절매다",
+      "word_freq": 42.5,
+      "word_m": 5.31,
+      "word_std": 2.45
+    },
+    {
+      "id": 98,
+      "cat_id": 1,
+      "word": "절절하다",
+      "word_freq": 77.5,
+      "word_m": 5.98,
+      "word_std": 2.65
+    },
+    {
+      "id": 99,
+      "cat_id": 1,
+      "word": "좌절되다",
+      "word_freq": 88.8,
+      "word_m": 6.62,
+      "word_std": 2.71
+    },
+    {
+      "id": 100,
+      "cat_id": 1,
+      "word": "죄송하다",
+      "word_freq": 85,
+      "word_m": 4.88,
+      "word_std": 2.44
+    },
+    {
+      "id": 101,
+      "cat_id": 1,
+      "word": "죄책감",
+      "word_freq": 67.5,
+      "word_m": 6.64,
+      "word_std": 2.79
+    },
+    {
+      "id": 102,
+      "cat_id": 1,
+      "word": "주눅들다",
+      "word_freq": 46.3,
+      "word_m": 4.26,
+      "word_std": 2.29
+    },
+    {
+      "id": 103,
+      "cat_id": 1,
+      "word": "짠하다",
+      "word_freq": 93.8,
+      "word_m": 6.54,
+      "word_std": 2.46
+    },
+    {
+      "id": 104,
+      "cat_id": 1,
+      "word": "찡하다",
+      "word_freq": 93.8,
+      "word_m": 6.67,
+      "word_std": 2.59
+    },
+    {
+      "id": 105,
+      "cat_id": 1,
+      "word": "착잡하다",
+      "word_freq": 67.5,
+      "word_m": 5.45,
+      "word_std": 2.7
+    },
+    {
+      "id": 106,
+      "cat_id": 1,
+      "word": "참담하다",
+      "word_freq": 80,
+      "word_m": 6.71,
+      "word_std": 2.48
+    },
+    {
+      "id": 107,
+      "cat_id": 1,
+      "word": "참회하다",
+      "word_freq": 66.3,
+      "word_m": 5.22,
+      "word_std": 2.4
+    },
+    {
+      "id": 108,
+      "cat_id": 1,
+      "word": "창피하다",
+      "word_freq": 37.5,
+      "word_m": 4.33,
+      "word_std": 2.6
+    },
+    {
+      "id": 109,
+      "cat_id": 1,
+      "word": "처량하다",
+      "word_freq": 92.5,
+      "word_m": 6.07,
+      "word_std": 2.4
+    },
+    {
+      "id": 110,
+      "cat_id": 1,
+      "word": "처절하다",
+      "word_freq": 78.8,
+      "word_m": 6.36,
+      "word_std": 2.35
+    },
+    {
+      "id": 111,
+      "cat_id": 1,
+      "word": "처참하다",
+      "word_freq": 81.3,
+      "word_m": 6.82,
+      "word_std": 2.41
+    },
+    {
+      "id": 112,
+      "cat_id": 1,
+      "word": "청승맞다",
+      "word_freq": 56.3,
+      "word_m": 5.34,
+      "word_std": 2.73
+    },
+    {
+      "id": 113,
+      "cat_id": 1,
+      "word": "초라하다",
+      "word_freq": 81.3,
+      "word_m": 5.49,
+      "word_std": 2.72
+    },
+    {
+      "id": 114,
+      "cat_id": 1,
+      "word": "측은하다",
+      "word_freq": 83.8,
+      "word_m": 6.05,
+      "word_std": 2.43
+    },
+    {
+      "id": 115,
+      "cat_id": 1,
+      "word": "침울하다",
+      "word_freq": 98.8,
+      "word_m": 6.97,
+      "word_std": 2.3
+    },
+    {
+      "id": 116,
+      "cat_id": 1,
+      "word": "침통하다",
+      "word_freq": 92.5,
+      "word_m": 6.87,
+      "word_std": 2.23
+    },
+    {
+      "id": 117,
+      "cat_id": 1,
+      "word": "탄복하다",
+      "word_freq": 62.5,
+      "word_m": 6.26,
+      "word_std": 2.72
+    },
+    {
+      "id": 118,
+      "cat_id": 1,
+      "word": "탄식하다",
+      "word_freq": 83.8,
+      "word_m": 6.26,
+      "word_std": 2.61
+    },
+    {
+      "id": 119,
+      "cat_id": 1,
+      "word": "통탄하다",
+      "word_freq": 88.8,
+      "word_m": 7.49,
+      "word_std": 2.32
+    },
+    {
+      "id": 120,
+      "cat_id": 1,
+      "word": "한숨짓다",
+      "word_freq": 68.8,
+      "word_m": 5.25,
+      "word_std": 2.64
+    },
+    {
+      "id": 121,
+      "cat_id": 1,
+      "word": "한스럽다",
+      "word_freq": 77.5,
+      "word_m": 7.04,
+      "word_std": 2.44
+    },
+    {
+      "id": 122,
+      "cat_id": 1,
+      "word": "한탄하다",
+      "word_freq": 87.5,
+      "word_m": 6.16,
+      "word_std": 2.23
+    },
+    {
+      "id": 123,
+      "cat_id": 1,
+      "word": "허무하다",
+      "word_freq": 48.8,
+      "word_m": 5.42,
+      "word_std": 2.79
+    },
+    {
+      "id": 124,
+      "cat_id": 1,
+      "word": "허전하다",
+      "word_freq": 67.5,
+      "word_m": 5.61,
+      "word_std": 2.5
+    },
+    {
+      "id": 125,
+      "cat_id": 1,
+      "word": "허탈하다",
+      "word_freq": 58.8,
+      "word_m": 4.59,
+      "word_std": 2.51
+    },
+    {
+      "id": 126,
+      "cat_id": 1,
+      "word": "후회하다",
+      "word_freq": 83.8,
+      "word_m": 5.6,
+      "word_std": 2.51
+    },
+    {
+      "id": 127,
+      "cat_id": 1,
+      "word": "휑하다",
+      "word_freq": 50,
+      "word_m": 6.22,
+      "word_std": 2.55
+    },
+    {
+      "id": 128,
+      "cat_id": 1,
+      "word": "흑흑",
+      "word_freq": 95,
+      "word_m": 6.54,
+      "word_std": 2.94
+    },
+    {
+      "id": 129,
+      "cat_id": 2,
+      "word": "가뿐하다",
+      "word_freq": 81.3,
+      "word_m": 5.36,
+      "word_std": 2.89
+    },
+    {
+      "id": 130,
+      "cat_id": 2,
+      "word": "감개무량하다",
+      "word_freq": 83.8,
+      "word_m": 7.23,
+      "word_std": 2.55
+    },
+    {
+      "id": 131,
+      "cat_id": 2,
+      "word": "감격하다",
+      "word_freq": 92.5,
+      "word_m": 7.81,
+      "word_std": 2.16
+    },
+    {
+      "id": 132,
+      "cat_id": 2,
+      "word": "감동하다",
+      "word_freq": 88.8,
+      "word_m": 7.48,
+      "word_std": 2.32
+    },
+    {
+      "id": 133,
+      "cat_id": 2,
+      "word": "감미롭다",
+      "word_freq": 77.5,
+      "word_m": 6.03,
+      "word_std": 2.63
+    },
+    {
+      "id": 134,
+      "cat_id": 2,
+      "word": "감복하다",
+      "word_freq": 61.3,
+      "word_m": 6.64,
+      "word_std": 2.65
+    },
+    {
+      "id": 135,
+      "cat_id": 2,
+      "word": "감사하다",
+      "word_freq": 97.5,
+      "word_m": 7.24,
+      "word_std": 2.26
+    },
+    {
+      "id": 136,
+      "cat_id": 2,
+      "word": "감회",
+      "word_freq": 51.2,
+      "word_m": 4.58,
+      "word_std": 2.5
+    },
+    {
+      "id": 137,
+      "cat_id": 2,
+      "word": "감흥",
+      "word_freq": 61.3,
+      "word_m": 5.83,
+      "word_std": 2.59
+    },
+    {
+      "id": 138,
+      "cat_id": 2,
+      "word": "경쾌하다",
+      "word_freq": 95,
+      "word_m": 7.42,
+      "word_std": 2.53
+    },
+    {
+      "id": 139,
+      "cat_id": 2,
+      "word": "고맙다",
+      "word_freq": 95,
+      "word_m": 7.26,
+      "word_std": 2.43
+    },
+    {
+      "id": 140,
+      "cat_id": 2,
+      "word": "근사하다",
+      "word_freq": 60,
+      "word_m": 6.03,
+      "word_std": 2.83
+    },
+    {
+      "id": 141,
+      "cat_id": 2,
+      "word": "기분좋다",
+      "word_freq": 98.8,
+      "word_m": 7.97,
+      "word_std": 2.41
+    },
+    {
+      "id": 142,
+      "cat_id": 2,
+      "word": "기쁘다",
+      "word_freq": 100,
+      "word_m": 8.8,
+      "word_std": 1.96
+    },
+    {
+      "id": 143,
+      "cat_id": 2,
+      "word": "까르르",
+      "word_freq": 96.3,
+      "word_m": 7.17,
+      "word_std": 2.53
+    },
+    {
+      "id": 144,
+      "cat_id": 2,
+      "word": "깔깔깔깔",
+      "word_freq": 96.3,
+      "word_m": 7.28,
+      "word_std": 2.6
+    },
+    {
+      "id": 145,
+      "cat_id": 2,
+      "word": "껄껄껄",
+      "word_freq": 93.8,
+      "word_m": 6.58,
+      "word_std": 2.61
+    },
+    {
+      "id": 146,
+      "cat_id": 2,
+      "word": "끼득끼득",
+      "word_freq": 78.8,
+      "word_m": 5.53,
+      "word_std": 2.87
+    },
+    {
+      "id": 147,
+      "cat_id": 2,
+      "word": "낄낄낄",
+      "word_freq": 90,
+      "word_m": 5.74,
+      "word_std": 2.42
+    },
+    {
+      "id": 148,
+      "cat_id": 2,
+      "word": "낭만적",
+      "word_freq": 82.5,
+      "word_m": 6.69,
+      "word_std": 2.61
+    },
+    {
+      "id": 149,
+      "cat_id": 2,
+      "word": "달갑다",
+      "word_freq": 72.5,
+      "word_m": 6.12,
+      "word_std": 2.49
+    },
+    {
+      "id": 150,
+      "cat_id": 2,
+      "word": "대견하다",
+      "word_freq": 86.3,
+      "word_m": 6.56,
+      "word_std": 2.74
+    },
+    {
+      "id": 151,
+      "cat_id": 2,
+      "word": "두근거리다",
+      "word_freq": 75,
+      "word_m": 6.4,
+      "word_std": 2.67
+    },
+    {
+      "id": 152,
+      "cat_id": 2,
+      "word": "따뜻하다",
+      "word_freq": 83.8,
+      "word_m": 5.95,
+      "word_std": 2.71
+    },
+    {
+      "id": 153,
+      "cat_id": 2,
+      "word": "따스하다",
+      "word_freq": 78.8,
+      "word_m": 6,
+      "word_std": 2.92
+    },
+    {
+      "id": 154,
+      "cat_id": 2,
+      "word": "만족하다",
+      "word_freq": 90,
+      "word_m": 7.38,
+      "word_std": 2.57
+    },
+    {
+      "id": 155,
+      "cat_id": 2,
+      "word": "반갑다",
+      "word_freq": 95,
+      "word_m": 7.45,
+      "word_std": 2.47
+    },
+    {
+      "id": 156,
+      "cat_id": 2,
+      "word": "방그레",
+      "word_freq": 97.5,
+      "word_m": 6.98,
+      "word_std": 2.76
+    },
+    {
+      "id": 157,
+      "cat_id": 2,
+      "word": "방글방글",
+      "word_freq": 96.3,
+      "word_m": 6.97,
+      "word_std": 2.49
+    },
+    {
+      "id": 158,
+      "cat_id": 2,
+      "word": "방긋",
+      "word_freq": 98.8,
+      "word_m": 6.5,
+      "word_std": 2.74
+    },
+    {
+      "id": 159,
+      "cat_id": 2,
+      "word": "보기좋다",
+      "word_freq": 92.5,
+      "word_m": 6.06,
+      "word_std": 2.8
+    },
+    {
+      "id": 160,
+      "cat_id": 2,
+      "word": "빙그레",
+      "word_freq": 95,
+      "word_m": 5.81,
+      "word_std": 2.79
+    },
+    {
+      "id": 161,
+      "cat_id": 2,
+      "word": "뿌듯하다",
+      "word_freq": 98.8,
+      "word_m": 7.24,
+      "word_std": 2.37
+    },
+    {
+      "id": 162,
+      "cat_id": 2,
+      "word": "사랑스럽다",
+      "word_freq": 93.8,
+      "word_m": 7.95,
+      "word_std": 2.17
+    },
+    {
+      "id": 163,
+      "cat_id": 2,
+      "word": "상쾌하다",
+      "word_freq": 96.3,
+      "word_m": 6.71,
+      "word_std": 2.76
+    },
+    {
+      "id": 164,
+      "cat_id": 2,
+      "word": "상큼하다",
+      "word_freq": 81.3,
+      "word_m": 5.45,
+      "word_std": 2.71
+    },
+    {
+      "id": 165,
+      "cat_id": 2,
+      "word": "설레다",
+      "word_freq": 83.8,
+      "word_m": 6.72,
+      "word_std": 2.4
+    },
+    {
+      "id": 166,
+      "cat_id": 2,
+      "word": "속시원하다",
+      "word_freq": 91.3,
+      "word_m": 7.34,
+      "word_std": 2.48
+    },
+    {
+      "id": 167,
+      "cat_id": 2,
+      "word": "신나다",
+      "word_freq": 95,
+      "word_m": 8.39,
+      "word_std": 1.97
+    },
+    {
+      "id": 168,
+      "cat_id": 2,
+      "word": "신명나다",
+      "word_freq": 91.3,
+      "word_m": 8.13,
+      "word_std": 1.92
+    },
+    {
+      "id": 169,
+      "cat_id": 2,
+      "word": "신바람나다",
+      "word_freq": 97.5,
+      "word_m": 7.86,
+      "word_std": 2.22
+    },
+    {
+      "id": 170,
+      "cat_id": 2,
+      "word": "싱글벙글하다",
+      "word_freq": 100,
+      "word_m": 7.56,
+      "word_std": 2.45
+    },
+    {
+      "id": 171,
+      "cat_id": 2,
+      "word": "쌩끗",
+      "word_freq": 95,
+      "word_m": 5.92,
+      "word_std": 2.96
+    },
+    {
+      "id": 172,
+      "cat_id": 2,
+      "word": "씰룩거리다",
+      "word_freq": 46.3,
+      "word_m": 4.42,
+      "word_std": 2.19
+    },
+    {
+      "id": 173,
+      "cat_id": 2,
+      "word": "아하하",
+      "word_freq": 88.8,
+      "word_m": 6.71,
+      "word_std": 3.09
+    },
+    {
+      "id": 174,
+      "cat_id": 2,
+      "word": "어여쁘다",
+      "word_freq": 77.5,
+      "word_m": 6.08,
+      "word_std": 2.81
+    },
+    {
+      "id": 175,
+      "cat_id": 2,
+      "word": "얼씨구",
+      "word_freq": 52.5,
+      "word_m": 6.6,
+      "word_std": 2.6
+    },
+    {
+      "id": 176,
+      "cat_id": 2,
+      "word": "예쁘다",
+      "word_freq": 80,
+      "word_m": 6.87,
+      "word_std": 3.01
+    },
+    {
+      "id": 177,
+      "cat_id": 2,
+      "word": "우아하다",
+      "word_freq": 50,
+      "word_m": 5.63,
+      "word_std": 2.97
+    },
+    {
+      "id": 178,
+      "cat_id": 2,
+      "word": "웃다",
+      "word_freq": 98.8,
+      "word_m": 7.16,
+      "word_std": 2.47
+    },
+    {
+      "id": 179,
+      "cat_id": 2,
+      "word": "웃어넘기다",
+      "word_freq": 45,
+      "word_m": 4.62,
+      "word_std": 3.17
+    },
+    {
+      "id": 180,
+      "cat_id": 2,
+      "word": "원더풀",
+      "word_freq": 86.3,
+      "word_m": 7.17,
+      "word_std": 2.6
+    },
+    {
+      "id": 181,
+      "cat_id": 2,
+      "word": "유쾌하다",
+      "word_freq": 97.5,
+      "word_m": 7.65,
+      "word_std": 2.26
+    },
+    {
+      "id": 182,
+      "cat_id": 2,
+      "word": "으쓱하다",
+      "word_freq": 76.3,
+      "word_m": 6.22,
+      "word_std": 2.55
+    },
+    {
+      "id": 183,
+      "cat_id": 2,
+      "word": "으하하하",
+      "word_freq": 91.3,
+      "word_m": 7.43,
+      "word_std": 2.44
+    },
+    {
+      "id": 184,
+      "cat_id": 2,
+      "word": "이힛힛힛",
+      "word_freq": 87.5,
+      "word_m": 6.04,
+      "word_std": 2.77
+    },
+    {
+      "id": 185,
+      "cat_id": 2,
+      "word": "자부하다",
+      "word_freq": 70,
+      "word_m": 6.15,
+      "word_std": 2.63
+    },
+    {
+      "id": 186,
+      "cat_id": 2,
+      "word": "재미있다",
+      "word_freq": 90,
+      "word_m": 7.29,
+      "word_std": 2.42
+    },
+    {
+      "id": 187,
+      "cat_id": 2,
+      "word": "좋다",
+      "word_freq": 100,
+      "word_m": 7.41,
+      "word_std": 2.58
+    },
+    {
+      "id": 188,
+      "cat_id": 2,
+      "word": "즐겁다",
+      "word_freq": 95,
+      "word_m": 8.26,
+      "word_std": 2.26
+    },
+    {
+      "id": 189,
+      "cat_id": 2,
+      "word": "천만다행이다",
+      "word_freq": 66.3,
+      "word_m": 6.28,
+      "word_std": 3.17
+    },
+    {
+      "id": 190,
+      "cat_id": 2,
+      "word": "친근하다",
+      "word_freq": 65,
+      "word_m": 5.79,
+      "word_std": 2.64
+    },
+    {
+      "id": 191,
+      "cat_id": 2,
+      "word": "친숙하다",
+      "word_freq": 71.3,
+      "word_m": 5.07,
+      "word_std": 2.79
+    },
+    {
+      "id": 192,
+      "cat_id": 2,
+      "word": "카핫핫핫",
+      "word_freq": 93.8,
+      "word_m": 6.73,
+      "word_std": 2.91
+    },
+    {
+      "id": 193,
+      "cat_id": 2,
+      "word": "콩닥거리다",
+      "word_freq": 67.5,
+      "word_m": 6.15,
+      "word_std": 2.45
+    },
+    {
+      "id": 194,
+      "cat_id": 2,
+      "word": "쾌적하다",
+      "word_freq": 83.8,
+      "word_m": 6.61,
+      "word_std": 2.63
+    },
+    {
+      "id": 195,
+      "cat_id": 2,
+      "word": "킬킬거리다",
+      "word_freq": 72.5,
+      "word_m": 5.48,
+      "word_std": 2.73
+    },
+    {
+      "id": 196,
+      "cat_id": 2,
+      "word": "통쾌하다",
+      "word_freq": 98.8,
+      "word_m": 7.77,
+      "word_std": 2.36
+    },
+    {
+      "id": 197,
+      "cat_id": 2,
+      "word": "편안하다",
+      "word_freq": 81.3,
+      "word_m": 6.18,
+      "word_std": 2.84
+    },
+    {
+      "id": 198,
+      "cat_id": 2,
+      "word": "하하",
+      "word_freq": 93.8,
+      "word_m": 6.79,
+      "word_std": 2.94
+    },
+    {
+      "id": 199,
+      "cat_id": 2,
+      "word": "함박웃음",
+      "word_freq": 98.8,
+      "word_m": 8.68,
+      "word_std": 1.91
+    },
+    {
+      "id": 200,
+      "cat_id": 2,
+      "word": "행복하다",
+      "word_freq": 98.8,
+      "word_m": 9.02,
+      "word_std": 1.63
+    },
+    {
+      "id": 201,
+      "cat_id": 2,
+      "word": "허허",
+      "word_freq": 76.3,
+      "word_m": 4.86,
+      "word_std": 2.69
+    },
+    {
+      "id": 202,
+      "cat_id": 2,
+      "word": "후련하다",
+      "word_freq": 85,
+      "word_m": 6.78,
+      "word_std": 2.75
+    },
+    {
+      "id": 203,
+      "cat_id": 2,
+      "word": "후후",
+      "word_freq": 61.3,
+      "word_m": 4.64,
+      "word_std": 2.38
+    },
+    {
+      "id": 204,
+      "cat_id": 2,
+      "word": "훌륭하다",
+      "word_freq": 81.3,
+      "word_m": 6.92,
+      "word_std": 2.31
+    },
+    {
+      "id": 205,
+      "cat_id": 2,
+      "word": "흐뭇하다",
+      "word_freq": 96.3,
+      "word_m": 6.91,
+      "word_std": 2.66
+    },
+    {
+      "id": 206,
+      "cat_id": 2,
+      "word": "흐흐",
+      "word_freq": 70,
+      "word_m": 4.67,
+      "word_std": 2.43
+    },
+    {
+      "id": 207,
+      "cat_id": 2,
+      "word": "흡족하다",
+      "word_freq": 92.5,
+      "word_m": 7.18,
+      "word_std": 2.42
+    },
+    {
+      "id": 208,
+      "cat_id": 2,
+      "word": "흥겹다",
+      "word_freq": 93.8,
+      "word_m": 7.72,
+      "word_std": 2.1
+    },
+    {
+      "id": 209,
+      "cat_id": 2,
+      "word": "희희낙락하다",
+      "word_freq": 95,
+      "word_m": 7.14,
+      "word_std": 2.4
+    },
+    {
+      "id": 210,
+      "cat_id": 2,
+      "word": "히죽거리다",
+      "word_freq": 83.8,
+      "word_m": 5.61,
+      "word_std": 2.75
+    },
+    {
+      "id": 211,
+      "cat_id": 2,
+      "word": "히히",
+      "word_freq": 95,
+      "word_m": 5.76,
+      "word_std": 2.87
+    },
+    {
+      "id": 212,
+      "cat_id": 3,
+      "word": "갑작스럽다",
+      "word_freq": 90,
+      "word_m": 7.54,
+      "word_std": 2.16
+    },
+    {
+      "id": 213,
+      "cat_id": 3,
+      "word": "경악하다",
+      "word_freq": 76.3,
+      "word_m": 8.46,
+      "word_std": 1.82
+    },
+    {
+      "id": 214,
+      "cat_id": 3,
+      "word": "경이롭다",
+      "word_freq": 76.3,
+      "word_m": 7.77,
+      "word_std": 2.12
+    },
+    {
+      "id": 215,
+      "cat_id": 3,
+      "word": "급작스럽다",
+      "word_freq": 93.8,
+      "word_m": 7.31,
+      "word_std": 2.17
+    },
+    {
+      "id": 216,
+      "cat_id": 3,
+      "word": "기겁하다",
+      "word_freq": 75,
+      "word_m": 7.63,
+      "word_std": 2.13
+    },
+    {
+      "id": 217,
+      "cat_id": 3,
+      "word": "기막히다",
+      "word_freq": 68.8,
+      "word_m": 6.89,
+      "word_std": 2.54
+    },
+    {
+      "id": 218,
+      "cat_id": 3,
+      "word": "기묘하다",
+      "word_freq": 53.8,
+      "word_m": 6.35,
+      "word_std": 2.31
+    },
+    {
+      "id": 219,
+      "cat_id": 3,
+      "word": "기상천외",
+      "word_freq": 83.8,
+      "word_m": 8.16,
+      "word_std": 1.85
+    },
+    {
+      "id": 220,
+      "cat_id": 3,
+      "word": "기이하다",
+      "word_freq": 76.3,
+      "word_m": 6.59,
+      "word_std": 2.13
+    },
+    {
+      "id": 221,
+      "cat_id": 3,
+      "word": "기절초풍하다",
+      "word_freq": 88.8,
+      "word_m": 8.81,
+      "word_std": 1.73
+    },
+    {
+      "id": 222,
+      "cat_id": 3,
+      "word": "기절하다",
+      "word_freq": 53.8,
+      "word_m": 8.13,
+      "word_std": 1.94
+    },
+    {
+      "id": 223,
+      "cat_id": 3,
+      "word": "까무러치다",
+      "word_freq": 71.3,
+      "word_m": 8.35,
+      "word_std": 2.27
+    },
+    {
+      "id": 224,
+      "cat_id": 3,
+      "word": "깜짝",
+      "word_freq": 93.8,
+      "word_m": 7.58,
+      "word_std": 2.56
+    },
+    {
+      "id": 225,
+      "cat_id": 3,
+      "word": "놀랍다",
+      "word_freq": 96.3,
+      "word_m": 8.4,
+      "word_std": 2.19
+    },
+    {
+      "id": 226,
+      "cat_id": 3,
+      "word": "당혹하다",
+      "word_freq": 78.8,
+      "word_m": 6.37,
+      "word_std": 2.37
+    },
+    {
+      "id": 227,
+      "cat_id": 3,
+      "word": "당황하다",
+      "word_freq": 82.5,
+      "word_m": 6.52,
+      "word_std": 2
+    },
+    {
+      "id": 228,
+      "cat_id": 3,
+      "word": "뜨금하다",
+      "word_freq": 80,
+      "word_m": 6.41,
+      "word_std": 2.29
+    },
+    {
+      "id": 229,
+      "cat_id": 3,
+      "word": "뜨악하다",
+      "word_freq": 85,
+      "word_m": 7.79,
+      "word_std": 1.87
+    },
+    {
+      "id": 230,
+      "cat_id": 3,
+      "word": "만만찮다",
+      "word_freq": 32.5,
+      "word_m": 5.26,
+      "word_std": 2.45
+    },
+    {
+      "id": 231,
+      "cat_id": 3,
+      "word": "쇼킹하다",
+      "word_freq": 91.3,
+      "word_m": 8.37,
+      "word_std": 1.82
+    },
+    {
+      "id": 232,
+      "cat_id": 3,
+      "word": "아뿔싸",
+      "word_freq": 92.5,
+      "word_m": 6.65,
+      "word_std": 2.57
+    },
+    {
+      "id": 233,
+      "cat_id": 3,
+      "word": "아연실색하다",
+      "word_freq": 55,
+      "word_m": 7.01,
+      "word_std": 2.48
+    },
+    {
+      "id": 234,
+      "cat_id": 3,
+      "word": "아이쿠",
+      "word_freq": 80,
+      "word_m": 5.89,
+      "word_std": 2.6
+    },
+    {
+      "id": 235,
+      "cat_id": 3,
+      "word": "아차",
+      "word_freq": 83.8,
+      "word_m": 5.86,
+      "word_std": 2.56
+    },
+    {
+      "id": 236,
+      "cat_id": 3,
+      "word": "앗",
+      "word_freq": 88.8,
+      "word_m": 6.68,
+      "word_std": 2.91
+    },
+    {
+      "id": 237,
+      "cat_id": 3,
+      "word": "어리둥절하다",
+      "word_freq": 52.5,
+      "word_m": 5.51,
+      "word_std": 2.46
+    },
+    {
+      "id": 238,
+      "cat_id": 3,
+      "word": "얼떨떨하다",
+      "word_freq": 58.8,
+      "word_m": 5.98,
+      "word_std": 2.61
+    },
+    {
+      "id": 239,
+      "cat_id": 3,
+      "word": "움찔하다",
+      "word_freq": 81.3,
+      "word_m": 6.22,
+      "word_std": 2.43
+    },
+    {
+      "id": 240,
+      "cat_id": 3,
+      "word": "으악",
+      "word_freq": 65,
+      "word_m": 7.3,
+      "word_std": 2.55
+    },
+    {
+      "id": 241,
+      "cat_id": 3,
+      "word": "이상하다",
+      "word_freq": 41.3,
+      "word_m": 4.91,
+      "word_std": 2.59
+    },
+    {
+      "id": 242,
+      "cat_id": 3,
+      "word": "철렁하다",
+      "word_freq": 65,
+      "word_m": 7.47,
+      "word_std": 1.73
+    },
+    {
+      "id": 243,
+      "cat_id": 3,
+      "word": "충격적",
+      "word_freq": 75,
+      "word_m": 8.49,
+      "word_std": 1.66
+    },
+    {
+      "id": 244,
+      "cat_id": 3,
+      "word": "헉",
+      "word_freq": 85,
+      "word_m": 6.74,
+      "word_std": 2.65
+    },
+    {
+      "id": 245,
+      "cat_id": 3,
+      "word": "휘둥그레지다",
+      "word_freq": 90,
+      "word_m": 8.25,
+      "word_std": 1.93
+    },
+    {
+      "id": 246,
+      "cat_id": 3,
+      "word": "흠칫하다",
+      "word_freq": 81.3,
+      "word_m": 6.79,
+      "word_std": 2.39
+    },
+    {
+      "id": 247,
+      "cat_id": 4,
+      "word": "겁나다",
+      "word_freq": 86.3,
+      "word_m": 6.94,
+      "word_std": 2.47
+    },
+    {
+      "id": 248,
+      "cat_id": 4,
+      "word": "겁쟁이",
+      "word_freq": 45,
+      "word_m": 6.66,
+      "word_std": 2.78
+    },
+    {
+      "id": 249,
+      "cat_id": 4,
+      "word": "공포감",
+      "word_freq": 96.3,
+      "word_m": 8.98,
+      "word_std": 1.92
+    },
+    {
+      "id": 250,
+      "cat_id": 4,
+      "word": "긴박하다",
+      "word_freq": 40,
+      "word_m": 4.74,
+      "word_std": 2.53
+    },
+    {
+      "id": 251,
+      "cat_id": 4,
+      "word": "긴장되다",
+      "word_freq": 41.3,
+      "word_m": 4.72,
+      "word_std": 2.54
+    },
+    {
+      "id": 252,
+      "cat_id": 4,
+      "word": "두렵다",
+      "word_freq": 85,
+      "word_m": 7.68,
+      "word_std": 2.33
+    },
+    {
+      "id": 253,
+      "cat_id": 4,
+      "word": "무섭다",
+      "word_freq": 90,
+      "word_m": 8.12,
+      "word_std": 2.49
+    },
+    {
+      "id": 254,
+      "cat_id": 4,
+      "word": "무시무시하다",
+      "word_freq": 85,
+      "word_m": 7.43,
+      "word_std": 2.21
+    },
+    {
+      "id": 255,
+      "cat_id": 4,
+      "word": "불안정하다",
+      "word_freq": 38.8,
+      "word_m": 5.4,
+      "word_std": 2.68
+    },
+    {
+      "id": 256,
+      "cat_id": 4,
+      "word": "불안하다",
+      "word_freq": 63.7,
+      "word_m": 6.13,
+      "word_std": 2.39
+    },
+    {
+      "id": 257,
+      "cat_id": 4,
+      "word": "살벌하다",
+      "word_freq": 88.8,
+      "word_m": 6.92,
+      "word_std": 2.3
+    },
+    {
+      "id": 258,
+      "cat_id": 4,
+      "word": "새파래지다",
+      "word_freq": 63.7,
+      "word_m": 7.55,
+      "word_std": 2.13
+    },
+    {
+      "id": 259,
+      "cat_id": 4,
+      "word": "섬뜩하다",
+      "word_freq": 91.3,
+      "word_m": 8.05,
+      "word_std": 1.96
+    },
+    {
+      "id": 260,
+      "cat_id": 4,
+      "word": "소름끼치다",
+      "word_freq": 77.5,
+      "word_m": 7.05,
+      "word_std": 2.3
+    },
+    {
+      "id": 261,
+      "cat_id": 4,
+      "word": "스산하다",
+      "word_freq": 85,
+      "word_m": 6.36,
+      "word_std": 2.35
+    },
+    {
+      "id": 262,
+      "cat_id": 4,
+      "word": "아슬아슬하다",
+      "word_freq": 40,
+      "word_m": 3.71,
+      "word_std": 2.29
+    },
+    {
+      "id": 263,
+      "cat_id": 4,
+      "word": "아찔하다",
+      "word_freq": 67.5,
+      "word_m": 6.32,
+      "word_std": 2.54
+    },
+    {
+      "id": 264,
+      "cat_id": 4,
+      "word": "안절부절하다",
+      "word_freq": 38.8,
+      "word_m": 4.28,
+      "word_std": 2.37
+    },
+    {
+      "id": 265,
+      "cat_id": 4,
+      "word": "오싹하다",
+      "word_freq": 95,
+      "word_m": 7.45,
+      "word_std": 2.17
+    },
+    {
+      "id": 266,
+      "cat_id": 4,
+      "word": "와들와들",
+      "word_freq": 58.8,
+      "word_m": 6.49,
+      "word_std": 2.48
+    },
+    {
+      "id": 267,
+      "cat_id": 4,
+      "word": "으스스하다",
+      "word_freq": 96.3,
+      "word_m": 6.39,
+      "word_std": 2.59
+    },
+    {
+      "id": 268,
+      "cat_id": 4,
+      "word": "을씨년스럽다",
+      "word_freq": 47.5,
+      "word_m": 6.28,
+      "word_std": 2.5
+    },
+    {
+      "id": 269,
+      "cat_id": 4,
+      "word": "잔인하다",
+      "word_freq": 75,
+      "word_m": 7.58,
+      "word_std": 2.4
+    },
+    {
+      "id": 270,
+      "cat_id": 4,
+      "word": "잔혹하다",
+      "word_freq": 66.3,
+      "word_m": 6.87,
+      "word_std": 2.75
+    },
+    {
+      "id": 271,
+      "cat_id": 4,
+      "word": "조마조마하다",
+      "word_freq": 47.5,
+      "word_m": 4.63,
+      "word_std": 2.75
+    },
+    {
+      "id": 272,
+      "cat_id": 4,
+      "word": "초조하다",
+      "word_freq": 48.8,
+      "word_m": 4.45,
+      "word_std": 2.37
+    },
+    {
+      "id": 273,
+      "cat_id": 5,
+      "word": "갈기갈기",
+      "word_freq": 78.8,
+      "word_m": 7.48,
+      "word_std": 2.37
+    },
+    {
+      "id": 274,
+      "cat_id": 5,
+      "word": "개새끼",
+      "word_freq": 81.3,
+      "word_m": 8.22,
+      "word_std": 2.37
+    },
+    {
+      "id": 275,
+      "cat_id": 5,
+      "word": "개쌍년",
+      "word_freq": 85,
+      "word_m": 9.04,
+      "word_std": 1.34
+    },
+    {
+      "id": 276,
+      "cat_id": 5,
+      "word": "개자식",
+      "word_freq": 81.3,
+      "word_m": 7.87,
+      "word_std": 2.21
+    },
+    {
+      "id": 277,
+      "cat_id": 5,
+      "word": "격노하다",
+      "word_freq": 95,
+      "word_m": 8.7,
+      "word_std": 1.61
+    },
+    {
+      "id": 278,
+      "cat_id": 5,
+      "word": "격분하다",
+      "word_freq": 88.8,
+      "word_m": 8.06,
+      "word_std": 1.87
+    },
+    {
+      "id": 279,
+      "cat_id": 5,
+      "word": "격앙되다",
+      "word_freq": 70,
+      "word_m": 6.82,
+      "word_std": 2.15
+    },
+    {
+      "id": 280,
+      "cat_id": 5,
+      "word": "격양되다",
+      "word_freq": 55,
+      "word_m": 6.71,
+      "word_std": 2.35
+    },
+    {
+      "id": 281,
+      "cat_id": 5,
+      "word": "격해지다",
+      "word_freq": 83.8,
+      "word_m": 7.07,
+      "word_std": 2.41
+    },
+    {
+      "id": 282,
+      "cat_id": 5,
+      "word": "괘씸하다",
+      "word_freq": 93.8,
+      "word_m": 6.8,
+      "word_std": 2.29
+    },
+    {
+      "id": 283,
+      "cat_id": 5,
+      "word": "굴욕감",
+      "word_freq": 66.3,
+      "word_m": 6.48,
+      "word_std": 2.56
+    },
+    {
+      "id": 284,
+      "cat_id": 5,
+      "word": "그년",
+      "word_freq": 77.5,
+      "word_m": 6.83,
+      "word_std": 2.54
+    },
+    {
+      "id": 285,
+      "cat_id": 5,
+      "word": "그놈",
+      "word_freq": 71.3,
+      "word_m": 5.01,
+      "word_std": 2.85
+    },
+    {
+      "id": 286,
+      "cat_id": 5,
+      "word": "그자식",
+      "word_freq": 73.8,
+      "word_m": 5.41,
+      "word_std": 3.05
+    },
+    {
+      "id": 287,
+      "cat_id": 5,
+      "word": "기분나쁘다",
+      "word_freq": 71.3,
+      "word_m": 6.17,
+      "word_std": 2.68
+    },
+    {
+      "id": 288,
+      "cat_id": 5,
+      "word": "기집년",
+      "word_freq": 81.3,
+      "word_m": 6,
+      "word_std": 2.73
+    },
+    {
+      "id": 289,
+      "cat_id": 5,
+      "word": "나쁘다",
+      "word_freq": 76.3,
+      "word_m": 5.18,
+      "word_std": 2.78
+    },
+    {
+      "id": 290,
+      "cat_id": 5,
+      "word": "네년",
+      "word_freq": 83.8,
+      "word_m": 6.52,
+      "word_std": 2.58
+    },
+    {
+      "id": 291,
+      "cat_id": 5,
+      "word": "네놈",
+      "word_freq": 78.8,
+      "word_m": 5.15,
+      "word_std": 2.98
+    },
+    {
+      "id": 292,
+      "cat_id": 5,
+      "word": "노여워하다",
+      "word_freq": 75,
+      "word_m": 7.73,
+      "word_std": 1.92
+    },
+    {
+      "id": 293,
+      "cat_id": 5,
+      "word": "니미",
+      "word_freq": 82.5,
+      "word_m": 6.76,
+      "word_std": 2.97
+    },
+    {
+      "id": 294,
+      "cat_id": 5,
+      "word": "멸시당하다",
+      "word_freq": 66.3,
+      "word_m": 7.13,
+      "word_std": 2.53
+    },
+    {
+      "id": 295,
+      "cat_id": 5,
+      "word": "모멸감",
+      "word_freq": 66.3,
+      "word_m": 7.22,
+      "word_std": 2.45
+    },
+    {
+      "id": 296,
+      "cat_id": 5,
+      "word": "모욕적",
+      "word_freq": 75,
+      "word_m": 7.08,
+      "word_std": 2.22
+    },
+    {
+      "id": 297,
+      "cat_id": 5,
+      "word": "못되다",
+      "word_freq": 63.7,
+      "word_m": 4.95,
+      "word_std": 2.45
+    },
+    {
+      "id": 298,
+      "cat_id": 5,
+      "word": "무시당하다",
+      "word_freq": 61.3,
+      "word_m": 6.23,
+      "word_std": 2.37
+    },
+    {
+      "id": 299,
+      "cat_id": 5,
+      "word": "미친개",
+      "word_freq": 57.5,
+      "word_m": 6.67,
+      "word_std": 3.03
+    },
+    {
+      "id": 300,
+      "cat_id": 5,
+      "word": "밉다",
+      "word_freq": 70,
+      "word_m": 5.55,
+      "word_std": 2.81
+    },
+    {
+      "id": 301,
+      "cat_id": 5,
+      "word": "발칙하다",
+      "word_freq": 67.5,
+      "word_m": 6.99,
+      "word_std": 6.83
+    },
+    {
+      "id": 302,
+      "cat_id": 5,
+      "word": "버럭",
+      "word_freq": 88.8,
+      "word_m": 6.79,
+      "word_std": 2.68
+    },
+    {
+      "id": 303,
+      "cat_id": 5,
+      "word": "복수심",
+      "word_freq": 91.3,
+      "word_m": 8.17,
+      "word_std": 2.04
+    },
+    {
+      "id": 304,
+      "cat_id": 5,
+      "word": "분개하다",
+      "word_freq": 81.3,
+      "word_m": 8.46,
+      "word_std": 1.87
+    },
+    {
+      "id": 305,
+      "cat_id": 5,
+      "word": "분노하다",
+      "word_freq": 91.3,
+      "word_m": 9.04,
+      "word_std": 1.71
+    },
+    {
+      "id": 306,
+      "cat_id": 5,
+      "word": "분통터지다",
+      "word_freq": 92.5,
+      "word_m": 8.25,
+      "word_std": 1.82
+    },
+    {
+      "id": 307,
+      "cat_id": 5,
+      "word": "분하다",
+      "word_freq": 86.3,
+      "word_m": 8.33,
+      "word_std": 2
+    },
+    {
+      "id": 308,
+      "cat_id": 5,
+      "word": "불만스럽다",
+      "word_freq": 72.5,
+      "word_m": 5.31,
+      "word_std": 2.82
+    },
+    {
+      "id": 309,
+      "cat_id": 5,
+      "word": "불만족하다",
+      "word_freq": 61.3,
+      "word_m": 4.79,
+      "word_std": 2.63
+    },
+    {
+      "id": 310,
+      "cat_id": 5,
+      "word": "불유쾌하다",
+      "word_freq": 48.8,
+      "word_m": 5.33,
+      "word_std": 2.54
+    },
+    {
+      "id": 311,
+      "cat_id": 5,
+      "word": "비딱하다",
+      "word_freq": 50,
+      "word_m": 4.89,
+      "word_std": 2.57
+    },
+    {
+      "id": 312,
+      "cat_id": 5,
+      "word": "비아냥거리다",
+      "word_freq": 62.5,
+      "word_m": 5.25,
+      "word_std": 2.83
+    },
+    {
+      "id": 313,
+      "cat_id": 5,
+      "word": "빌어먹을",
+      "word_freq": 91.3,
+      "word_m": 6.89,
+      "word_std": 2.55
+    },
+    {
+      "id": 314,
+      "cat_id": 5,
+      "word": "뾰루퉁하다",
+      "word_freq": 51.2,
+      "word_m": 2.8,
+      "word_std": 1.94
+    },
+    {
+      "id": 315,
+      "cat_id": 5,
+      "word": "삐치다",
+      "word_freq": 65,
+      "word_m": 3.84,
+      "word_std": 2.39
+    },
+    {
+      "id": 316,
+      "cat_id": 5,
+      "word": "속썩이다",
+      "word_freq": 55,
+      "word_m": 5.25,
+      "word_std": 2.78
+    },
+    {
+      "id": 317,
+      "cat_id": 5,
+      "word": "신경질적",
+      "word_freq": 90,
+      "word_m": 6.52,
+      "word_std": 2.72
+    },
+    {
+      "id": 318,
+      "cat_id": 5,
+      "word": "심술궂다",
+      "word_freq": 53.8,
+      "word_m": 4.47,
+      "word_std": 2.56
+    },
+    {
+      "id": 319,
+      "cat_id": 5,
+      "word": "심통",
+      "word_freq": 62.5,
+      "word_m": 5.21,
+      "word_std": 2.46
+    },
+    {
+      "id": 320,
+      "cat_id": 5,
+      "word": "싸가지",
+      "word_freq": 83.8,
+      "word_m": 5.86,
+      "word_std": 2.77
+    },
+    {
+      "id": 321,
+      "cat_id": 5,
+      "word": "쌍년",
+      "word_freq": 81.3,
+      "word_m": 8.18,
+      "word_std": 2.27
+    },
+    {
+      "id": 322,
+      "cat_id": 5,
+      "word": "쌍놈",
+      "word_freq": 78.8,
+      "word_m": 7.52,
+      "word_std": 2.47
+    },
+    {
+      "id": 323,
+      "cat_id": 5,
+      "word": "씨부랄",
+      "word_freq": 88.8,
+      "word_m": 8.26,
+      "word_std": 2.18
+    },
+    {
+      "id": 324,
+      "cat_id": 5,
+      "word": "씨부렁거리다",
+      "word_freq": 71.3,
+      "word_m": 5.99,
+      "word_std": 2.85
+    },
+    {
+      "id": 325,
+      "cat_id": 5,
+      "word": "씩씩거리다",
+      "word_freq": 90,
+      "word_m": 6.84,
+      "word_std": 2.35
+    },
+    {
+      "id": 326,
+      "cat_id": 5,
+      "word": "씹새끼",
+      "word_freq": 76.3,
+      "word_m": 8.44,
+      "word_std": 2.06
+    },
+    {
+      "id": 327,
+      "cat_id": 5,
+      "word": "아으",
+      "word_freq": 23.8,
+      "word_m": 5.69,
+      "word_std": 3.09
+    },
+    {
+      "id": 328,
+      "cat_id": 5,
+      "word": "아이씨",
+      "word_freq": 80,
+      "word_m": 5.66,
+      "word_std": 3.3
+    },
+    {
+      "id": 329,
+      "cat_id": 5,
+      "word": "야박하다",
+      "word_freq": 55,
+      "word_m": 5.05,
+      "word_std": 2.89
+    },
+    {
+      "id": 330,
+      "cat_id": 5,
+      "word": "약오르다",
+      "word_freq": 78.8,
+      "word_m": 5.92,
+      "word_std": 2.8
+    },
+    {
+      "id": 331,
+      "cat_id": 5,
+      "word": "얄밉다",
+      "word_freq": 68.8,
+      "word_m": 4.56,
+      "word_std": 2.79
+    },
+    {
+      "id": 332,
+      "cat_id": 5,
+      "word": "어이없다",
+      "word_freq": 50,
+      "word_m": 4.55,
+      "word_std": 2.59
+    },
+    {
+      "id": 333,
+      "cat_id": 5,
+      "word": "언짢다",
+      "word_freq": 57.5,
+      "word_m": 4.47,
+      "word_std": 2.43
+    },
+    {
+      "id": 334,
+      "cat_id": 5,
+      "word": "옘병할",
+      "word_freq": 85,
+      "word_m": 7.82,
+      "word_std": 2.39
+    },
+    {
+      "id": 335,
+      "cat_id": 5,
+      "word": "우라질",
+      "word_freq": 88.8,
+      "word_m": 7.29,
+      "word_std": 2.57
+    },
+    {
+      "id": 336,
+      "cat_id": 5,
+      "word": "울화통",
+      "word_freq": 78.8,
+      "word_m": 7.76,
+      "word_std": 2.15
+    },
+    {
+      "id": 337,
+      "cat_id": 5,
+      "word": "웃음거리",
+      "word_freq": 38.8,
+      "word_m": 5.25,
+      "word_std": 2.44
+    },
+    {
+      "id": 338,
+      "cat_id": 5,
+      "word": "원망하다",
+      "word_freq": 73.8,
+      "word_m": 6.45,
+      "word_std": 2.74
+    },
+    {
+      "id": 339,
+      "cat_id": 5,
+      "word": "웬수",
+      "word_freq": 75,
+      "word_m": 5.89,
+      "word_std": 2.99
+    },
+    {
+      "id": 340,
+      "cat_id": 5,
+      "word": "으이구",
+      "word_freq": 42.5,
+      "word_m": 3.53,
+      "word_std": 2.68
+    },
+    {
+      "id": 341,
+      "cat_id": 5,
+      "word": "의심스럽다",
+      "word_freq": 40,
+      "word_m": 3.99,
+      "word_std": 2.22
+    },
+    {
+      "id": 342,
+      "cat_id": 5,
+      "word": "이새끼",
+      "word_freq": 78.8,
+      "word_m": 6.75,
+      "word_std": 2.73
+    },
+    {
+      "id": 343,
+      "cat_id": 5,
+      "word": "잡놈",
+      "word_freq": 72.5,
+      "word_m": 6.68,
+      "word_std": 2.77
+    },
+    {
+      "id": 344,
+      "cat_id": 5,
+      "word": "저년",
+      "word_freq": 77.5,
+      "word_m": 6.86,
+      "word_std": 2.67
+    },
+    {
+      "id": 345,
+      "cat_id": 5,
+      "word": "저놈",
+      "word_freq": 73.8,
+      "word_m": 5.3,
+      "word_std": 3.01
+    },
+    {
+      "id": 346,
+      "cat_id": 5,
+      "word": "제기랄",
+      "word_freq": 88.8,
+      "word_m": 6.61,
+      "word_std": 2.62
+    },
+    {
+      "id": 347,
+      "cat_id": 5,
+      "word": "증오하다",
+      "word_freq": 77.5,
+      "word_m": 8.41,
+      "word_std": 1.75
+    },
+    {
+      "id": 348,
+      "cat_id": 5,
+      "word": "지랄하다",
+      "word_freq": 76.3,
+      "word_m": 7.11,
+      "word_std": 2.48
+    },
+    {
+      "id": 349,
+      "cat_id": 5,
+      "word": "진노하다",
+      "word_freq": 83.8,
+      "word_m": 8.03,
+      "word_std": 2.42
+    },
+    {
+      "id": 350,
+      "cat_id": 5,
+      "word": "질투하다",
+      "word_freq": 60,
+      "word_m": 5.26,
+      "word_std": 2.44
+    },
+    {
+      "id": 351,
+      "cat_id": 5,
+      "word": "짜증나다",
+      "word_freq": 81.3,
+      "word_m": 6.57,
+      "word_std": 2.4
+    },
+    {
+      "id": 352,
+      "cat_id": 5,
+      "word": "치떨리다",
+      "word_freq": 71.3,
+      "word_m": 8.06,
+      "word_std": 2.04
+    },
+    {
+      "id": 353,
+      "cat_id": 5,
+      "word": "치밀어오르다",
+      "word_freq": 91.3,
+      "word_m": 7.66,
+      "word_std": 2.14
+    },
+    {
+      "id": 354,
+      "cat_id": 5,
+      "word": "치사하다",
+      "word_freq": 63.7,
+      "word_m": 5.05,
+      "word_std": 2.45
+    },
+    {
+      "id": 355,
+      "cat_id": 5,
+      "word": "치욕적",
+      "word_freq": 68.8,
+      "word_m": 6.97,
+      "word_std": 2.49
+    },
+    {
+      "id": 356,
+      "cat_id": 5,
+      "word": "흥분하다",
+      "word_freq": 56.3,
+      "word_m": 6.72,
+      "word_std": 2.71
+    },
+    {
+      "id": 357,
+      "cat_id": 6,
+      "word": "가관이다",
+      "word_freq": 47.5,
+      "word_m": 4.95,
+      "word_std": 2.46
+    },
+    {
+      "id": 358,
+      "cat_id": 6,
+      "word": "가소롭다",
+      "word_freq": 46.3,
+      "word_m": 4.82,
+      "word_std": 1.81
+    },
+    {
+      "id": 359,
+      "cat_id": 6,
+      "word": "거북하다",
+      "word_freq": 61.3,
+      "word_m": 6.31,
+      "word_std": 2.51
+    },
+    {
+      "id": 360,
+      "cat_id": 6,
+      "word": "경박하다",
+      "word_freq": 62.5,
+      "word_m": 5.57,
+      "word_std": 2.4
+    },
+    {
+      "id": 361,
+      "cat_id": 6,
+      "word": "괴상하다",
+      "word_freq": 51.2,
+      "word_m": 6.74,
+      "word_std": 2.74
+    },
+    {
+      "id": 362,
+      "cat_id": 6,
+      "word": "괴팍하다",
+      "word_freq": 42.5,
+      "word_m": 5.76,
+      "word_std": 2.68
+    },
+    {
+      "id": 363,
+      "cat_id": 6,
+      "word": "구역질나다",
+      "word_freq": 76.3,
+      "word_m": 7.81,
+      "word_std": 2.44
+    },
+    {
+      "id": 364,
+      "cat_id": 6,
+      "word": "구질구질하다.",
+      "word_freq": 63.7,
+      "word_m": 5.85,
+      "word_std": 2.41
+    },
+    {
+      "id": 365,
+      "cat_id": 6,
+      "word": "꺼림칙하다",
+      "word_freq": 56.3,
+      "word_m": 5.5,
+      "word_std": 2.75
+    },
+    {
+      "id": 366,
+      "cat_id": 6,
+      "word": "꼴불견",
+      "word_freq": 75,
+      "word_m": 6.74,
+      "word_std": 2.74
+    },
+    {
+      "id": 367,
+      "cat_id": 6,
+      "word": "넌더리",
+      "word_freq": 43.8,
+      "word_m": 5.83,
+      "word_std": 2.2
+    },
+    {
+      "id": 368,
+      "cat_id": 6,
+      "word": "느글거리다",
+      "word_freq": 48.8,
+      "word_m": 4.99,
+      "word_std": 2.73
+    },
+    {
+      "id": 369,
+      "cat_id": 6,
+      "word": "느끼하다",
+      "word_freq": 42.5,
+      "word_m": 5.46,
+      "word_std": 2.93
+    },
+    {
+      "id": 370,
+      "cat_id": 6,
+      "word": "달갑잖다",
+      "word_freq": 40,
+      "word_m": 4.16,
+      "word_std": 2.44
+    },
+    {
+      "id": 371,
+      "cat_id": 6,
+      "word": "더럽다",
+      "word_freq": 86.3,
+      "word_m": 7.12,
+      "word_std": 2.55
+    },
+    {
+      "id": 372,
+      "cat_id": 6,
+      "word": "망측하다",
+      "word_freq": 73.8,
+      "word_m": 7,
+      "word_std": 2.45
+    },
+    {
+      "id": 373,
+      "cat_id": 6,
+      "word": "못미덥다",
+      "word_freq": 33.8,
+      "word_m": 3.69,
+      "word_std": 2.18
+    },
+    {
+      "id": 374,
+      "cat_id": 6,
+      "word": "부담스럽다",
+      "word_freq": 31.3,
+      "word_m": 4.49,
+      "word_std": 3.07
+    },
+    {
+      "id": 375,
+      "cat_id": 6,
+      "word": "역겹다",
+      "word_freq": 80,
+      "word_m": 8.51,
+      "word_std": 1.75
+    },
+    {
+      "id": 376,
+      "cat_id": 6,
+      "word": "지독하다",
+      "word_freq": 58.8,
+      "word_m": 5.65,
+      "word_std": 2.39
+    },
+    {
+      "id": 377,
+      "cat_id": 6,
+      "word": "징그럽다",
+      "word_freq": 87.5,
+      "word_m": 7.83,
+      "word_std": 2.15
+    },
+    {
+      "id": 378,
+      "cat_id": 6,
+      "word": "찜찜하다",
+      "word_freq": 33.8,
+      "word_m": 4.24,
+      "word_std": 2.94
+    },
+    {
+      "id": 379,
+      "cat_id": 6,
+      "word": "코웃음치다",
+      "word_freq": 33.8,
+      "word_m": 3.89,
+      "word_std": 2.68
+    },
+    {
+      "id": 380,
+      "cat_id": 6,
+      "word": "해괴하다",
+      "word_freq": 52.5,
+      "word_m": 6.01,
+      "word_std": 2.91
+    },
+    {
+      "id": 381,
+      "cat_id": 6,
+      "word": "흉측하다",
+      "word_freq": 80,
+      "word_m": 8.34,
+      "word_std": 2
+    },
+    {
+      "id": 382,
+      "cat_id": 7,
+      "word": "갑갑하다",
+      "word_freq": 42.5,
+      "word_m": 6.55,
+      "word_std": 2.79
+    },
+    {
+      "id": 383,
+      "cat_id": 7,
+      "word": "고리타분하다",
+      "word_freq": 77.5,
+      "word_m": 7.81,
+      "word_std": 2.32
+    },
+    {
+      "id": 384,
+      "cat_id": 7,
+      "word": "귀찮다",
+      "word_freq": 83.8,
+      "word_m": 7.87,
+      "word_std": 1.95
+    },
+    {
+      "id": 385,
+      "cat_id": 7,
+      "word": "답답하다",
+      "word_freq": 41.3,
+      "word_m": 6.94,
+      "word_std": 2.99
+    },
+    {
+      "id": 386,
+      "cat_id": 7,
+      "word": "따분하다",
+      "word_freq": 92.5,
+      "word_m": 8.75,
+      "word_std": 1.58
+    },
+    {
+      "id": 387,
+      "cat_id": 7,
+      "word": "무료하다",
+      "word_freq": 96.3,
+      "word_m": 8.02,
+      "word_std": 2.23
+    },
+    {
+      "id": 388,
+      "cat_id": 7,
+      "word": "서먹하다",
+      "word_freq": 43.8,
+      "word_m": 5.37,
+      "word_std": 2.67
+    },
+    {
+      "id": 389,
+      "cat_id": 7,
+      "word": "신통찮다",
+      "word_freq": 31.3,
+      "word_m": 5.4,
+      "word_std": 2.1
+    },
+    {
+      "id": 390,
+      "cat_id": 7,
+      "word": "싫증나다",
+      "word_freq": 66.3,
+      "word_m": 7.86,
+      "word_std": 2.06
+    },
+    {
+      "id": 391,
+      "cat_id": 7,
+      "word": "심드렁하다",
+      "word_freq": 67.5,
+      "word_m": 6.46,
+      "word_std": 2.4
+    },
+    {
+      "id": 392,
+      "cat_id": 7,
+      "word": "심심하다",
+      "word_freq": 88.8,
+      "word_m": 8.65,
+      "word_std": 1.94
+    },
+    {
+      "id": 393,
+      "cat_id": 7,
+      "word": "어색하다",
+      "word_freq": 56.3,
+      "word_m": 5.56,
+      "word_std": 3.17
+    },
+    {
+      "id": 394,
+      "cat_id": 7,
+      "word": "재미없다",
+      "word_freq": 93.8,
+      "word_m": 8.68,
+      "word_std": 1.73
+    },
+    {
+      "id": 395,
+      "cat_id": 7,
+      "word": "지겹다",
+      "word_freq": 87.5,
+      "word_m": 8.95,
+      "word_std": 1.79
+    },
+    {
+      "id": 396,
+      "cat_id": 7,
+      "word": "지긋지긋하다",
+      "word_freq": 76.3,
+      "word_m": 8.37,
+      "word_std": 1.73
+    },
+    {
+      "id": 397,
+      "cat_id": 7,
+      "word": "지루함하다",
+      "word_freq": 97.5,
+      "word_m": 9.15,
+      "word_std": 1.7
+    },
+    {
+      "id": 398,
+      "cat_id": 8,
+      "word": "갈구하다",
+      "word_freq": 42.5,
+      "word_m": 6.36,
+      "word_std": 2.8
+    },
+    {
+      "id": 399,
+      "cat_id": 8,
+      "word": "갈망하다",
+      "word_freq": 38.8,
+      "word_m": 7.36,
+      "word_std": 2.07
+    },
+    {
+      "id": 400,
+      "cat_id": 8,
+      "word": "감질나다",
+      "word_freq": 46.3,
+      "word_m": 5.45,
+      "word_std": 3.18
+    },
+    {
+      "id": 401,
+      "cat_id": 8,
+      "word": "궁금하다",
+      "word_freq": 77.5,
+      "word_m": 7.42,
+      "word_std": 2.41
+    },
+    {
+      "id": 402,
+      "cat_id": 8,
+      "word": "반신반의하다",
+      "word_freq": 32.5,
+      "word_m": 4.57,
+      "word_std": 2.71
+    },
+    {
+      "id": 403,
+      "cat_id": 8,
+      "word": "부러워하다",
+      "word_freq": 41.3,
+      "word_m": 5.48,
+      "word_std": 1.99
+    },
+    {
+      "id": 404,
+      "cat_id": 8,
+      "word": "섹시하다",
+      "word_freq": 72.5,
+      "word_m": 7.16,
+      "word_std": 2.32
+    },
+    {
+      "id": 405,
+      "cat_id": 8,
+      "word": "신비롭다",
+      "word_freq": 63.7,
+      "word_m": 7.33,
+      "word_std": 2.19
+    },
+    {
+      "id": 406,
+      "cat_id": 8,
+      "word": "아리송하다",
+      "word_freq": 41.3,
+      "word_m": 4.2,
+      "word_std": 1.84
+    },
+    {
+      "id": 407,
+      "cat_id": 8,
+      "word": "알쏭달쏭하다",
+      "word_freq": 53.8,
+      "word_m": 5.87,
+      "word_std": 1.9
+    },
+    {
+      "id": 408,
+      "cat_id": 8,
+      "word": "충동적",
+      "word_freq": 37.5,
+      "word_m": 6.03,
+      "word_std": 2.61
+    },
+    {
+      "id": 409,
+      "cat_id": 8,
+      "word": "탐나다",
+      "word_freq": 70,
+      "word_m": 7.32,
+      "word_std": 2.26
+    },
+    {
+      "id": 410,
+      "cat_id": 8,
+      "word": "흥미롭다",
+      "word_freq": 82.5,
+      "word_m": 8.99,
+      "word_std": 1.74
+    }
+  ]
+}
