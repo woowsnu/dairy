@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
 import { renderCalendar, renderCalendarChange } from '../../utils/render-calendar';
 import colors from '../../styles/colors';
 import styled from 'styled-components';
@@ -80,12 +81,18 @@ const Calendar = () => {
 					{dates.map((date, i) => {
 						if (date.id === 0) {
 							return (
-								<DateItem key={i}>
-									<span>{date.value}</span>
-								</DateItem>
+								<Link href="/emotions">
+									<DateItem key={i}>
+										<span>{date.value}</span>
+									</DateItem>
+								</Link>
 							);
 						}
-						return <DateItem key={i}>{date.value}</DateItem>;
+						return (
+							<Link href="/emotions">
+								<DateItem key={i}>{date.value}</DateItem>
+							</Link>
+						);
 					})}
 				</Dates>
 			</div>
