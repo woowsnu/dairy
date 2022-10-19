@@ -1,4 +1,4 @@
-package com.diary.back.service;
-
-public interface EmotionCategoryService {
-}
+//package com.diary.back.service;
+//
+//public interface EmotionCategoryService {
+//}
