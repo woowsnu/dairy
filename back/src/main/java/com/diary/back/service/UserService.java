@@ -1,6 +1,6 @@
 package com.diary.back.service;
 
-import com.diary.back.model.Model;
+//import com.diary.back.model.Model;
 import com.diary.back.model.User;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -20,5 +20,5 @@ public interface UserService {
 
 //    void login(User user);
 
-    Boolean isThereUseridAndPassword(Model model);
+//    Boolean isThereUseridAndPassword(Model model);
 }

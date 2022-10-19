@@ -2,35 +2,45 @@ package com.diary.back.model;
 
 
 import lombok.*;
+import org.hibernate.annotations.UpdateTimestamp;
+import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
 
 @Builder
-@RequiredArgsConstructor
 @AllArgsConstructor
-@Setter @Getter
 @Entity
-@ToString
+@Data
 public class Post {
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "post_id")
     private Long post_id;
 
+    @Column
+    private String title;
+    @Column
+    private String contents;
+
     @ManyToOne(fetch = FetchType.LAZY, targetEntity = User.class)
-    @JoinColumn(name = "user_id", referencedColumnName = "user_id", foreignKey = @ForeignKey(name = "user_id", foreignKeyDefinition = "FOREIGN KEY(user_id) REFERENCES USER(user_id) ON UPDATE CASCADE ON DELETE CASCADE"))
-    private Long user_id;
-    private String post_date;
-    private String post_text;
-    private String post_text_summary;
-    private String emotion_cat_id;
-    private String emotion_list;
+    @JoinColumn(name = "user_id", referencedColumnName = "user_id")
+    private User user;
+
+    @ManyToOne(fetch = FetchType.LAZY, targetEntity = Emotion.class)
+    @JoinColumn(name = "emotion_id", referencedColumnName = "emotion_id")
+    private Emotion emotion;
+
+    @CreatedDate
+    private LocalDateTime createDate;
+
+    @UpdateTimestamp
+    private Timestamp lastUpdate;
 
 //    @OneToMany
 //    @JoinTable(name = "PostPostEmotion", joinColumns = @JoinColumn(name = "post_id"),

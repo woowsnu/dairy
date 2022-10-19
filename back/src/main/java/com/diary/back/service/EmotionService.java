@@ -13,7 +13,7 @@ public interface EmotionService {
 
     List<Emotion> findAll();
 
-    Optional<Emotion> findbycatid(Long emotion_cat_id);
+    Optional<Emotion> findbycatid(Long categoryId);
 
 
 

@@ -1,6 +1,6 @@
 package com.diary.back.controller;
 
-import com.diary.back.model.Model;
+//import com.diary.back.model.Model;
 import com.diary.back.model.User;
 import com.diary.back.service.UserService;
 import lombok.Setter;
@@ -76,25 +76,25 @@ public class UserController {
 
 
 
-    @PostMapping(value = "/login")
-//    public String isThere(@ModelAttribute("login") Model model) {
-    public String isThere(@RequestBody Model model, HttpSession session, RedirectAttributes redirectAttr){
-        //여기서부터 다 살리기
-
-
-        try{userService.isThereUseridAndPassword(model);
-//            String s =
-            session.setAttribute("username",model.getUsername());
-//            return "redirect:/login";
-            session.setMaxInactiveInterval(-1);
-            return "redirect:/";
-        } catch(Exception e){
-
-        return "로그인실패 페이지";
-
-//        return userService.isThereUseridAndPassword(model);
-    }
-    }
+//    @PostMapping(value = "/login")
+////    public String isThere(@ModelAttribute("login") Model model) {
+//    public String isThere(@RequestBody Model model, HttpSession session, RedirectAttributes redirectAttr){
+//        //여기서부터 다 살리기
+//
+//
+//        try{userService.isThereUseridAndPassword(model);
+////            String s =
+//            session.setAttribute("username",model.getUsername());
+////            return "redirect:/login";
+//            session.setMaxInactiveInterval(-1);
+//            return "redirect:/";
+//        } catch(Exception e){
+//
+//        return "로그인실패 페이지";
+//
+////        return userService.isThereUseridAndPassword(model);
+//    }
+//    }
 
 
 

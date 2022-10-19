@@ -3,28 +3,32 @@ package com.diary.back.model;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Builder
-@RequiredArgsConstructor
+@Data
 @AllArgsConstructor
-@Setter
-@Getter
 @Entity
-@ToString
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long user_id;
 
+    @Column(nullable = false, length = 30, unique = true)
     private String username;
-    private String userpassword;
-    private String user_email;
-    private String user_nickname;
+    @Column(nullable = false, length = 50)
+    private String password;
+    @Column(nullable = false, unique = true)
+    private String email;
+    @Column(nullable = false, length = 30, unique = true)
+    private String nickname;
+
+    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private List<Post> postList;
+
+//    private String roles;
 //    private String user_profile; 미구현
 
 }

@@ -32,8 +32,9 @@ public class PostServiceImpl implements PostService{
 
         foundPost.ifPresent(newPost ->{
             newPost.setPost_id(post.getPost_id());
-            newPost.setPost_date(post.getPost_date());
-            newPost.setPost_text(post.getPost_text());
+            newPost.setTitle(post.getTitle());
+            newPost.setContents(post.getContents());
+            newPost.setLastUpdate(post.getLastUpdate());
 
             repository.save(newPost);
         });

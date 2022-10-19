@@ -31,8 +31,8 @@ public class EmotionServiceImpl implements EmotionService {
 
 
     @Override
-    public Optional<Emotion> findbycatid(Long emotion_cat_id) {
-        Optional<Emotion> emotionn = repository.findById(emotion_cat_id);
+    public Optional<Emotion> findbycatid(Long categoryId) {
+        Optional<Emotion> emotionn = repository.findById(categoryId);
         return emotionn;
     }
 
