@@ -10,13 +10,13 @@ import java.util.List;
 public interface UserService {
 
 
-    List<User> findbyid(User user);
+//    List<User> findbyid(User user);
 
     // 유저 등록
 //    User regist(User user);
 
     // 유저 수정
-    List<User> update(User user);
+//    List<User> update(User user);
 
 //    void login(User user);
 

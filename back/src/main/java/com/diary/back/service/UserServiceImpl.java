@@ -1,61 +1,78 @@
 package com.diary.back.service;
 
 //import com.diary.back.model.Model;
+import com.diary.back.DTO.UserDTO;
 import com.diary.back.model.User;
 import com.diary.back.repository.UserRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
+@Transactional
+@RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
 
     @Autowired
-    private UserRepository repository;
+    private final UserRepository userRepository;
 
-
-    @Override
-    public List<User> findbyid(User user){
-
-        final Optional<User> foundbyidUser = repository.findById(user.getUser_id());
-
-        foundbyidUser.ifPresent(newUser -> {
-            newUser.setUser_id(user.getUser_id());
-            newUser.setUsername(user.getUsername());
-            newUser.setNickname(user.getNickname());
-//            newUser.setUser_profile(user.getUser_profile());
-            repository.save(newUser);
-        });
-
-        return repository.findAll();
+    public User saveUser(User user){
+        validateCuplicateUser(user);
+        return userRepository.save(user);
     }
 
-    // 유저 등록
+    private void validateCuplicateUser(User user){
+        User findUser = userRepository.findByEmail(user.getEmail());
+        if (findUser != null){
+            throw new IllegalStateException("이미 가입된 email입니다.");
+        }
+    }
+
+
 //    @Override
-//    public User regist(User user){ return repository.save(user); }
-
-    // 유저 수정
-    @Override
-    public List<User> update(User user){
-
-        final Optional<User> foundUser = repository.findById(user.getUser_id());
-
-        foundUser.ifPresent(newUser -> {
-            newUser.setUsername(user.getUsername());
-            newUser.setEmail(user.getEmail());
-            newUser.setNickname(user.getNickname());
-            newUser.setPassword(user.getPassword());
-//            newUser.setUser_profile(user.getUser_profile());
-
-            repository.save(newUser);
-
-        });
-
-        return repository.findAll();
-
-    }
+//    public List<User> findbyid(User user){
+//
+//        final Optional<User> foundbyidUser = repository.findById(user.getUser_id());
+//
+//        foundbyidUser.ifPresent(newUser -> {
+//            newUser.setUser_id(user.getUser_id());
+//            newUser.setUsername(user.getUsername());
+//            newUser.setNickname(user.getNickname());
+////            newUser.setUser_profile(user.getUser_profile());
+//            repository.save(newUser);
+//        });
+//
+//        return repository.findAll();
+//    }
+//
+//    // 유저 등록
+////    @Override
+////    public User regist(User user){ return repository.save(user); }
+//
+//    // 유저 수정
+//    @Override
+//    public List<User> update(User user){
+//
+//        final Optional<User> foundUser = repository.findById(user.getUser_id());
+//
+//        foundUser.ifPresent(newUser -> {
+//            newUser.setUsername(user.getUsername());
+//            newUser.setEmail(user.getEmail());
+//            newUser.setNickname(user.getNickname());
+//            newUser.setPassword(user.getPassword());
+////            newUser.setUser_profile(user.getUser_profile());
+//
+//            repository.save(newUser);
+//
+//        });
+//
+//        return repository.findAll();
+//
+//    }
 
     // 유저가 로그인하면 DB 안의 user 들과 하나씩 비교해서 true false 반환하기
     // 실패
