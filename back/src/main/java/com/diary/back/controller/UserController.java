@@ -25,11 +25,11 @@ public class UserController {
 
 //     // 유저 등록
     @Operation(summary = "회원 가입 요청", description = "회원 정보를 등록합니다.", tags = {"User Controller"})
-    @PostMapping("/v1/regist")
+    @PostMapping("/v1/user/regist")
     public ResponseEntity<?> registUser(@RequestBody User user){
         try{
             userService.registUser(user);
-            return ResponseEntity.ok("Sucess Registing User");
+            return ResponseEntity.ok("Success Registing User");
         }
         catch (Exception e){
             return ResponseEntity.badRequest().body("Failed Regist User");
