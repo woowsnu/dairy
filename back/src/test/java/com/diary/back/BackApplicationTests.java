@@ -35,7 +35,7 @@ class BackApplicationTests {
 	@DisplayName("회원가입 테스트")
 	public void saveUserTest(){
 		User user = createUser();
-		User saveUser = userService.saveUser(user);
+		User saveUser = userService.registUser(user);
 
 		assertEquals(user.getEmail(), saveUser.getEmail());
 	}
