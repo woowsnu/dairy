@@ -16,7 +16,7 @@ public class Emotion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long emotion_id;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private Long categoryId;
 
     @Column(nullable = false, unique = true)

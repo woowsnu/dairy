@@ -1,6 +1,7 @@
 package com.diary.back.model;
 
 
+import com.diary.back.DTO.PostDTO;
 import lombok.*;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.CreatedDate;
@@ -41,6 +42,18 @@ public class Post {
 
     @UpdateTimestamp
     private Timestamp lastUpdate;
+
+    public static Post createPost(PostDTO postDTO){
+        Post post = Post.builder()
+                .title(postDTO.getTitle())
+                .contents(postDTO.getContents())
+                .user(postDTO.getUser())
+                .emotion(postDTO.getEmotion())
+                .createDate(postDTO.getCreateDate())
+                .lastUpdate(postDTO.getLastUpdate())
+                .build();
+        return post;
+    }
 
 //    @OneToMany
 //    @JoinTable(name = "PostPostEmotion", joinColumns = @JoinColumn(name = "post_id"),
