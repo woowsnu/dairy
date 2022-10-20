@@ -79,6 +79,17 @@
 			<artifactId>spring-security-crypto</artifactId>
 			<version>5.7.1</version>
 		</dependency>
+		<!--	spring swagger 	-->
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>1.6.12</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-webmvc-core</artifactId>
+			<version>1.6.12</version>
+		</dependency>
 	</dependencies>
 
 	<build>
