@@ -8,10 +8,12 @@ import java.util.List;
 
 public interface PostService {
 
+    Post registPost(Post post);
+
 
     List<Post> findAll();
-
-    Post save(Post post);
+//
+//    Post save(Post post);
 
     List<Post> update(Post post);
 
