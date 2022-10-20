@@ -20,7 +20,7 @@ public class User {
 
     @Column(nullable = false, length = 30, unique = true)
     private String username;
-    @Column(nullable = false, length = 50)
+    @Column(nullable = false)
     private String password;
     @Column(nullable = false, unique = true)
     private String email;
@@ -34,12 +34,12 @@ public class User {
 //    private String user_profile; 미구현
 
     @Builder
-    public User(String username, String email, String password, String nickname, List<Post> postList){
+    public User(String username, String email, String password, String nickname){
         this.username = username;
         this.email = email;
         this.password = password;
         this.nickname = nickname;
-        this.postList = postList;
+//        this.postList = postList;
         // role 이 들어오면 role 도 추가(들어오는 property 에도 String role 추가해야함)
         // this.role = role
     }
@@ -48,7 +48,7 @@ public class User {
         User user = User.builder()
                 .username(userDTO.getUsername())
                 .email(userDTO.getEmail())
-                .password(userDTO.getPassword())
+                .password(passwordEncoder.encode(userDTO.getPassword()))
                 .nickname(userDTO.getNickname())
 //                .role(userDTO.getRole())
                 .build();
