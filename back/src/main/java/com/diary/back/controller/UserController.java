@@ -1,19 +1,17 @@
 package com.diary.back.controller;
 
-//import com.diary.back.model.Model;
 import com.diary.back.model.User;
 import com.diary.back.service.UserService;
-import lombok.Setter;
+import io.swagger.v3.oas.annotations.Operation;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
-import javax.servlet.http.HttpSession;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/api")
 @CrossOrigin("*")
+@RequiredArgsConstructor
 public class UserController {
 
     @Autowired
@@ -25,13 +23,21 @@ public class UserController {
 //        return userService.findbyid(user);
 //    }
 
-    // 유저 등록
-//    @PostMapping("/regist")
-//    public User regist(@RequestBody User user){
+//     // 유저 등록
+    @Operation(summary = "회원 가입 요청", description = "회원 정보를 등록합니다.", tags = {"User Controller"})
+    @PostMapping("/v1/regist")
+    public ResponseEntity<?> registUser(@RequestBody User user){
+        try{
+            userService.registUser(user);
+            return ResponseEntity.ok("Sucess Registing User");
+        }
+        catch (Exception e){
+            return ResponseEntity.badRequest().body("Failed Regist User");
+        }
 //        System.out.println("regist user");
-//        return userService.regist(user);
-//    }
-//
+//        return userService.registUser(user);
+    }
+
 //    // 유저 수정
 //    @PatchMapping
 //    public List<User> update(@RequestBody User user){
