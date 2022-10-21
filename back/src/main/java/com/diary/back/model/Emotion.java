@@ -14,21 +14,21 @@ public class Emotion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long emotion_id;
+    protected Long emotion_id;
 
     @Column(nullable = false)
-    private Long categoryId;
+    protected Long categoryId;
 
     @Column(nullable = false, unique = true)
-    private String word;
+    protected String word;
 
     @Column
-    private float wordFrequency;    // 빈도(Frequency)
+    protected float wordFrequency;    // 빈도(Frequency)
 
     @Column
-    private float wordStrengthM;        // 감정 강도 평균(Mean)
+    protected float wordStrengthM;        // 감정 강도 평균(Mean)
 
     @Column
-    private float wordSTD;      // 감정 강도 표준편차(STD)
+    protected float wordSTD;      // 감정 강도 표준편차(STD)
 
 }

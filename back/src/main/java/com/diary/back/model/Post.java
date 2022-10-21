@@ -16,6 +16,7 @@ import java.util.List;
 
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Data
 public class Post {
