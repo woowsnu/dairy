@@ -48,7 +48,7 @@ class BackApplicationTests {
 	PostService postService;
 
 	Emotion emotion = new Emotion(0L,1L,"감정test1",2,3,4);
-	
+
 	public Post createPost(){
 		User user = createUser();
 		PostDTO postDTO = PostDTO.builder()
