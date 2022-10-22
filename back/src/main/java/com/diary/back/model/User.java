@@ -2,6 +2,7 @@ package com.diary.back.model;
 
 
 import com.diary.back.DTO.UserDTO;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
@@ -28,6 +29,7 @@ public class User {
     @Column(nullable = false, length = 30, unique = true)
     private String nickname;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "user", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Post> postList;
 

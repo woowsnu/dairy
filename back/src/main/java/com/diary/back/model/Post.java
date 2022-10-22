@@ -2,6 +2,7 @@ package com.diary.back.model;
 
 
 import com.diary.back.DTO.PostDTO;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.CreatedDate;
@@ -30,11 +31,11 @@ public class Post {
     @Column
     private String contents;
 
-    @ManyToOne(fetch = FetchType.LAZY, targetEntity = User.class)
+    @ManyToOne(fetch = FetchType.EAGER, targetEntity = User.class)
     @JoinColumn(name = "user_id", referencedColumnName = "user_id")
     private User user;
 
-    @ManyToOne(fetch = FetchType.LAZY, targetEntity = Emotion.class)
+    @ManyToOne(fetch = FetchType.EAGER, targetEntity = Emotion.class)
     @JoinColumn(name = "emotion_id", referencedColumnName = "emotion_id")
     private Emotion emotion;
 

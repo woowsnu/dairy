@@ -10,6 +10,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity
 @Data
+@NoArgsConstructor
 public class Emotion {
 
     @Id
