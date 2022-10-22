@@ -11,10 +11,11 @@ import java.util.Optional;
 
 public interface EmotionService {
 
+    List<Emotion> findByCategoryId(Long categoryId);
+
     List<Emotion> findAll();
 
-    Optional<Emotion> findbycatid(Long categoryId);
-
+//    Optional<Emotion> findbycatid(Long categoryId);
 
 
 

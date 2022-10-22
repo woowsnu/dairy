@@ -2,6 +2,8 @@ package com.diary.back.controller;
 
 import com.diary.back.model.Emotion;
 import com.diary.back.service.EmotionService;
+import io.swagger.v3.oas.annotations.Operation;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -16,11 +18,24 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("emotions")    // 뭐라고 주소를 적어야하지? 주소를 꼭 적어야하나?
+@RequestMapping("/api")    // 뭐라고 주소를 적어야하지? 주소를 꼭 적어야하나?
+@RequiredArgsConstructor
 public class EmotionController {
 
     @Autowired
     private EmotionService emotionService;
+
+    @Operation(summary = "감정 조회", description = "카테고리로 필터링 된 감정 조회", tags = {"Emotion Controller"})
+    @GetMapping("/v1/emotion/{categoryId}")
+    public ResponseEntity<?> findByCategoryId(@PathVariable Long categoryId){
+        try{
+            List<Emotion> emotionList = emotionService.findByCategoryId(categoryId);
+            return ResponseEntity.ok().body(emotionList);
+        }
+        catch (Exception e){
+            return ResponseEntity.badRequest().body("Failed to Looking Up Emotion With CategoryId");
+        }
+    }
 
 //    // 슬라이드로 보여주기
 //    @GetMapping(path = "/{emotion_cat_id}")

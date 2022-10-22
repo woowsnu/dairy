@@ -14,27 +14,34 @@ import java.util.Optional;
 public class EmotionServiceImpl implements EmotionService {
 
     @Autowired
-    private EmotionRepository repository;
+    private EmotionRepository emotionRepository;
 
 //    @Override
 //    public List<Emotion> findAll(){
 //        return repository.findAll();
 //    }
 
+
+    public List<Emotion> findByCategoryId(Long categoryId) {
+        List<Emotion> emotionList = emotionRepository.findByCategoryId(categoryId);
+
+        return emotionList;
+    }
+
     @Override
     public List<Emotion> findAll(){
 //        List<Emotion> emotion = new ArrayList<>();
 //        repository.findAll().forEach(e -> emotion.add(e));
 //        return emotion;
-        return repository.findAll();
+        return emotionRepository.findAll();
     }
 
 
-    @Override
-    public Optional<Emotion> findbycatid(Long categoryId) {
-        Optional<Emotion> emotionn = repository.findById(categoryId);
-        return emotionn;
-    }
+//    @Override
+//    public Optional<Emotion> findbycatid(Long categoryId) {
+//        Optional<Emotion> emotionn = emotionRepository.findById(categoryId);
+//        return emotionn;
+//    }
 
 //    @Override
 //    public Optional<Emotion> findByUseridAndDate(Long emotion_cat_id) {
