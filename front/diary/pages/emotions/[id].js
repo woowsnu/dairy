@@ -1,17 +1,8 @@
-// import React from "react";
-// import { useRouter } from "next/router";
-// import Emotion from "../../components/Emotions/Emotion";
-// import Modal from "../../components/UI/Modal";
+import React from 'react';
+import Emotion from '../../components/Emotions/Emotion';
 
-// const EmotionDetail = () => {
+const EmotionDetail = () => {
+	return <Emotion />;
+};
 
-//   return (
-//     <div>
-//       <Modal>
-//         <Emotion />
-//       </Modal>
-//     </div>
-//   );
-// };
-
-// export default EmotionDetail;
+export default EmotionDetail;

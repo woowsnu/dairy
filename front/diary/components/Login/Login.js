@@ -78,7 +78,7 @@ const Container = styled.div`
   }
 
   .input:focus {
-    outline: 1px soilid ${colors.primary};
+    outline: 1px solid ${colors.primary};
   }
 
   .user-link {
