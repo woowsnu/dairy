@@ -15,6 +15,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception{
         http
+                // csrf().disable() 은 나중에 disable() 을 다른 token 이나 뭐 그런 걸로 꼭 바꿔주자.
                 .csrf().disable()
                 .authorizeHttpRequests()
                 .antMatchers("/api/**")

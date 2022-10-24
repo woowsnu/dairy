@@ -4,6 +4,7 @@ import com.diary.back.model.User;
 import com.diary.back.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,9 +16,13 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private final UserRepository userRepository;
 
+    @Autowired
+    private final PasswordEncoder passwordEncoder;
+
     public User registUser(User user){
         validateCuplicateUser(user);
-        return userRepository.save(user);
+        User encodedUser = encodePassword(user);
+        return userRepository.save(encodedUser);
     }
 
     private void validateCuplicateUser(User user){
@@ -27,6 +32,15 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+    private User encodePassword(User user){
+        User encodedUser = User.builder()
+                .username(user.getUsername())
+                .email(user.getEmail())
+                .password(passwordEncoder.encode(user.getPassword()))
+                .nickname(user.getNickname())
+                .build();
+        return encodedUser;
+    }
 
 //    @Override
 //    public List<User> findbyid(User user){
