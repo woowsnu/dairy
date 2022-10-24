@@ -5,20 +5,14 @@ import com.diary.back.service.EmotionService;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.text.html.Option;
-import java.awt.*;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")    // 뭐라고 주소를 적어야하지? 주소를 꼭 적어야하나?
+@CrossOrigin("*")
 @RequiredArgsConstructor
 public class EmotionController {
 
@@ -66,10 +60,10 @@ public class EmotionController {
 //        return new ResponseEntity<Emotion>(emotion.get(), HttpStatus.OK);
 //    }
 
-    @GetMapping
-    public List<Emotion> findAll(){
-        System.out.println("Get요청 전송됨");
-        return emotionService.findAll();
-    }
+//    @GetMapping
+//    public List<Emotion> findAll(){
+//        System.out.println("Get요청 전송됨");
+//        return emotionService.findAll();
+//    }
 
 }

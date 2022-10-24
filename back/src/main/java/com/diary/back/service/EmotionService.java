@@ -1,13 +1,8 @@
 package com.diary.back.service;
 
 import com.diary.back.model.Emotion;
-import org.springframework.data.repository.query.Param;
 
 import java.util.List;
-import java.util.Optional;
-
-
-
 
 public interface EmotionService {
 

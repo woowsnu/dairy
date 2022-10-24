@@ -4,7 +4,6 @@ import com.diary.back.model.Post;
 import com.diary.back.repository.PostRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -23,23 +22,25 @@ public class PostServiceImpl implements PostService{
         return postRepository.save(post);
     }
 
+    // userId 를 필터로 Post 일부 조회
+    public List<Post> findByUserId(Long userId){
+        System.out.println("seviceImpl user"+userId);
+        List<Post> postList = postRepository.findByUserId(userId);
+        return postList;
+    }
+
+    // Post 전체 조회
     @Override
     public List<Post> findAll() {
-        System.out.println("dsfsd");
         return postRepository.findAll();
     }
-//
-//    public Post save(Post post) {
-//        return repository.save(post);
-//    }
-//
-//
+
     @Override
     public List<Post> update(Post post){
-        final Optional<Post> foundPost = postRepository.findById(post.getPost_id());
+        final Optional<Post> foundPost = postRepository.findById(post.getId());
 
         foundPost.ifPresent(newPost ->{
-            newPost.setPost_id(post.getPost_id());
+            newPost.setId(post.getId());
             newPost.setTitle(post.getTitle());
             newPost.setContents(post.getContents());
             newPost.setLastUpdate(post.getLastUpdate());

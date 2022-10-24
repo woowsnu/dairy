@@ -1,42 +1,39 @@
 package com.diary.back.model;
 
 
-import com.diary.back.DTO.PostDTO;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 
 
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Data
+@Setter
+@Getter
 public class Post {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long post_id;
+    @Column(name = "postId")
+    private Long id;
 
     @Column
     private String title;
     @Column
     private String contents;
 
-    @ManyToOne(fetch = FetchType.EAGER, targetEntity = User.class)
-    @JoinColumn(name = "user_id", referencedColumnName = "user_id")
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "userId", referencedColumnName = "userId")
     private User user;
 
-    @ManyToOne(fetch = FetchType.EAGER, targetEntity = Emotion.class)
-    @JoinColumn(name = "emotion_id", referencedColumnName = "emotion_id")
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "emotionId", referencedColumnName = "emotionId")
     private Emotion emotion;
 
     @CreatedDate
@@ -45,17 +42,17 @@ public class Post {
     @UpdateTimestamp
     private Timestamp lastUpdate;
 
-    public static Post createPost(PostDTO postDTO){
-        Post post = Post.builder()
-                .title(postDTO.getTitle())
-                .contents(postDTO.getContents())
-                .user(postDTO.getUser())
-                .emotion(postDTO.getEmotion())
-                .createDate(postDTO.getCreateDate())
-                .lastUpdate(postDTO.getLastUpdate())
-                .build();
-        return post;
-    }
+//    public static Post createPost(PostDTO postDTO){
+//        Post post = Post.builder()
+//                .title(postDTO.getTitle())
+//                .contents(postDTO.getContents())
+//                .user(postDTO.getUserId())
+//                .emotionId(postDTO.getEmotionId())
+//                .createDate(postDTO.getCreateDate())
+//                .lastUpdate(postDTO.getLastUpdate())
+//                .build();
+//        return post;
+//    }
 
 //    @OneToMany
 //    @JoinTable(name = "PostPostEmotion", joinColumns = @JoinColumn(name = "post_id"),

@@ -1,7 +1,5 @@
 package com.diary.back.model;
 
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -9,13 +7,15 @@ import javax.persistence.*;
 @Builder
 @AllArgsConstructor
 @Entity
-@Data
+@Setter
+@Getter
 @NoArgsConstructor
 public class Emotion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    protected Long emotion_id;
+    @Column(name = "emotionId")
+    protected Long emotionId;
 
     @Column(nullable = false)
     protected Long categoryId;

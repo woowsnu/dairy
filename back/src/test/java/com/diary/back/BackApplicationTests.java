@@ -49,23 +49,23 @@ class BackApplicationTests {
 
 	Emotion emotion = new Emotion(0L,1L,"감정test1",2,3,4);
 
-	public Post createPost(){
-		User user = createUser();
-		PostDTO postDTO = PostDTO.builder()
-				.title("postTitleTEST")
-				.contents("postContentsTEST")
-				.user(user)
-				.emotion(emotion)
-				.build();
-		return Post.createPost(postDTO);
-	}
-
-	@Test
-	@DisplayName("게시글 작성 테스트")
-	public void savePostTest(){
-		Post post = createPost();
-		Post savePost = postService.registPost(post);
-	}
+//	public Post createPost(){
+//		User user = createUser();
+//		PostDTO postDTO = PostDTO.builder()
+//				.title("postTitleTEST")
+//				.contents("postContentsTEST")
+//				.userId(user.getId())
+//				.emotionId(emotion.getEmotionId())
+//				.build();
+//		return Post.createPost(postDTO);
+//	}
+//
+//	@Test
+//	@DisplayName("게시글 작성 테스트")
+//	public void savePostTest(){
+//		Post post = createPost();
+//		Post savePost = postService.registPost(post);
+//	}
 
 	@Test
 	void contextLoads() {
