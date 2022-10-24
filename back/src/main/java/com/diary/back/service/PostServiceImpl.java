@@ -24,9 +24,12 @@ public class PostServiceImpl implements PostService{
 
     // userId 를 필터로 Post 일부 조회
     public List<Post> findByUserId(Long userId){
-        System.out.println("seviceImpl user"+userId);
         List<Post> postList = postRepository.findByUserId(userId);
         return postList;
+    }
+
+    public Optional<Post> findByPostId(Long postId){
+        return postRepository.findById(postId);
     }
 
     // Post 전체 조회

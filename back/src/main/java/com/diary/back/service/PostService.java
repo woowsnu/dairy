@@ -4,6 +4,7 @@ package com.diary.back.service;
 import com.diary.back.model.Post;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface PostService {
 
@@ -16,6 +17,8 @@ public interface PostService {
 //    Post save(Post post);
 
     List<Post> update(Post post);
+
+    Optional<Post> findByPostId(Long postId);
 
 
 
