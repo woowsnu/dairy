@@ -1,5 +1,6 @@
 package com.diary.back.controller;
 
+import com.diary.back.DTO.UserDTO;
 import com.diary.back.model.User;
 import com.diary.back.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -36,6 +37,26 @@ public class UserController {
         }
 //        System.out.println("regist user");
 //        return userService.registUser(user);
+    }
+
+    // 유저 로그인
+    @Operation(summary = "회원 로그인 email", description = "이메일을 이용한 로그인", tags = {"User Controller"})
+    @PostMapping("/v1/user/login")
+    public ResponseEntity<?> signInByEmail(@RequestBody UserDTO userDTO){
+        try{
+            User user = userService.signInByEmail(userDTO);
+            UserDTO responseUserDTO = UserDTO.builder()
+                    .id(user.getId())
+                    .username(user.getUsername())
+                    .email(user.getEmail())
+                    .nickname(user.getNickname())
+                    .postList(user.getPostList())
+                    .build();
+            return ResponseEntity.ok(responseUserDTO);
+        }
+        catch (Exception e){
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
     }
 
 //    // 유저 수정

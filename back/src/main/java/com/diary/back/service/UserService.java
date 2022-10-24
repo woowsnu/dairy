@@ -1,6 +1,7 @@
 package com.diary.back.service;
 
 //import com.diary.back.model.Model;
+import com.diary.back.DTO.UserDTO;
 import com.diary.back.model.User;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -10,6 +11,8 @@ import java.util.List;
 public interface UserService {
 
     User registUser(User user);
+
+    User signInByEmail(UserDTO userDTO);
 
 //    List<User> findbyid(User user);
 

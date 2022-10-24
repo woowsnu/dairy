@@ -1,10 +1,12 @@
 package com.diary.back.DTO;
 
+import com.diary.back.model.Post;
 import lombok.*;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.util.List;
 
 @NoArgsConstructor
 @Builder
@@ -28,5 +30,7 @@ public class UserDTO {
 
     @NotBlank(message = "nickname은 필수입니다.")
     private String nickname;
+
+    private List<Post> postList;
 
 }

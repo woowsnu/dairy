@@ -1,5 +1,6 @@
 package com.diary.back.service;
 
+import com.diary.back.DTO.UserDTO;
 import com.diary.back.model.User;
 import com.diary.back.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -40,6 +41,18 @@ public class UserServiceImpl implements UserService {
                 .nickname(user.getNickname())
                 .build();
         return encodedUser;
+    }
+
+    public User signInByEmail(UserDTO userDTO){
+        final String email = userDTO.getEmail();
+        final String password = userDTO.getPassword();
+        User userByEmail = userRepository.findByEmail(email);
+        if (userByEmail == null){
+            throw new IllegalStateException("이메일이 업습니다.");
+        } else if (passwordEncoder.matches(password, userByEmail.getPassword())) {
+            return userByEmail;
+        }
+        throw new IllegalStateException("비밀번호가 틀렸습니다.");
     }
 
 //    @Override
