@@ -56,6 +56,17 @@ public class PostController {
         }
     }
 
+    @Operation(summary = "게시글 일부 조회 with contents", description = "contents 로 필터링 된 post 조회", tags = {"Post Controller"})
+    @GetMapping("/v1/post/search/{search}")
+    public ResponseEntity<?> findBySearch(@RequestParam String search){
+        try{
+            return ResponseEntity.ok(postService.findBySearch(search));
+        }
+        catch (Exception e){
+            return ResponseEntity.badRequest().body("Failed to Look up posts with Contents");
+        }
+    }
+
     @Operation(summary = "게시글 전체 조회", description = "전체 게시글을 조회합니다.", tags = {"Post Controller"})
     @GetMapping("/v1/posts")
     public List<Post> findAll(){
@@ -74,6 +85,7 @@ public class PostController {
     @DeleteMapping("/v1/post/delete/{postId}")
     public ResponseEntity<?> deletePost(@PathVariable Long postId){
         try{
+            System.out.println("지우기 미션");
             return ResponseEntity.ok(postService.delete(postId));
         }
         catch (Exception e){

@@ -72,6 +72,11 @@ public class PostServiceImpl implements PostService{
         return postRepository.findAll();
     }
 
+    public List<Post> findBySearch(String search){
+        List<Post> postList = postRepository.findBySearch(search);
+        return postList;
+    }
+
 
 //    public List<PostEmotion> searchDateAndUserid(@Param("post_date") String post_date, @Param("user_id") Long user_id){
 //

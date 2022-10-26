@@ -22,6 +22,7 @@ public interface PostService {
 
     List<Post> delete(Long postId);
 
+    List<Post> findBySearch(String search);
 
 
 
