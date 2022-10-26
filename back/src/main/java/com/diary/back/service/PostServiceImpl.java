@@ -78,18 +78,12 @@ public class PostServiceImpl implements PostService{
         List<Post> postList = postRepository.findBySearch(search);
         // 그거 말고 findAll 해서 모든 post 를 가져온뒤에, 거기서 emotion을 뽑고, 그걸 다시,
         for(Post posttmp : postRepository.findAll()){
-            System.out.println("for실험" + posttmp);
             for (Emotion emotiontmp : posttmp.getEmotion()){
-                System.out.println("for실험emotion" + emotiontmp.getWord());
                 if(emotiontmp.getWord().contains(search)){
-                    System.out.println("문자열있음!");
                     postList.add(posttmp);
-                }else {
-                    System.out.println("문자열 없음!");
                 }
             }
         }
-//        postList.get(1).getEmotion().get(0)
         return postList;
     }
 
