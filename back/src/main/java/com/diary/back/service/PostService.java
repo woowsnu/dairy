@@ -16,9 +16,11 @@ public interface PostService {
 //
 //    Post save(Post post);
 
-    List<Post> update(Post post);
+    Post update(Post post);
 
     Optional<Post> findByPostId(Long postId);
+
+    List<Post> delete(Long postId);
 
 
 

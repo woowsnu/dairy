@@ -64,10 +64,21 @@ public class PostController {
     }
 
     @Operation(summary = "게시글 수정", description = "게시글을 수정합니다.", tags = {"Post Controller"})
-    @PutMapping("/v1/post/update")
-    public List<Post> update(@RequestBody Post post){
+    @PatchMapping("/v1/post/update")
+    public Post update(@RequestBody Post post){
 
         return postService.update(post);
+    }
+
+    @Operation(summary = "게시글 삭제", description = "post Id 를 이용해 게시글을 삭제합니다.", tags = {"Post Controller"})
+    @DeleteMapping("/v1/post/delete/{postId}")
+    public ResponseEntity<?> deletePost(@PathVariable Long postId){
+        try{
+            return ResponseEntity.ok(postService.delete(postId));
+        }
+        catch (Exception e){
+            return ResponseEntity.badRequest().body("Failed to Delete the Post");
+        }
     }
 
 //    public ResponseEntity<Post> getPostPostEmotion(@PathVariable("user_id") Long user_id, @RequestParam("post_date")){

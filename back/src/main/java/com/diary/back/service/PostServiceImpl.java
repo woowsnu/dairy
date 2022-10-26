@@ -1,7 +1,9 @@
 package com.diary.back.service;
 
 import com.diary.back.model.Post;
+import com.diary.back.model.User;
 import com.diary.back.repository.PostRepository;
+import com.diary.back.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,6 +19,8 @@ public class PostServiceImpl implements PostService{
 
     @Autowired
     private final PostRepository postRepository;
+    @Autowired
+    private final UserRepository userRepository;
 
     public Post registPost(Post post){
         return postRepository.save(post);
@@ -38,19 +42,34 @@ public class PostServiceImpl implements PostService{
         return postRepository.findAll();
     }
 
+    // Post Update
+    // 작성자를 확인하는 로직을 넣어야할 거 같은데.
     @Override
-    public List<Post> update(Post post){
+    public Post update(Post post){
         final Optional<Post> foundPost = postRepository.findById(post.getId());
 
         foundPost.ifPresent(newPost ->{
             newPost.setId(post.getId());
             newPost.setTitle(post.getTitle());
             newPost.setContents(post.getContents());
+            newPost.setEmotion(post.getEmotion());
             newPost.setLastUpdate(post.getLastUpdate());
 
             postRepository.save(newPost);
         });
+        // 왜 바로 조회를 하면 제대로 된 값이 안 들어가고, emotion 에 null 값이 들어가게 되는 거지?
+        // findByPostId 가 여기에 들어가도 안되네. 따로 findBtPostId 하면 잘 됨.
+        Optional<Post> updatedPost = findByPostId(foundPost.get().getId());
 
+        return updatedPost.get();
+    }
+
+    @Override
+    public List<Post> delete(Long postId){
+        Optional<Post> post = postRepository.findById(postId);
+        Post deletePost = post.get();
+        User user = userRepository.findByEmail(deletePost.getUser().getEmail());
+        postRepository.delete(deletePost);
         return postRepository.findAll();
     }
 
