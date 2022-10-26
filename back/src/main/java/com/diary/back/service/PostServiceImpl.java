@@ -64,7 +64,6 @@ public class PostServiceImpl implements PostService{
         return updatedPost.get();
     }
 
-    @Override
     public List<Post> delete(Long postId){
         Optional<Post> post = postRepository.findById(postId);
         Post deletePost = post.get();

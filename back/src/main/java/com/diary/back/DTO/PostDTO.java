@@ -28,7 +28,7 @@ public class PostDTO {
     @NotNull(message = "emotionId는 필수입니다.")
     private Long emotionId;
 
-    private LocalDateTime createDate;
+    private String createDate;
 
     private Timestamp lastUpdate;
 

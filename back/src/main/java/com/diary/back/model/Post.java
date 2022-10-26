@@ -1,13 +1,16 @@
 package com.diary.back.model;
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.CreatedDate;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 
 @Builder
@@ -37,7 +40,7 @@ public class Post {
     private Emotion emotion;
 
     @CreatedDate
-    private LocalDateTime createDate;
+    private String createDate = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyMMdd"));
 
     @UpdateTimestamp
     private Timestamp lastUpdate;
