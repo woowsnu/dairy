@@ -6,6 +6,7 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Getter
 @Setter
@@ -26,7 +27,7 @@ public class PostDTO {
     private Long userId;
 
     @NotNull(message = "emotionId는 필수입니다.")
-    private Long emotionId;
+    private List<Long> emotionId;
 
     private String createDate;
 

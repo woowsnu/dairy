@@ -11,6 +11,7 @@ import javax.persistence.*;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 
 @Builder
@@ -35,9 +36,9 @@ public class Post {
     @JoinColumn(name = "userId", referencedColumnName = "userId")
     private User user;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinColumn(name = "emotionId", referencedColumnName = "emotionId")
-    private Emotion emotion;
+    private List<Emotion> emotion;
 
     @CreatedDate
     private String createDate = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyMMdd"));
