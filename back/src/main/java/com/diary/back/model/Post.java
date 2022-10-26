@@ -1,11 +1,8 @@
 package com.diary.back.model;
 
-
-import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.CreatedDate;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
@@ -57,17 +54,4 @@ public class Post {
 //                .build();
 //        return post;
 //    }
-
-//    @OneToMany
-//    @JoinTable(name = "PostPostEmotion", joinColumns = @JoinColumn(name = "post_id"),
-//    inverseJoinColumns = @JoinColumn(name="PostEmotion_id"))
-//    private List<Post> postPostEmotions = new ArrayList<>();
-
-//    @OneToMany
-//    @JoinTable(name = "PostPostEmotion", joinColumns = @JoinColumn(name = "post_id"),
-//    inverseJoinColumns = @JoinColumn(name="PostEmotion_id"))
-//    private List<PostEmotion> postemotions = new ArrayList<>();
-
-//    private PostPostEmotion postPostEmotion;
-//    private List<PostPostEmotion> Post_PostEmotion = new ArrayList<>();
 }
