@@ -3,6 +3,7 @@ package com.diary.back.service;
 import com.diary.back.DTO.UserDTO;
 import com.diary.back.model.User;
 import com.diary.back.repository.UserRepository;
+import io.sentry.spring.tracing.SentrySpan;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -20,12 +21,14 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private final PasswordEncoder passwordEncoder;
 
+    @SentrySpan
     public User registUser(User user){
         validateCuplicateUser(user);
         User encodedUser = encodePassword(user);
         return userRepository.save(encodedUser);
     }
 
+    @SentrySpan
     private void validateCuplicateUser(User user){
         User findUser = userRepository.findByEmail(user.getEmail());
         if (findUser != null){
@@ -43,6 +46,7 @@ public class UserServiceImpl implements UserService {
         return encodedUser;
     }
 
+    @SentrySpan
     public User signInByEmail(UserDTO userDTO){
         final String email = userDTO.getEmail();
         final String password = userDTO.getPassword();
@@ -94,64 +98,6 @@ public class UserServiceImpl implements UserService {
 //
 //        return repository.findAll();
 //
-//    }
-
-    // 유저가 로그인하면 DB 안의 user 들과 하나씩 비교해서 true false 반환하기
-    // 실패
-//    @Override
-//    public void login(User user){
-//        System.out.println("login serviceImpl");
-//
-//        if(repository.equals(user.getUser_name())){
-//            System.out.println(true);
-//        }else { System.out.println(false); }
-//    }
-
-//    String jsonStr = jsonArray.toJSONString();
-    //임시저장
-//    @Override
-//    public Boolean isThereUseridAndPassword(Model model){
-//
-//
-////        Model loginUser = repository.findByUser_name(model.getAttribute("user_name"));//ver1
-////        String loginUser = (String) model.getUsername();//ver2
-//        String loginUser = model.getUsername(); //ver3
-////        String loginUser = (String) model.asMap().get("user_name"); //ver1
-//        User userSelect = repository.findByUsername(loginUser);
-//        System.out.println(userSelect);
-////        String userCheckk = userCheck.getUsername(model);
-//        String userCheck = userSelect.getUsername(); //살려야함
-////        System.out.println(userCheck); // DB안에 있는 id
-//                                        //DB밖 id
-//////        String userCheck = repository.findByUsername(model.getUsername());//ver2
-////
-////        String loginUserPass = (String) model.getUserpassword();
-//////        String loginUserPass = (String) model.asMap().get("user_password"); //ver1
-////        String userCheckPass = repository.findByUserpassword(loginUserPass);
-//
-//
-//
-//        //여기서부터 다 살리기
-//        //lastPass
-//        String loginUserPass = model.getPassword();
-//        User userSelectPass = repository.findByUserpassword(loginUserPass);
-//        String userCheckPass = userSelectPass.getPassword();
-//
-////        //ver2
-//        if(userSelect == null){
-//            return false;
-//        }
-////        if(!loginuser.getUser_password().equals(user.getUser_password())){
-////        if(!userCheckPass.getAttribute("user_password").equals(model.getAttribute("user_password"))){
-//        if(!userSelectPass.getPassword().equals(loginUserPass)){
-////        if(userCheckPass == null){
-//            return false;
-//        }
-//
-//        return true;
-////        return userCheck;
-////        return "";
-////        return "";
 //    }
 }
 

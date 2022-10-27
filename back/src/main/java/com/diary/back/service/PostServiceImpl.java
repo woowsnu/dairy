@@ -5,6 +5,7 @@ import com.diary.back.model.Post;
 import com.diary.back.model.User;
 import com.diary.back.repository.PostRepository;
 import com.diary.back.repository.UserRepository;
+import io.sentry.spring.tracing.SentrySpan;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,21 +24,25 @@ public class PostServiceImpl implements PostService{
     @Autowired
     private final UserRepository userRepository;
 
+    @SentrySpan
     public Post registPost(Post post){
         return postRepository.save(post);
     }
 
     // userId 를 필터로 Post 일부 조회
+    @SentrySpan
     public List<Post> findByUserId(Long userId){
         List<Post> postList = postRepository.findByUserId(userId);
         return postList;
     }
 
+    @SentrySpan
     public Optional<Post> findByPostId(Long postId){
         return postRepository.findById(postId);
     }
 
     // Post 전체 조회
+    @SentrySpan
     @Override
     public List<Post> findAll() {
         return postRepository.findAll();
@@ -45,6 +50,7 @@ public class PostServiceImpl implements PostService{
 
     // Post Update
     // 작성자를 확인하는 로직을 넣어야할 거 같은데.
+    @SentrySpan
     @Override
     public Post update(Post post){
         final Optional<Post> foundPost = postRepository.findById(post.getId());
@@ -65,6 +71,7 @@ public class PostServiceImpl implements PostService{
         return updatedPost.get();
     }
 
+    @SentrySpan
     public List<Post> delete(Long postId){
         Optional<Post> post = postRepository.findById(postId);
         Post deletePost = post.get();
@@ -73,6 +80,7 @@ public class PostServiceImpl implements PostService{
         return postRepository.findAll();
     }
 
+    @SentrySpan
     public List<Post> findBySearch(String search){
         // 일단 search 가 포함된 postList 받아옴
         List<Post> postList = postRepository.findBySearch(search);
@@ -86,18 +94,5 @@ public class PostServiceImpl implements PostService{
         }
         return postList;
     }
-
-
-//    public List<PostEmotion> searchDateAndUserid(@Param("post_date") String post_date, @Param("user_id") Long user_id){
-//
-////        return repository.
-//    };
-
-
-//    List<Post>
-//
-//    public List<Post> find(Post post){
-//        final Optional<Post> foundPost =
-//    }
 
 }

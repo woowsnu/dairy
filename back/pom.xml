@@ -90,6 +90,17 @@
 			<artifactId>springdoc-openapi-webmvc-core</artifactId>
 			<version>1.6.12</version>
 		</dependency>
+		<!--	sentry.io	-->
+		<dependency>
+			<groupId>io.sentry</groupId>
+			<artifactId>sentry-spring-boot-starter</artifactId>
+			<version>6.6.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.sentry</groupId>
+			<artifactId>sentry-logback</artifactId>
+			<version>6.6.0</version>
+		</dependency>
 	</dependencies>
 
 	<build>
