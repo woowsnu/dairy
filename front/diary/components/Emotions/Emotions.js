@@ -3,53 +3,73 @@ import Link from 'next/link';
 
 import { EMOTION_CAT } from '../../data/category';
 import Button from '../UI/Button';
-import Emotion from './Emotion';
 
 import styled from 'styled-components';
 import colors from '../../styles/colors';
 import fonts from '../../styles/fonts';
-import Modal from '../UI/Modal';
+import Emotion from './Emotion';
+import { useRecoilValue, useSetRecoilState } from 'recoil';
+import { selectedEmotionList } from '../../recoils/emotion';
+import { getCookie } from '../../utils/cookie';
 
 const Emotions = () => {
-  const [openModal, setOpenModal] = useState(false);
+	const [openModal, setOpenModal] = useState(false);
+	const [clickedCatId, setClickedCatId] = useState(0);
+	const selectedEmotion = useRecoilValue(selectedEmotionList);
+	const setEmotionList = useSetRecoilState(selectedEmotionList);
+	const nickname = getCookie('nickname')
+	const handleModalState = () => {
+		setOpenModal(!openModal);
+	};
 
-	// Click state가 true일 때  emotion 컴포넌트를 보여주는 function
-	const onClickHandler = () => {
-    setOpenModal(!openModal);
-  }
+	const handleCatId = id => {
+		setClickedCatId(id);
+	};
 
-	// emotion에서 선택된 단어 상태
-	const [selected, setSelected] = useState([]);
-
-	const selectHandler = (emotion) => {
-		setSelected([...selected, emotion]);
+	const handleEmotionSelect = emotion => {
+		console.log(emotion)
+		setEmotionList(prevList => [...prevList, ...emotion]);
 	};
 
 	return (
 		<Container>
-			<div className="title">오늘의 기분은 어떠셨나요?</div>
-			<div className="seleted-word-area">{selected.length > 0 ? selected : <div>선택하신 단어가 표시됩니다.</div>}</div>
-			<Wrap>
+			{openModal && (
+				<Emotion catId={clickedCatId} handleModalState={handleModalState} handleEmotionSelect={handleEmotionSelect} />
+			)}
+			<h1>
+				{nickname}님,
+				<br />
+				오늘의 기분은 어때요?
+			</h1>
+			<SelectedWordSection>
+				{selectedEmotion.length > 0 ? (
+					selectedEmotion.map(emotion => <span>{emotion.emotionWord}</span>)
+				) : (
+					<div>선택하신 단어가 표시됩니다.</div>
+				)}
+			</SelectedWordSection>
+			<EmotionBtns>
 				{EMOTION_CAT.map(category => (
-					<EmotionBtn onClick={()=>{onClickHandler(category.id)}}>
-            <Link href={`/emotions/${category.id}`}>
-						<div className="btn">
-							<div className="btn-main-emotion" style={{ backgroundColor: category.color }}></div>
-							<p className="txt-main-emotion">{category.name}</p>
-						</div>
-            </Link>
+					<EmotionBtn
+						onClick={() => {
+							handleModalState();
+							handleCatId(category.id);
+						}}
+					>
+						<div>{category.emoji}</div>
+						<p>{category.name}</p>
 					</EmotionBtn>
 				))}
-			</Wrap>
-      <Bottom>
-			{selected.length > 0 ? (
-				<Link href={{ pathname: `/emotions/write`, query: { selected } }}>
-					<Button>일기쓰기</Button>
-				</Link>
-			) : (
-				<button className="btn-disable">단어를 선택해주세요</button>
-			)}
-      </Bottom>
+			</EmotionBtns>
+			<Bottom>
+				{selectedEmotion.length > 0 ? (
+					<Link href="/emotions/write">
+						<Button label="일기쓰기" size="md" />
+					</Link>
+				) : (
+					<Button label="단어를 선택해주세요" disabled={true} notForClick="true" />
+				)}
+			</Bottom>
 		</Container>
 	);
 };
@@ -58,14 +78,17 @@ export default Emotions;
 
 const Container = styled.div`
 	position: relative;
-	width: 100%;
-  height: 100vh;
+	max-width: 360px;
+	max-width: 100%;
+	height: 100vh;
 	margin: 0 auto;
+	padding: 0 1.5rem;
 	z-index: 1px;
 
-	.title {
+	h1 {
 		${fonts.H2};
-		color: ${colors.gray2};
+		color: ${colors.gray1};
+		padding-top: 1rem;
 	}
 
 	.seleted-word-area {
@@ -89,34 +112,50 @@ const Container = styled.div`
 	}
 `;
 
-const Wrap = styled.div`
-	max-width: 100%;
+const SelectedWordSection = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 17.5rem;
+	height: 17.5rem;
+	margin: 2.1rem auto;
+	border-radius: 50%;
+	background: linear-gradient(90deg, #fdfbfb 0%, #ebedee 100%);
+	box-shadow: 0 0 1.2rem #ebedee;
+
+	span {
+		margin-right: 0.6rem;
+	}
+`;
+
+const EmotionBtns = styled.div`
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	padding-top: 24px;
 	margin: 0 auto;
 `;
 
 const EmotionBtn = styled.div`
-	width: calc(100%/4);
+	margin-bottom: 1rem;
+	text-align: center;
+	border: 1px solid ${colors.gray5};
+	border-radius: 0.75rem;
+	padding: 0.5rem 1rem;
+	margin-bottom: 0.6rem;
 
-	.btn {
-		border: 1px solid ${colors.gray4};
-		border-radius: 3px;
-		padding: 8px;
-		margin-top: 10px;
+	div {
+		font-size: 2rem;
+		padding-bottom: 0.8rem;
 	}
 
-	.btn:hover {
+	p {
+		${fonts.Caption};
+	}
+
+	&:hover {
 		border: 1px solid ${colors.primary};
 		color: ${colors.primary};
-	}
-
-	.btn-main-emotion {
-		width: 30px;
-		height: 30px;
-		border-radius: 50%;
 	}
 
 	.txt-main-emotion {
@@ -128,6 +167,8 @@ const EmotionBtn = styled.div`
 `;
 
 const Bottom = styled.div`
-  position: absolute;
-  bottom: 0;
-`
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+`;

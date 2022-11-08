@@ -1,27 +1,46 @@
-import React from "react";
-import Link from "next/link";
-import styled from "styled-components";
-
+import React, { useState } from 'react';
+import Link from 'next/link';
+import colors from '../../styles/colors'
+import styled from 'styled-components';
 
 const MypageTab = () => {
-  return (
-      <div>
-        <Btn>
-        <Link href="/mypage/weekly"><button className="btn">주간</button></Link>
-        <Link href="/mypage/monthly"><button className="btn">월간</button></Link>
-        <Link href="/mypage/total"><button className="btn">종합</button></Link>
-        </Btn>
-      </div>
-  );
+	const [tabNum, setTabNum] = useState(0);
+	return (
+		<Ul>
+			<Li>
+				<button>주간</button>
+			</Li>
+			<Li>
+				<button>월간</button>
+			</Li>
+			<Li>
+				<button>종합</button>
+			</Li>
+		</Ul>
+	);
 };
 
 export default MypageTab;
 
-const Btn = styled.div`
-  width: 90%;
+const Ul = styled.ul`
+	display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+	list-style: none;
+  background-color: ${colors.gray6};
+`;
 
-  .btn {
-    padding: 10px;
+const Li = styled.li`
+  width: calc(100%/3);
+  border-radius: 0.3rem;
+
+  button {
+    width: 100%;
+    padding: 0.8rem;
+    border: 0;
+    outline: 0;
+    background-color: ${colors.white};
   }
-
 `
+
+// background-color: ${colors.primary};

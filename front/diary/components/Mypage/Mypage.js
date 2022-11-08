@@ -1,23 +1,22 @@
-import React from "react";
-import MypageTab from "./MypageTab";
-import styled from "styled-components";
+import React from 'react';
+import MypageTab from './MypageTab';
+import styled from 'styled-components';
+import Layout from '../Layout/Layout';
 
 const Mypage = (props) => {
-  return (
-    <MypageContainer>
-      <div>
-        <MypageTab />
-        {props.children}
-      </div>
-    </MypageContainer>
-  );
+	return (
+		<Layout>
+			<MypageContainer>
+				<MypageTab />
+				{props.children}
+			</MypageContainer>
+		</Layout>
+	);
 };
 
 export default Mypage;
 
 const MypageContainer = styled.div`
-  display:flex;
-  justify-content:center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-`
+	width: 100%;
+	height: 100vh;
+`;

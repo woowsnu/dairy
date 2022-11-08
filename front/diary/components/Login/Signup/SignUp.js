@@ -13,7 +13,6 @@ const SignUp = () => {
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
   const [nickname, setNickname] = useState('');
-  // const [profile, setProfile] = useState('');
 
   const router = useRouter();
 
@@ -29,17 +28,13 @@ const SignUp = () => {
   const nicknameChangeHandler = (event) => {
     setNickname(event.target.value);
   };
-  // const profileChangeHandler = (event) => {
-  //   setProfile(event.target.value);
-  // };
 
   const signUp = () => {
     const user = {
-      user_name: id,
-      user_password: password,
-      user_email: email,
-      user_nickname: nickname,
-      // user_profile: profile,
+      username: id,
+      password: password,
+      email: email,
+      nickname: nickname,
     }
     // 확인용
     // console.log(user);
@@ -50,7 +45,6 @@ const SignUp = () => {
     setPassword('');
     setEmail('');
     setNickname('');
-    // setProfile('');
 
     router.replace('/user/regist_com')
 
@@ -60,7 +54,7 @@ const SignUp = () => {
     <Container>
       <div className="title">회원가입</div>
       <div>
-        <p className='label'>아이디</p>
+        <p className='label'>username</p>
         <input className="input" id="regist-id" type="text" value={id} onChange={idChangeHandler} placeholder="영문 소문자, 숫자 조합해 4자 이상 입력해주세요" required />
       </div>
       <div>
@@ -76,7 +70,7 @@ const SignUp = () => {
         <input className="input" id="regist-nickname" type="text" value={nickname} onChange={nicknameChangeHandler} placeholder="닉네임을 입력해주세요" required />
       </div>
       <div>
-        <Button type="button" onClick={signUp}>회원가입</Button>
+        <Button type="button" onClick={signUp} label='회원가입' />
       </div>
     </Container>
   )
