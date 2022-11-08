@@ -10,7 +10,7 @@ export const getDiaryAPI = () =>
 	});
 
 export const getEmotionByCatAPI = async (catId) => {
-	const response = await fetch(`${baseURL}/emotion/?cat_id=${catId}`, {
+	const response = await fetch(`${baseURL}/emotion/${catId}`, {
 		method: 'GET',
 		headers: {
 			'Content-Type': 'application/json',

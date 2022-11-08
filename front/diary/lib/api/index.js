@@ -1,3 +1,3 @@
-const baseURL = 'http://localhost:3500';
+const baseURL = 'http://localhost:8080/api/v1';
 
 export default baseURL;
