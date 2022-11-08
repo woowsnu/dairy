@@ -1,74 +1,102 @@
-import React from "react";
-import Link from "next/link";
-import styled from "styled-components";
-import colors from "../../styles/colors";
-import fonts from "../../styles/fonts";
-import CancelIcon from "../../public/static/svg/cancel.svg";
+import React from 'react';
+import Link from 'next/link';
+import { getCookie } from '../../utils/cookie';
+import { BsXLg } from 'react-icons/bs';
+import styled, { keyframes } from 'styled-components';
+import colors from '../../styles/colors';
+import fonts from '../../styles/fonts';
 
 const Menu = (props) => {
-  console.log(props.user[0]);
+	const nickname = getCookie('nickname');
 
-  // 닫기 눌렀을 때 기존페이지로 (현재는 임시로 메인으로)
+	return (
+		<>
+			<Rnb>
+				<CloseBtn>
+					<BsXLg
+						onClick={() => {
+							props.handleMenuState();
+						}}
+					/>
+				</CloseBtn>
+				<UserWrap>
+					<h3>{nickname}</h3>
+				</UserWrap>
+				<MenuWrap>
+					<Link href="/mypage/weekly">
+						<li>마이페이지</li>
+					</Link>
 
-  return (
-    <Rnb>
-      <div className="wrap">
-      <div className="close">
-        <Link href="/">
-          <CancelIcon />
-        </Link>
-      </div>
-      <div className="user">
-        <h3 className="user-nickname">닉네임 님</h3>
-        <p className="user-id">아이디</p>
-      </div>
-      <div className="sub-menu">
-        <ul>
-          <li>
-            <Link href="/mypage/weekly">마이페이지</Link>
-          </li>
-          <li>
-            <Link href="/mypage">회원정보수정</Link>
-          </li>
-        </ul>
-      </div>
-      </div>
-    </Rnb>
-  );
+					<Link href="/mypage">
+						<li>회원정보수정</li>
+					</Link>
+				</MenuWrap>
+			</Rnb>
+			<Deemed
+				onClick={() => {
+					props.handleMenuState();
+				}}
+			/>
+		</>
+	);
 };
 
 export default Menu;
 
+const Deemed = styled.div`
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 150;
+	padding: 1.2rem 0;
+	background-color: ${colors.black};
+	opacity: 50%;
+`;
+
 const Rnb = styled.div`
-  width: 70%;
-  height: 100vh;
-  opacity: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  background-color: ${colors.primary};
-  z-index: 100;
-  margin-left: 72px;
-  padding: 20px;
-  text-decoration: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 200;
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+	height: 100%;
+	padding: 1.2rem;
+	background-color: ${colors.white};
+	text-decoration: none;
+	/* animation: ${MenuSlide} 1s; */
+`;
 
-  .wrap {
-    padding: 16px;
-  }
+const CloseBtn = styled.div`
+	font-size: 1.5rem;
+	align-self: flex-end;
+`;
 
-  .close {
-    float: right;
-  }
+const UserWrap = styled.div`
+	display: flex;
+	padding-top: 2rem;
+	padding-left: 1rem;
 
-  .user-nickname {
-    ${fonts.Body1};
-    font-weight: 700;
-  }
+	h3 {
+		${fonts.H3};
+	}
+`;
 
-  .user-id {
-    ${fonts.Caption};
-    color: ${colors.gray4};
-  }
+const MenuWrap = styled.ul`
+	padding-top: 2rem;
+	padding-left: 1rem;
+	text-decoration: none;
+	list-style: none;
+
+	li {
+		${fonts.Body1}
+		text-decoration: none;
+		list-style: none;
+		padding-bottom: 1rem;
+	}
+
+	li:hover {
+		color: ${colors.primary};
+	}
 `;
