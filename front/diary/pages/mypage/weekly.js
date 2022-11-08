@@ -6,7 +6,7 @@ const weekly = () => {
   return (
     <div className="weekly">
       <Mypage></Mypage>
-      <ChartWeekly/>
+      {/* <ChartWeekly/> */}
     </div>
   )
 }

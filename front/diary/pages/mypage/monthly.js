@@ -6,7 +6,7 @@ const monthly = () => {
   return (
     <div className="monthly">
       <Mypage></Mypage>
-      <ChartMonthly/>
+      {/* <ChartMonthly/> */}
     </div>
   )
 }

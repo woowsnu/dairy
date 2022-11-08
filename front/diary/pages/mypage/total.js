@@ -6,7 +6,7 @@ const total = () => {
   return (
     <div className="total">
       <Mypage></Mypage>
-      <ChartTotal/>
+      {/* <ChartTotal/> */}
     </div>
   )
 }

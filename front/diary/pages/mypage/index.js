@@ -1,8 +1,9 @@
 import React from 'react'
+import Mypage from '../../components/Mypage/Mypage'
 
 const index = () => {
   return (
-    <div>index</div>
+    <Mypage />
   )
 }
 

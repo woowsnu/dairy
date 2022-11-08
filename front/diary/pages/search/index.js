@@ -1,9 +1,8 @@
-import React from 'react'
+import React from 'react';
+import Search from '../../components/Search/Search';
 
-const Search = () => {
-  return (
-    <div><br/>검색 결과가 나타납니다.</div>
-  )
-}
+const index = () => {
+	return <Search />;
+};
 
-export default Search;
+export default index;

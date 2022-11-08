@@ -1,25 +1,24 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 class MyDocument extends Document {
-  render() {
-    return (
-      <Html>
-        <Head>
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap"
-            rel="stylesheet"
-          />
-        </Head>
-        <body>
-          <Main />
-          <div id="modal-root" />
-          <NextScript />
-        </body>
-      </Html>
-    );
-  }
+	render() {
+		return (
+			<Html>
+				<Head>
+					<link
+						href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css"
+						rel="stylesheet"
+						type="text/css"
+					/>
+				</Head>
+				<body>
+					<Main />
+					<div id="modal-root" />
+					<NextScript />
+				</body>
+			</Html>
+		);
+	}
 }
 
 export default MyDocument;

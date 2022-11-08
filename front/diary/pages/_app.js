@@ -1,16 +1,16 @@
-import Layout from "../components/Layout/Layout";
-import { Reset } from "styled-reset";
-import "../styles/global.css";
+import { RecoilRoot } from 'recoil';
+import { Reset } from 'styled-reset';
+import '../styles/global.css';
 
 function MyApp({ Component, pageProps }) {
-  return (
-    <>
-    <Reset />
-    <Layout>
-        <Component {...pageProps} />
-    </Layout>
-    </>
-  );
+	return (
+		<>
+			<Reset />
+			<RecoilRoot>
+				<Component {...pageProps} />
+			</RecoilRoot>
+		</>
+	);
 }
 
 export default MyApp;
