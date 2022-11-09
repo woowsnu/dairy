@@ -22,7 +22,6 @@ export const getPostByUserAPI = (userId) =>
 
 export const getPostByPostIdAPI = (postId) => fetch(`${baseURL}/post/${postId}`);
 
-
 // POST todos API
 export const putPostAPI = (editedPost) =>
 	fetch(`${baseURL}/post/user`, {
@@ -32,3 +31,12 @@ export const putPostAPI = (editedPost) =>
 		},
 		body: JSON.stringify(editedPost),
 	});
+
+// search API
+export const searchPostAPI = async (keyword) => {
+	let searchData;
+	await fetch(`${baseURL}/post/search/?search=${keyword}`)
+		.then((response) => response.json())
+		.then((data) => searchData = data);
+	return searchData;
+};

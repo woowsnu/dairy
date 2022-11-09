@@ -1,19 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import colors from '../../styles/colors';
 import styled from 'styled-components';
 
 import { FaSearch, FaBars } from 'react-icons/fa';
+import { searchPostAPI } from '../../lib/api/post';
+import Card from '../UI/Card';
 
 const Search = () => {
+	const [enteredKeyword, setEnteredKeyword] = useState('');
+	const [searchResult, setSearchResult] = useState([]);
+
+	const handleEnteredKeyword = (e) => {
+		setEnteredKeyword(e.target.value);
+	};
+
+	const submitKeyword = async () => {
+		const data = await searchPostAPI(enteredKeyword);
+		setSearchResult(data);
+	};
+
 	return (
-		<NavContainer>
-			<Form>
-				<input type="text" />
-				<label>
-					<FaSearch />
-				</label>
-			</Form>
-		</NavContainer>
+		<>
+			<NavContainer>
+				<Form>
+					<input type="text" vlaue={enteredKeyword} onChange={handleEnteredKeyword} />
+					<label onClick={submitKeyword}>
+						<FaSearch />
+					</label>
+				</Form>
+			</NavContainer>
+			<div>
+				<ul>
+					{searchResult?.map((result) => (
+						<Card key={result.id} post={result}/>
+					))}
+				</ul>
+				
+			</div>
+		</>
 	);
 };
 
@@ -34,8 +58,8 @@ const Form = styled.form`
 
 	input {
 		font-size: 1.5rem;
-        border: 0;
-        background-color: ${colors.gray6};
+		border: 0;
+		background-color: ${colors.gray6};
 		color: ${colors.gray2};
 		padding-left: 0.8rem;
 		border-radius: 1rem;
@@ -43,7 +67,7 @@ const Form = styled.form`
 
 	label {
 		position: absolute;
-        top: 0;
-        right: 0;
+		top: 0;
+		right: 0;
 	}
 `;
