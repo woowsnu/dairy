@@ -1,47 +1,57 @@
 package com.diary.back.model;
 
-
 import lombok.*;
+import org.hibernate.annotations.UpdateTimestamp;
+import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
-import java.time.LocalDate;
-import java.util.ArrayList;
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 
 @Builder
-@RequiredArgsConstructor
 @AllArgsConstructor
-@Setter @Getter
+@NoArgsConstructor
 @Entity
-@ToString
+@Setter
+@Getter
 public class Post {
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "post_id")
-    private Long post_id;
+    @Column(name = "postId")
+    private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY, targetEntity = User.class)
-    @JoinColumn(name = "user_id", referencedColumnName = "user_id", foreignKey = @ForeignKey(name = "user_id", foreignKeyDefinition = "FOREIGN KEY(user_id) REFERENCES USER(user_id) ON UPDATE CASCADE ON DELETE CASCADE"))
-    private Long user_id;
-    private String post_date;
-    private String post_text;
-    private String post_text_summary;
-    private String emotion_cat_id;
-    private String emotion_list;
+    @Column
+    private String title;
+    @Column
+    private String contents;
 
-//    @OneToMany
-//    @JoinTable(name = "PostPostEmotion", joinColumns = @JoinColumn(name = "post_id"),
-//    inverseJoinColumns = @JoinColumn(name="PostEmotion_id"))
-//    private List<Post> postPostEmotions = new ArrayList<>();
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "userId", referencedColumnName = "userId")
+    private User user;
 
-//    @OneToMany
-//    @JoinTable(name = "PostPostEmotion", joinColumns = @JoinColumn(name = "post_id"),
-//    inverseJoinColumns = @JoinColumn(name="PostEmotion_id"))
-//    private List<PostEmotion> postemotions = new ArrayList<>();
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinColumn(name = "emotionId", referencedColumnName = "emotionId")
+    private List<Emotion> emotion;
 
-//    private PostPostEmotion postPostEmotion;
-//    private List<PostPostEmotion> Post_PostEmotion = new ArrayList<>();
+    @CreatedDate
+    private String createDate = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyMMdd"));
+
+    @UpdateTimestamp
+    private Timestamp lastUpdate;
+
+//    public static Post createPost(PostDTO postDTO){
+//        Post post = Post.builder()
+//                .title(postDTO.getTitle())
+//                .contents(postDTO.getContents())
+//                .user(postDTO.getUserId())
+//                .emotionId(postDTO.getEmotionId())
+//                .createDate(postDTO.getCreateDate())
+//                .lastUpdate(postDTO.getLastUpdate())
+//                .build();
+//        return post;
+//    }
 }

@@ -4,36 +4,26 @@ import com.diary.back.model.Emotion;
 import com.diary.back.repository.EmotionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.swing.text.html.Option;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Service
+@Transactional
 public class EmotionServiceImpl implements EmotionService {
 
     @Autowired
-    private EmotionRepository repository;
+    private EmotionRepository emotionRepository;
 
-//    @Override
-//    public List<Emotion> findAll(){
-//        return repository.findAll();
-//    }
+    public List<Emotion> findByCategoryId(Long categoryId) {
+        List<Emotion> emotionList = emotionRepository.findByCategoryId(categoryId);
+
+        return emotionList;
+    }
 
     @Override
     public List<Emotion> findAll(){
-//        List<Emotion> emotion = new ArrayList<>();
-//        repository.findAll().forEach(e -> emotion.add(e));
-//        return emotion;
-        return repository.findAll();
-    }
-
-
-    @Override
-    public Optional<Emotion> findbycatid(Long emotion_cat_id) {
-        Optional<Emotion> emotionn = repository.findById(emotion_cat_id);
-        return emotionn;
+        return emotionRepository.findAll();
     }
 
 //    @Override

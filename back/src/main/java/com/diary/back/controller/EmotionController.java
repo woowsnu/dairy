@@ -2,25 +2,38 @@ package com.diary.back.controller;
 
 import com.diary.back.model.Emotion;
 import com.diary.back.service.EmotionService;
+import io.sentry.Sentry;
+import io.sentry.spring.tracing.SentrySpan;
+import io.swagger.v3.oas.annotations.Operation;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.text.html.Option;
-import java.awt.*;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
-@RequestMapping("emotions")    // 뭐라고 주소를 적어야하지? 주소를 꼭 적어야하나?
+@RequestMapping("/api")    // 뭐라고 주소를 적어야하지? 주소를 꼭 적어야하나?
+@CrossOrigin("*")
+@RequiredArgsConstructor
 public class EmotionController {
 
     @Autowired
     private EmotionService emotionService;
+
+    @Operation(summary = "감정 조회", description = "카테고리로 필터링 된 감정 조회", tags = {"Emotion Controller"})
+    @GetMapping("/v1/emotion/{categoryId}")
+    @SentrySpan
+    public ResponseEntity<?> findByCategoryId(@PathVariable Long categoryId){
+        try{
+            List<Emotion> emotionList = emotionService.findByCategoryId(categoryId);
+            return ResponseEntity.ok().body(emotionList);
+        }
+        catch (Exception e){
+            Sentry.captureException(e);
+            return ResponseEntity.badRequest().body("Failed to Looking Up Emotion With CategoryId");
+        }
+    }
 
 //    // 슬라이드로 보여주기
 //    @GetMapping(path = "/{emotion_cat_id}")
@@ -51,10 +64,10 @@ public class EmotionController {
 //        return new ResponseEntity<Emotion>(emotion.get(), HttpStatus.OK);
 //    }
 
-    @GetMapping
-    public List<Emotion> findAll(){
-        System.out.println("Get요청 전송됨");
-        return emotionService.findAll();
-    }
+//    @GetMapping
+//    public List<Emotion> findAll(){
+//        System.out.println("Get요청 전송됨");
+//        return emotionService.findAll();
+//    }
 
 }
