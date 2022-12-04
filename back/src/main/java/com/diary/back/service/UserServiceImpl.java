@@ -21,14 +21,12 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private final PasswordEncoder passwordEncoder;
 
-    @SentrySpan
     public User registUser(User user){
         validateCuplicateUser(user);
         User encodedUser = encodePassword(user);
         return userRepository.save(encodedUser);
     }
 
-    @SentrySpan
     private void validateCuplicateUser(User user){
         User findUser = userRepository.findByEmail(user.getEmail());
         if (findUser != null){
@@ -46,7 +44,6 @@ public class UserServiceImpl implements UserService {
         return encodedUser;
     }
 
-    @SentrySpan
     public User signInByEmail(UserDTO userDTO){
         final String email = userDTO.getEmail();
         final String password = userDTO.getPassword();

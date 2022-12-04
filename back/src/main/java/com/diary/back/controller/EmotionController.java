@@ -2,6 +2,8 @@ package com.diary.back.controller;
 
 import com.diary.back.model.Emotion;
 import com.diary.back.service.EmotionService;
+import io.sentry.Sentry;
+import io.sentry.spring.tracing.SentrySpan;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,12 +23,14 @@ public class EmotionController {
 
     @Operation(summary = "감정 조회", description = "카테고리로 필터링 된 감정 조회", tags = {"Emotion Controller"})
     @GetMapping("/v1/emotion/{categoryId}")
+    @SentrySpan
     public ResponseEntity<?> findByCategoryId(@PathVariable Long categoryId){
         try{
             List<Emotion> emotionList = emotionService.findByCategoryId(categoryId);
             return ResponseEntity.ok().body(emotionList);
         }
         catch (Exception e){
+            Sentry.captureException(e);
             return ResponseEntity.badRequest().body("Failed to Looking Up Emotion With CategoryId");
         }
     }
